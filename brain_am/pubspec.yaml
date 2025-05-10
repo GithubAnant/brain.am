@@ -57,9 +57,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  To add assets to your application, add an assets section, like this:
+
   assets:
-    - assets/images/logo.jpg
+  - assets/images/logo.jpg
   
   fonts:
     - family: Lato
@@ -69,7 +69,7 @@ flutter:
           style: italic
         - asset: assets/fonts/Lato/Lato-Bold.ttf
           weight: 700
-        - asset: assets/fonts/Lato/Lato-BoldItalic.ttf
+        - asset: assets/fonts/Lato/Lcato-BoldItalic.ttf
           weight: 700
           style: italic
         - asset: assets/fonts/Lato/Lato-Italic.ttf
