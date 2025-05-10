@@ -5,6 +5,9 @@ class LandingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Container(child: Image.asset('assets/images/landing_backdrop.jpg'),
+      ),
+    );
   }
 }

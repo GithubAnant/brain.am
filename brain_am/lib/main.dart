@@ -1,3 +1,4 @@
+import 'package:brain_am/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -9,6 +10,9 @@ class BrainAM extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: LandingPage(),
+    );
   }
 }
