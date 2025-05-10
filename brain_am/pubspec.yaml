@@ -62,6 +62,7 @@ flutter:
   assets:
   - assets/images/logo.jpg
   - assets/images/landing_backdrop.jpg
+  - assets/images/landing_backdrop2.jpeg
   
   fonts:
     - family: Lato
