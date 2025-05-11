@@ -1,18 +1,19 @@
-import 'package:brain_am/screens/LandingPage.dart';
+import 'package:brain.am/screens/LandingPage.dart';
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(BrainAM());
+void main() {
+  runApp(const BrainAMApp());
 }
 
-class BrainAM extends StatelessWidget {
-  const BrainAM({super.key});
+class BrainAMApp extends StatelessWidget {
+  const BrainAMApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Brain AM',
       debugShowCheckedModeBanner: false,
-      home: LandingPage(),
+      home: const BrainAMHome(),
     );
   }
 }
