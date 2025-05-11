@@ -15,8 +15,9 @@ class HeroText extends StatelessWidget {
         ).createShader(bounds);
       },
       child: Text(
-        'Sounds for\neverything',
+        'Sounds for  \neverything',
         style: TextStyle(
+          fontFamily: 'Lato',
           fontSize: MediaQuery.of(context).size.width*0.05,
           fontWeight: FontWeight.bold,
           color: Colors.white,
