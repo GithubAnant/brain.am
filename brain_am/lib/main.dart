@@ -1,4 +1,4 @@
-import 'package:brain_am/homepage.dart';
+import 'package:brain_am/screens/LandingPage.dart';
 import 'package:flutter/material.dart';
 
 void main(){
