@@ -10,7 +10,7 @@ Future<void> _launchURL(String url) async {
 
 class SocialLink extends StatelessWidget {
   const SocialLink({super.key, required this.urlLink});
-  final urlLink;
+  final String urlLink;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +20,7 @@ class SocialLink extends StatelessWidget {
           await _launchURL('https://github.com/GithubAnant/');
         } catch (e) {
           // Handle the error, e.g., show a SnackBar or a dialog
+          // ignore: avoid_print
           print('Error launching URL: $e');
         }
       },
