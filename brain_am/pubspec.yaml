@@ -40,6 +40,7 @@ dependencies:
   glassmorphism: ^3.0.0
   url_launcher: ^6.3.1
   font_awesome_flutter: ^10.8.0
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +71,7 @@ flutter:
   - assets/images/image.png
   - assets/images/1.png
   - assets/images/background.png
+
   
   fonts:
     - family: Lato

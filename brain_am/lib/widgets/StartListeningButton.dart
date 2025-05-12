@@ -1,50 +1,3 @@
-
-// import 'package:flutter/material.dart';
-// import 'package:glassmorphism/glassmorphism.dart';
-
-// class StartListeningButton extends StatelessWidget {
-//   const StartListeningButton({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return GestureDetector(
-//       onTap: (){},
-//       child: GlassmorphicContainer(
-//         height: MediaQuery.of(context).size.height*0.07,
-//         width: MediaQuery.of(context).size.width*0.14,
-//         // padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width) ,
-//         borderRadius: 40,
-//         blur: 20,
-//         alignment: Alignment.center,
-//         border: 0.7,
-//         linearGradient: LinearGradient(
-//           colors: [
-//             Colors.white.withAlpha(20),
-//             Colors.white.withAlpha(13),
-//           ],
-//           begin: Alignment.topLeft,
-//           end: Alignment.bottomRight,
-//         ),
-//         borderGradient: LinearGradient(
-//           colors: [
-//             Colors.white.withAlpha(77),
-//             Colors.white.withAlpha(26),
-//           ],
-//         ),
-//         child: Text(
-//           'START LISTENING',
-//           style: TextStyle(
-//             fontFamily: 'Lato',
-//             color: Color.fromARGB(255, 192, 192, 192),
-//             fontWeight: FontWeight.w400,
-//             fontSize: MediaQuery.of(context).size.height*0.02,
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
@@ -61,7 +14,6 @@ class _StartListeningButtonState extends State<StartListeningButton> {
   @override
   Widget build(BuildContext context) {
     final blurAmount = _isHovered ? 55.0 : 20.0;
-    final heightButton = _isHovered ? MediaQuery.of(context).size.height * 0.07 : MediaQuery.of(context).size.height * 0.07; 
     final widthButton = _isHovered ? MediaQuery.of(context).size.width * 0.143 : MediaQuery.of(context).size.width * 0.14; 
 
     return MouseRegion(
@@ -73,7 +25,7 @@ class _StartListeningButtonState extends State<StartListeningButton> {
           // your tap logic
         },
         child: GlassmorphicContainer(
-          height: heightButton,
+          height: MediaQuery.of(context).size.height * 0.07,
           width: widthButton,
           borderRadius: 40,
           blur: blurAmount,

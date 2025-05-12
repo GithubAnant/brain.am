@@ -2,23 +2,26 @@
 import 'package:flutter/material.dart';
 
 class HeroText extends StatelessWidget {
-  const HeroText({super.key});
+  const HeroText({super.key, required this.text});
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return ShaderMask(
       shaderCallback: (bounds) {
         return const RadialGradient(
-          center: Alignment.topLeft,
+          center: Alignment.center,
           radius: 2,
-          colors: [Colors.white, Color.fromARGB(217, 114, 114, 114)],
+          colors: [Color.fromARGB(255, 255, 230, 172), Color.fromRGBO(255, 195, 152, 0.758)],
         ).createShader(bounds);
       },
       child: Text(
-        'Sounds for  \neverything',
+        text,
+        textAlign: TextAlign.start,
         style: TextStyle(
           fontFamily: 'Lato',
-          fontSize: MediaQuery.of(context).size.width*0.05,
+          fontSize: MediaQuery.of(context).size.width*0.034,
           fontWeight: FontWeight.bold,
           color: Colors.white,
            shadows: [
@@ -28,8 +31,14 @@ class HeroText extends StatelessWidget {
               color: Colors.black.withAlpha(64),
             ),
           ],
+          
         ),
       ),
     );
   }
 }
+
+// 217 114 114 114
+
+// Color.fromRGBO(255, 195, 152, 0.758)
+// Color.fromARGB(255, 255, 250, 223)
