@@ -3,26 +3,28 @@ import 'dart:ui';
 import 'package:brain.am/widgets/ImageBox.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class TabBarDisplayWidget extends StatelessWidget {
-  const TabBarDisplayWidget({super.key, required TabController tabController})
+  TabBarDisplayWidget({super.key, required TabController tabController})
     : _tabController = tabController;
 
   final TabController _tabController;
+  List<ImageBox> workImageBoxes = [
+    ImageBox(imagePath: 'assets/images/work1.png', description: 'Deep Work'),
+    ImageBox(imagePath: 'assets/images/work2.png', description: 'Lofi Beats'),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: TabBarView(
         controller: _tabController,
-        children: const [
+        children: [
           Center(
             child: Padding(
               padding: EdgeInsets.only(left: 20, right: 20),
               child: Row(
-                children: [
-                  ImageBox(imagePath: 'assets/images/work1.png', description: 'Deep Work',),
-                  ImageBox(imagePath: 'assets/images/work2.png', description: 'Lofi Beats',),
-                ],
+                children: workImageBoxes
               ),
             ),
           ),
@@ -84,10 +86,10 @@ class TabBarCreate extends StatelessWidget {
 
         tabs: const [
           Tab(text: 'Work'),
-          Tab(text: 'Relax'),
+          Tab(text: 'Chill'),
+          Tab(text: 'Sleep'),
+          Tab(text: 'Study'),
           Tab(text: 'Focus'),
-          Tab(text: 'Calm'),
-          Tab(text: 'Deep Think'),
         ],
       ),
     );

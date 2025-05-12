@@ -10,6 +10,7 @@
 analyzer:
   errors:
     file_names: ignore
+    unnecessary_import: ignore
     unused_import: ignore
 include: package:flutter_lints/flutter.yaml
 
