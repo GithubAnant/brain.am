@@ -65,12 +65,11 @@ flutter:
 
 
   assets:
-  - assets/images/logo.jpg
-  - assets/images/landing_backdrop.jpg
-  - assets/images/landing_backdrop2.jpeg
-  - assets/images/image.png
-  - assets/images/1.png
   - assets/images/background.png
+
+  # work images
+  - assets/images/work1.png
+  - assets/images/work2.png
 
   
   fonts:
