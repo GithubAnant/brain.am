@@ -79,7 +79,6 @@ class BrainAMHome extends StatelessWidget {
               ),
             ],
           ),
-
         ],
       ),
     );
