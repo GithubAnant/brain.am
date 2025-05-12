@@ -37,8 +37,3 @@ class HeroText extends StatelessWidget {
     );
   }
 }
-
-// 217 114 114 114
-
-// Color.fromRGBO(255, 195, 152, 0.758)
-// Color.fromARGB(255, 255, 250, 223)

@@ -72,6 +72,23 @@ flutter:
   - assets/images/work2.png
   - assets/images/work3.png
 
+  # chill images
+  - assets/images/chill1.png
+  - assets/images/chill2.png
+  - assets/images/chill3.png
+
+  # sleep images
+  - assets/images/sleep1.png
+  - assets/images/sleep2.png
+  
+  # study images
+  - assets/images/study1.png
+  - assets/images/study2.png
+  - assets/images/study3.png
+
+  # focus images
+  - assets/images/focus1.png
+  - assets/images/focus2.png
   
   fonts:
     - family: Lato

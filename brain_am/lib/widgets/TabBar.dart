@@ -9,9 +9,29 @@ class TabBarDisplayWidget extends StatelessWidget {
     : _tabController = tabController;
 
   final TabController _tabController;
+
   List<ImageBox> workImageBoxes = [
     ImageBox(imagePath: 'assets/images/work1.png', description: 'Deep Work'),
     ImageBox(imagePath: 'assets/images/work2.png', description: 'Lofi Beats'),
+    ImageBox(imagePath: 'assets/images/work3.png', description: 'Coding'),
+  ];
+  List<ImageBox> chillImageBoxes = [
+    ImageBox(imagePath: 'assets/images/chill1.png', description: 'Instrumental'),
+    ImageBox(imagePath: 'assets/images/chill2.png', description: 'Lofi'),
+    ImageBox(imagePath: 'assets/images/chill3.png', description: 'Vintage'),
+  ];
+  List<ImageBox> sleepImageBoxes = [
+    ImageBox(imagePath: 'assets/images/sleep1.png', description: 'Rain Sounds'),
+    ImageBox(imagePath: 'assets/images/sleep2.png', description: 'Ambient'),
+  ];
+  List<ImageBox> studyImageBoxes = [
+    ImageBox(imagePath: 'assets/images/study1.png', description: 'Rainforest'),
+    ImageBox(imagePath: 'assets/images/study2.png', description: 'Electronic'),
+    ImageBox(imagePath: 'assets/images/study3.png', description: 'Underwater'),
+  ];
+  List<ImageBox> focusImageBoxes = [
+    ImageBox(imagePath: 'assets/images/focus1.png', description: 'Concentrate'),
+    ImageBox(imagePath: 'assets/images/focus2.png', description: 'Post Rock'),
   ];
 
   @override
@@ -20,34 +40,47 @@ class TabBarDisplayWidget extends StatelessWidget {
       child: TabBarView(
         controller: _tabController,
         children: [
-          Center(
-            child: Padding(
-              padding: EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                children: workImageBoxes
-              ),
-            ),
-          ),
-          Center(
-            child: Text('Relax Sounds', style: TextStyle(color: Colors.white)),
-          ),
-          Center(
-            child: Text('Focus Sounds', style: TextStyle(color: Colors.white)),
-          ),
-          Center(
-            child: Text('Calm Sounds', style: TextStyle(color: Colors.white)),
-          ),
-          Center(
-            child: Text(
-              'Deep Think Sounds',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
+          
+          RowImageBox(ImageBoxes: workImageBoxes),
+          RowImageBox(ImageBoxes: chillImageBoxes),
+          RowImageBox(ImageBoxes: sleepImageBoxes),
+          RowImageBox(ImageBoxes: studyImageBoxes),
+          RowImageBox(ImageBoxes: focusImageBoxes),
+          
         ],
       ),
     );
   }
 }
+
+
+
+class RowImageBox extends StatelessWidget {
+  const RowImageBox({
+    super.key,
+    required this.ImageBoxes,
+  });
+
+  final List<ImageBox> ImageBoxes;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: EdgeInsets.only(left: 20, right: 20),
+        child: Row(
+          children: ImageBoxes
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+
+
 
 class TabBarCreate extends StatelessWidget {
   const TabBarCreate({super.key, required TabController tabController})
