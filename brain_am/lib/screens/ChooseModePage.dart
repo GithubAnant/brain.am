@@ -11,7 +11,6 @@ class ChooseModePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-
       backgroundColor: Colors.transparent,
       body: Stack(
         children: [
