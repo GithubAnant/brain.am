@@ -33,6 +33,9 @@ class _PlayerScreenMainState extends State<PlayerScreenMain> {
   }
 }
 
+
+
+
 class OptionsSidebar extends StatelessWidget {
   const OptionsSidebar({super.key});
 
@@ -78,6 +81,11 @@ class OptionsSidebar extends StatelessWidget {
   }
 }
 
+
+
+
+
+
 class IconSidebar extends StatelessWidget {
   const IconSidebar({super.key, required this.iconName});
 
@@ -93,5 +101,5 @@ class IconSidebar extends StatelessWidget {
         onPressed: () {},
       ),
     );
-  }
+  } 
 }
