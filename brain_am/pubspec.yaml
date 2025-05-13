@@ -66,29 +66,8 @@ flutter:
 
   assets:
   - assets/images/background.png
-
-  # work images
-  - assets/images/LandingPageImages/work1.png
-  - assets/images/LandingPageImages/work2.png
-  - assets/images/LandingPageImages/work3.png
-  
-  # chill images
-  - assets/images/LandingPageImages/chill1.png
-  - assets/images/LandingPageImages/chill2.png
-  - assets/images/LandingPageImages/chill3.png
-  
-  # sleep images
-  - assets/images/LandingPageImages/sleep1.png
-  - assets/images/LandingPageImages/sleep2.png
-  
-  # study images
-  - assets/images/LandingPageImages/study1.png
-  - assets/images/LandingPageImages/study2.png
-  - assets/images/LandingPageImages/study3.png
-  
-  # focus images
-  - assets/images/LandingPageImages/focus1.png
-  - assets/images/LandingPageImages/focus2.png
+  - assets/images/LandingPageImages
+  - assets/images/MusicPhotos
 
 
 
