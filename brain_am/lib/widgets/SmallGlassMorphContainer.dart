@@ -6,11 +6,11 @@ import 'package:brain.am/screens/LandingPage.dart';
 
 class SmallGlassMorphContainer extends StatefulWidget {
   const SmallGlassMorphContainer({
-    Key? key,
+    super.key,
     required this.text,
     required this.startColor,
     required this.endColor,
-  }) : super(key: key);
+  });
 
   final String text;
   final Color startColor;

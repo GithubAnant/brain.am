@@ -43,8 +43,8 @@ class _SocialLinkState extends State<SocialLink> {
             style: TextStyle(
               fontSize: 14,
               color: _isHovered
-                  ? Colors.white.withOpacity(0.6)
-                  : Colors.white.withOpacity(0.3),
+                  ? Colors.white.withAlpha(154)
+                  : Colors.white.withAlpha(77),
               decoration: TextDecoration.underline,
             ),
             child: const Text('@GithubAnant'),

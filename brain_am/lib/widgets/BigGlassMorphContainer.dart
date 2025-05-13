@@ -42,11 +42,11 @@ class _BigGlassMorphContainerState extends State<BigGlassMorphContainer> {
                   _isHovered
                       ? [
                         // strong mint → teal → cyan
-                        const Color(0xFF1DE9B6).withOpacity(0.5), // fresh mint
-                        const Color(0xFF00BFA5).withOpacity(0.45), // deep teal
+                        const Color(0xFF1DE9B6).withAlpha(122), // fresh mint
+                        const Color(0xFF00BFA5).withAlpha(115), // deep teal
                         const Color(
                           0xFF00E5FF,
-                        ).withOpacity(0.35), // electric cyan
+                        ).withAlpha(85), // electric cyan
                       ]
                       : [
                         const Color.fromARGB(255, 132, 132, 132).withAlpha(20),
@@ -58,7 +58,7 @@ class _BigGlassMorphContainerState extends State<BigGlassMorphContainer> {
             borderGradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Colors.white.withOpacity(0.1), Colors.transparent],
+              colors: [Colors.white.withAlpha(26), Colors.transparent],
             ),
             child: Center(
               child: Text(

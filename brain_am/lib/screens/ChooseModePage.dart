@@ -44,25 +44,11 @@ class ChooseModePage extends StatelessWidget {
 
                   Column(
                     children: [
-                      // SmallGlassMorphContainer(
-                      //   text: 'Chill',
-                      //   startColor: const Color(0xFF00C6FF).withOpacity(0.25),
-                      //   endColor: const Color(0xFF0072FF).withOpacity(0.15),
-                      // ),
-                      // SmallGlassMorphContainer(
-                      //   text: 'Sleep',
-                      //   startColor: const Color(0xFF7F00FF).withOpacity(0.25),
-                      //   endColor: const Color(0xFFE100FF).withOpacity(0.15),
-                      // ),
-                      // SmallGlassMorphContainer(
-                      //   text: 'Study',
-                      //   startColor: const Color(0xFF00F260).withOpacity(0.25),
-                      //   endColor: const Color(0xFF0575E6).withOpacity(0.15),
-                      // ),
+
                       SmallGlassMorphContainer(
                         text: 'Chill',
-                        startColor: Color(0xFFFF6B6B).withOpacity(0.3),
-                        endColor: Color(0xFFFFE66D).withOpacity(0.2),
+                        startColor: Color(0xFFFF6B6B).withAlpha(77),
+                        endColor: Color(0xFFFFE66D).withAlpha(51),
                       ),
                       SmallGlassMorphContainer(
                         text: 'Sleep',
@@ -71,13 +57,13 @@ class ChooseModePage extends StatelessWidget {
                           64,
                           28,
                           142,
-                        ).withOpacity(0.3),
-                        endColor: Color(0xFF9B51E0).withOpacity(0.2),
+                        ).withAlpha(77),
+                        endColor: Color(0xFF9B51E0).withAlpha(51),
                       ),
                       SmallGlassMorphContainer(
                         text: 'Study',
-                        startColor: Color(0xFFB8E986).withOpacity(0.3),
-                        endColor: Color(0xFF62D2A2).withOpacity(0.2),
+                        startColor: Color(0xFFB8E986).withAlpha(77),
+                        endColor: Color(0xFF62D2A2).withAlpha(51),
                       ),
                     ],
                   ),
