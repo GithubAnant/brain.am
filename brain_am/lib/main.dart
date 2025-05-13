@@ -1,3 +1,4 @@
+import 'package:brain.am/screens/ChooseModePage.dart';
 import 'package:brain.am/screens/LandingPage.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class BrainAMApp extends StatelessWidget {
     return MaterialApp(
       title: 'Brain AM',
       debugShowCheckedModeBanner: false,
-      home: const BrainAMHome(),
+      home: const ChooseModePage(),
     );
   }
 }
