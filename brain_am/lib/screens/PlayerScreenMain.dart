@@ -8,8 +8,17 @@ class PlayerScreenMain extends StatefulWidget {
 }
 
 class _PlayerScreenMainState extends State<PlayerScreenMain> {
+
+  
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Stack(
+        children: [
+          Positioned.fill(child: Image.asset('assets/images/MusicPhotos/free-photo-of-charming-empty-cobbled-street-at-dusk.jpeg', fit: BoxFit.cover))
+        ],
+      ),
+    );
   }
 }

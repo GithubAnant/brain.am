@@ -1,5 +1,6 @@
 import 'package:brain.am/screens/ChooseModePage.dart';
 import 'package:brain.am/screens/LandingPage.dart';
+import 'package:brain.am/screens/PlayerScreenMain.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,7 +17,7 @@ class BrainAMApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Brain AM',
       debugShowCheckedModeBanner: false,
-      home: const ChooseModePage(),
+      home: const PlayerScreenMain(),
     );
   }
 }

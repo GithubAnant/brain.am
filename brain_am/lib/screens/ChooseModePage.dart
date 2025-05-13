@@ -1,4 +1,4 @@
-import 'package:brain.am/widgets/BigGlassMorphContainer.dart';
+import 'package:brain.am/widgets/FocusGlassContainer.dart';
 import 'package:brain.am/widgets/SmallGlassMorphContainer.dart';
 import 'package:brain.am/widgets/SocialLink.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +40,7 @@ class ChooseModePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  BigGlassMorphContainer(text: 'Focus'),
+                  FocusGlassContainer(text: 'Focus'),
 
                   Column(
                     children: [

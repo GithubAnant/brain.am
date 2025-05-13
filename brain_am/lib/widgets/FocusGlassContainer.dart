@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
-class BigGlassMorphContainer extends StatefulWidget {
-  const BigGlassMorphContainer({super.key, required this.text});
+class FocusGlassContainer extends StatefulWidget {
+  const FocusGlassContainer({super.key, required this.text});
 
   final String text;
 
   @override
-  State<BigGlassMorphContainer> createState() => _BigGlassMorphContainerState();
+  State<FocusGlassContainer> createState() => _FocusGlassContainerState();
 }
 
-class _BigGlassMorphContainerState extends State<BigGlassMorphContainer> {
+class _FocusGlassContainerState extends State<FocusGlassContainer> {
   bool _isHovered = false;
 
   @override
