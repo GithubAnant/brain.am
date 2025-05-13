@@ -30,7 +30,7 @@ class ChooseModePage extends StatelessWidget {
             left: 0,
             right: 0,
             child: Center(
-              child: SocialLink(urlLink: 'https://github.com/GithubAnant')
+              child: SocialLink(urlLink: 'https://github.com/GithubAnant'),
             ),
           ),
           Column(
@@ -44,7 +44,6 @@ class ChooseModePage extends StatelessWidget {
 
                   Column(
                     children: [
-
                       SmallGlassMorphContainer(
                         text: 'Chill',
                         startColor: Color(0xFFFF6B6B).withAlpha(77),
