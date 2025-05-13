@@ -8,28 +8,47 @@ Future<void> _launchURL(String url) async {
   }
 }
 
-class SocialLink extends StatelessWidget {
+class SocialLink extends StatefulWidget {
   const SocialLink({super.key, required this.urlLink});
   final String urlLink;
+
+  @override
+  State<SocialLink> createState() => _SocialLinkState();
+}
+
+class _SocialLinkState extends State<SocialLink> {
+  bool _isHovered = false;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
         try {
-          await _launchURL('https://github.com/GithubAnant/');
+          await _launchURL(widget.urlLink);
         } catch (e) {
-          // Handle the error, e.g., show a SnackBar or a dialog
-          // ignore: avoid_print
           print('Error launching URL: $e');
         }
       },
-      child: Text(
-        '@GithubAnant',
-        style: TextStyle(
-          fontSize: 14,
-          color: Colors.blueGrey,
-          decoration: TextDecoration.underline,
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        onEnter: (_) => setState(() => _isHovered = true),
+        onExit: (_) => setState(() => _isHovered = false),
+        child: AnimatedScale(
+          scale: _isHovered ? 1.02 : 1.0,
+          duration: const Duration(milliseconds: 200),
+          curve: Curves.easeOut,
+          child: AnimatedDefaultTextStyle(
+            duration: const Duration(milliseconds: 200),
+            curve: Curves.easeOut,
+            style: TextStyle(
+              fontSize: 14,
+              color: _isHovered
+                  ? Colors.white.withOpacity(0.6)
+                  : Colors.white.withOpacity(0.3),
+              decoration: TextDecoration.underline,
+            ),
+            child: const Text('@GithubAnant'),
+          ),
         ),
       ),
     );

@@ -2,6 +2,7 @@ import 'package:brain.am/widgets/DemoImage.dart';
 import 'package:brain.am/widgets/HeaderText.dart';
 import 'package:brain.am/widgets/HeroText.dart';
 import 'package:brain.am/widgets/MainContainer.dart';
+import 'package:brain.am/widgets/SocialLink.dart';
 import 'package:brain.am/widgets/StartListeningButton.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
@@ -27,15 +28,21 @@ class BrainAMHome extends StatelessWidget {
           ),
 
           //tint
-          Positioned.fill(child: Container(color: Colors.black.withAlpha(150))),
+          Positioned.fill(child: Container(color: Colors.black.withAlpha(50))),
+
+          Positioned(
+            bottom: 13,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: SocialLink(urlLink: 'https://github.com/GithubAnant')
+            ),
+          ),
 
           Column(
             children: [
-              SizedBox(height: MediaQuery.of(context).size.height*0.04),
-              Center(
-
-                child: MainContainer(),
-              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+              Center(child: MainContainer()),
             ],
           ),
         ],
@@ -43,5 +50,3 @@ class BrainAMHome extends StatelessWidget {
     );
   }
 }
-
-

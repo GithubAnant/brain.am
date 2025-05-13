@@ -1,6 +1,8 @@
 import 'package:brain.am/screens/ChooseModePage.dart';
 import 'package:brain.am/screens/LandingPage.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
 
 void main() {
   runApp(const BrainAMApp());
@@ -11,7 +13,7 @@ class BrainAMApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Brain AM',
       debugShowCheckedModeBanner: false,
       home: const ChooseModePage(),

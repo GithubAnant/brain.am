@@ -1,5 +1,7 @@
+import 'package:brain.am/screens/ChooseModePage.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
+import 'package:get/get.dart';
 
 class StartListeningButton extends StatefulWidget {
   const StartListeningButton({super.key});
@@ -22,7 +24,7 @@ class _StartListeningButtonState extends State<StartListeningButton> {
       child: InkWell(
         borderRadius: BorderRadius.circular(40),
         onTap: () {
-          // your tap logic
+          Get.to(const ChooseModePage(), transition: Transition.zoom);
         },
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 400),
