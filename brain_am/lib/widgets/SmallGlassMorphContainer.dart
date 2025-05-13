@@ -38,7 +38,7 @@ class _SmallGlassMorphContainerState extends State<SmallGlassMorphContainer> {
         onEnter: (_) => setState(() => _isHovered = true),
         onExit: (_) => setState(() => _isHovered = false),
         child: AnimatedScale(
-          duration: Duration(milliseconds: 300),
+          duration: Duration(milliseconds: 200),
           scale: _isHovered ? 1.02 : 1.0,
           child: GlassmorphicContainer(
             width: Basewidth,

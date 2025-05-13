@@ -66,16 +66,9 @@ flutter:
 
   assets:
   - assets/images/background.png
-  - assets/images/LandingPageImages
-  - assets/images/MusicPhotos
+  - assets/images/LandingPageImages/
+  - assets/images/MusicPhotos/
 
-
-
-
-
-
-
-  
   fonts:
     - family: Lato
       fonts:

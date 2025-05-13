@@ -10,29 +10,34 @@ class TabBarDisplayWidget extends StatelessWidget {
 
   final TabController _tabController;
 
-  List<ImageBox> workImageBoxes = [
-    ImageBox(imagePath: 'assets/images/work1.png', description: 'Deep Work'),
-    ImageBox(imagePath: 'assets/images/work2.png', description: 'Lofi Beats'),
-    ImageBox(imagePath: 'assets/images/work3.png', description: 'Coding'),
-  ];
-  List<ImageBox> chillImageBoxes = [
-    ImageBox(imagePath: 'assets/images/chill1.png', description: 'Instrumental'),
-    ImageBox(imagePath: 'assets/images/chill2.png', description: 'Lofi'),
-    ImageBox(imagePath: 'assets/images/chill3.png', description: 'Vintage'),
-  ];
-  List<ImageBox> sleepImageBoxes = [
-    ImageBox(imagePath: 'assets/images/sleep1.png', description: 'Rain Sounds'),
-    ImageBox(imagePath: 'assets/images/sleep2.png', description: 'Ambient'),
-  ];
-  List<ImageBox> studyImageBoxes = [
-    ImageBox(imagePath: 'assets/images/study1.png', description: 'Rainforest'),
-    ImageBox(imagePath: 'assets/images/study2.png', description: 'Electronic'),
-    ImageBox(imagePath: 'assets/images/study3.png', description: 'Underwater'),
-  ];
-  List<ImageBox> focusImageBoxes = [
-    ImageBox(imagePath: 'assets/images/focus1.png', description: 'Concentrate'),
-    ImageBox(imagePath: 'assets/images/focus2.png', description: 'Post Rock'),
-  ];
+List<ImageBox> workImageBoxes = [
+  ImageBox(imagePath: 'assets/images/LandingPageImages/work1.png', description: 'Deep Work'),
+  ImageBox(imagePath: 'assets/images/LandingPageImages/work2.png', description: 'Lofi Beats'),
+  ImageBox(imagePath: 'assets/images/LandingPageImages/work3.png', description: 'Coding'),
+];
+
+List<ImageBox> chillImageBoxes = [
+  ImageBox(imagePath: 'assets/images/LandingPageImages/chill1.png', description: 'Instrumental'),
+  ImageBox(imagePath: 'assets/images/LandingPageImages/chill2.png', description: 'Lofi'),
+  ImageBox(imagePath: 'assets/images/LandingPageImages/chill3.png', description: 'Vintage'),
+];
+
+List<ImageBox> sleepImageBoxes = [
+  ImageBox(imagePath: 'assets/images/LandingPageImages/sleep1.png', description: 'Rain Sounds'),
+  ImageBox(imagePath: 'assets/images/LandingPageImages/sleep2.png', description: 'Ambient'),
+];
+
+List<ImageBox> studyImageBoxes = [
+  ImageBox(imagePath: 'assets/images/LandingPageImages/study1.png', description: 'Rainforest'),
+  ImageBox(imagePath: 'assets/images/LandingPageImages/study2.png', description: 'Electronic'),
+  ImageBox(imagePath: 'assets/images/LandingPageImages/study3.png', description: 'Underwater'),
+];
+
+List<ImageBox> focusImageBoxes = [
+  ImageBox(imagePath: 'assets/images/LandingPageImages/focus1.png', description: 'Concentrate'),
+  ImageBox(imagePath: 'assets/images/LandingPageImages/focus2.png', description: 'Post Rock'),
+];
+
 
   @override
   Widget build(BuildContext context) {
