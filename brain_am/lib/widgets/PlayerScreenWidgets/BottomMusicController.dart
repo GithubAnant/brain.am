@@ -46,42 +46,16 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
             const Color.fromARGB(210, 255, 255, 255),
           ],
         ),
-        
+
         child: Stack(
           children: [
             // Song info - left side
-            Positioned(
-              left: screenWidth * 0.03,
-              top: screenHeight * 0.025,
-              child: Row(
-                children: [
-                  // Album art
-                  Container(
-                    width: 36,
-                    height: 36,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[300],
-                      borderRadius: BorderRadius.circular(6),
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Icons.music_note,
-                        size: 20,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  SongNameAndSubtext(),
-                ],
-              ),
-            ),
-
+            SongNameAndSubtext(screenWidth: screenWidth, screenHeight: screenHeight),
 
             Positioned(
               left: 0,
-              right: 0,
-              top: screenHeight * 0.003,
+              right: screenWidth * 0.008,
+              top: screenHeight * 0.006,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -91,7 +65,6 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
                 ],
               ),
             ),
-
 
             Positioned(
               right: screenWidth * 0.03,
@@ -141,30 +114,62 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
 //
 
 class SongNameAndSubtext extends StatelessWidget {
-  const SongNameAndSubtext({super.key});
+  const SongNameAndSubtext({
+    super.key,
+    required this.screenWidth,
+    required this.screenHeight,
+  });
+
+  final double screenWidth;
+  final double screenHeight;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
-        Text(
-          "Song Name",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
+    return Positioned(
+      left: screenWidth * 0.025,
+      top: screenHeight * 0.04,
+      child: Row(
+        children: [
+          // Album art
+          Container(
+            width: 36,
+            height: 36,
+            decoration: BoxDecoration(
+              color: Colors.grey[300],
+              borderRadius: BorderRadius.circular(6),
+            ),
+            child: const Center(
+              child: Icon(
+                Icons.music_note,
+                size: 20,
+                color: Colors.grey,
+              ),
+            ),
           ),
-        ),
-        Text(
-          "subtext goes here",
-          style: TextStyle(
-            color: Colors.grey,
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
+          const SizedBox(width: 12),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text(
+                "SemiColon",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              Text(
+                "Post-Rock",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ],
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

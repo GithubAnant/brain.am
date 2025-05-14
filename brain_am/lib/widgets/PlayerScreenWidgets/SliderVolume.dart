@@ -30,11 +30,11 @@ class _VolumeSliderState extends State<VolumeSlider> {
               trackHeight: 1.5,
               thumbShape: RoundSliderThumbShape(
                 enabledThumbRadius: thumbRadius,
-              ),
+              ),  
               overlayShape: const RoundSliderOverlayShape(overlayRadius: 9),
               activeTrackColor:
                   _isHovered
-                      ?const Color.fromARGB(255, 255, 220, 188)
+                      ?const Color.fromARGB(255, 0, 224, 22)
                       :  Colors.white,
               inactiveTrackColor: const Color.fromARGB(59, 157, 157, 157),
               thumbColor: Colors.white,
