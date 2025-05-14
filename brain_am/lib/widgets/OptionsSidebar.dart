@@ -9,7 +9,7 @@ class OptionsSidebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      left: MediaQuery.of(context).size.width * 0.01,
+      left: MediaQuery.of(context).size.width * 0.04,
       top: MediaQuery.of(context).size.height * 0.3,
       child: GlassmorphicContainer(
         width: MediaQuery.of(context).size.width * 0.05,
@@ -33,14 +33,16 @@ class OptionsSidebar extends StatelessWidget {
             const Color.fromARGB(210, 255, 255, 255),
           ],
         ),
-        child: Center(
-          child: Column(
-            children: [
-              IconSidebar(iconName: RemixIcons.home_2_line),
-              IconSidebar(iconName: RemixIcons.music_2_line),
-              IconSidebar(iconName: RemixIcons.time_line),
-              IconSidebar(iconName: RemixIcons.hourglass_2_fill),
-            ],
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: [
+                IconSidebar(iconName: RemixIcons.home_2_line),
+                IconSidebar(iconName: RemixIcons.music_2_line),
+                IconSidebar(iconName: RemixIcons.time_line),
+                IconSidebar(iconName: RemixIcons.hourglass_2_fill),
+              ],
+            ),
           ),
         ),
       ),
@@ -62,7 +64,7 @@ class IconSidebar extends StatelessWidget {
       padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.039),
       child: IconButton(
         hoverColor: const Color.fromARGB(255, 48, 48, 48),
-        icon: Icon(iconName, color: Colors.white),
+        icon: Icon(iconName, color: Colors.white, size: MediaQuery.of(context).size.height*0.022),
         onPressed: () {},
       ),
     );

@@ -32,6 +32,7 @@ class ChooseModePage extends StatelessWidget {
               child: SocialLink(urlLink: 'https://github.com/GithubAnant'),
             ),
           ),
+          
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
