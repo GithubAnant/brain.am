@@ -1,9 +1,9 @@
-import 'package:brain.am/widgets/DemoImage.dart';
-import 'package:brain.am/widgets/HeaderText.dart';
-import 'package:brain.am/widgets/HeroText.dart';
-import 'package:brain.am/widgets/MainContainer.dart';
+import 'package:brain.am/widgets/LandingPageWidgets/DemoImage.dart';
+import 'package:brain.am/widgets/LandingPageWidgets/HeaderText.dart';
+import 'package:brain.am/widgets/LandingPageWidgets/HeroText.dart';
+import 'package:brain.am/widgets/LandingPageWidgets/MainContainer.dart';
 import 'package:brain.am/widgets/SocialLink.dart';
-import 'package:brain.am/widgets/StartListeningButton.dart';
+import 'package:brain.am/widgets/LandingPageWidgets/StartListeningButton.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:google_fonts/google_fonts.dart';

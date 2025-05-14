@@ -1,5 +1,5 @@
-import 'package:brain.am/widgets/FocusGlassContainer.dart';
-import 'package:brain.am/widgets/SmallGlassMorphContainer.dart';
+import 'package:brain.am/widgets/ChooseModeScreenWidgets/FocusGlassContainer.dart';
+import 'package:brain.am/widgets/ChooseModeScreenWidgets/SmallGlassMorphContainer.dart';
 import 'package:brain.am/widgets/SocialLink.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

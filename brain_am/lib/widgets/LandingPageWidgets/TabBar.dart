@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:brain.am/widgets/ImageBox.dart';
+import 'package:brain.am/widgets/LandingPageWidgets/ImageBox.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

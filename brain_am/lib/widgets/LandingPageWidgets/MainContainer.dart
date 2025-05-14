@@ -1,5 +1,5 @@
 import 'package:brain.am/screens/LandingPage.dart';
-import 'package:brain.am/widgets/MainContainerContent.dart';
+import 'package:brain.am/widgets/LandingPageWidgets/MainContainerContent.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 

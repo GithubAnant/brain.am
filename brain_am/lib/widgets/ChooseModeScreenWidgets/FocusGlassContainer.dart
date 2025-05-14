@@ -1,3 +1,4 @@
+import 'package:brain.am/controllers/screen_controller.dart';
 import 'package:brain.am/screens/PlayerPageContainers/HomeContainer.dart';
 import 'package:brain.am/screens/PlayerScreenMain.dart';
 import 'package:flutter/material.dart';
@@ -22,8 +23,10 @@ class _FocusGlassContainerState extends State<FocusGlassContainer> {
     double baseHeight = MediaQuery.of(context).size.height * 0.56;
 
     return GestureDetector(
+
       onTap: () {
-        Get.to(PlayerScreenMain(), transition: Transition.fade);
+        // Instead of Get.to(PlayerScreenMain())
+        Get.find<ScreenController>().goToPlayer();
       },
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
@@ -49,13 +52,11 @@ class _FocusGlassContainerState extends State<FocusGlassContainer> {
                         // strong mint → teal → cyan
                         const Color(0xFF1DE9B6).withAlpha(122), // fresh mint
                         const Color(0xFF00BFA5).withAlpha(115), // deep teal
-                        const Color(
-                          0xFF00E5FF,
-                        ).withAlpha(85), // electric cyan
+                        const Color(0xFF00E5FF).withAlpha(85), // electric cyan
                       ]
                       : [
-                        const Color.fromARGB(255, 132, 132, 132).withAlpha(20),
-                        const Color.fromARGB(255, 94, 94, 94).withAlpha(13),
+                        const Color.fromARGB(255, 204, 204, 204).withAlpha(20),
+                        const Color.fromARGB(255, 94, 94, 94).withAlpha(54),
                       ],
               stops: _isHovered ? [0.0, 0.5, 1.0] : null,
             ),
@@ -63,7 +64,7 @@ class _FocusGlassContainerState extends State<FocusGlassContainer> {
             borderGradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Colors.white.withAlpha(26), Colors.transparent],
+              colors: [Colors.white.withAlpha(150), const Color.fromARGB(213, 121, 121, 121)],
             ),
             child: Center(
               child: Text(

@@ -1,5 +1,7 @@
+import 'package:brain.am/controllers/screen_controller.dart';
 import 'package:brain.am/screens/ChooseModePage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:get/get.dart';
 
@@ -16,15 +18,20 @@ class _StartListeningButtonState extends State<StartListeningButton> {
   @override
   Widget build(BuildContext context) {
     final blurAmount = _isHovered ? 55.0 : 20.0;
-    final widthButton = _isHovered ? MediaQuery.of(context).size.width * 0.143 : MediaQuery.of(context).size.width * 0.14; 
+    final widthButton =
+        _isHovered
+            ? MediaQuery.of(context).size.width * 0.143
+            : MediaQuery.of(context).size.width * 0.14;
 
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
       onExit: (_) => setState(() => _isHovered = false),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(40),
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+
         onTap: () {
-          Get.to(const ChooseModePage(), transition: Transition.fadeIn);
+          // Instead of Get.to(ChooseModePage())
+          Get.find<ScreenController>().goToChooseMode();
         },
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 400),
@@ -37,18 +44,12 @@ class _StartListeningButtonState extends State<StartListeningButton> {
             alignment: Alignment.center,
             border: 0.7,
             linearGradient: LinearGradient(
-              colors: [
-                Colors.white.withAlpha(20),
-                Colors.white.withAlpha(13),
-              ],
+              colors: [Colors.white.withAlpha(20), Colors.white.withAlpha(13)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
             borderGradient: LinearGradient(
-              colors: [
-                Colors.white.withAlpha(77),
-                Colors.white.withAlpha(26),
-              ],
+              colors: [Colors.white.withAlpha(77), Colors.white.withAlpha(26)],
             ),
             child: Text(
               'START LISTENING',

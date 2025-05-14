@@ -1,7 +1,7 @@
-import 'package:brain.am/widgets/HeaderText.dart';
-import 'package:brain.am/widgets/HeroText.dart';
-import 'package:brain.am/widgets/StartListeningButton.dart';
-import 'package:brain.am/widgets/TabBar.dart';
+import 'package:brain.am/widgets/LandingPageWidgets/HeaderText.dart';
+import 'package:brain.am/widgets/LandingPageWidgets/HeroText.dart';
+import 'package:brain.am/widgets/LandingPageWidgets/StartListeningButton.dart';
+import 'package:brain.am/widgets/LandingPageWidgets/TabBar.dart';
 import 'package:flutter/material.dart';
 
 class MainContainerContent extends StatefulWidget {

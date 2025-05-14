@@ -1,9 +1,9 @@
+import 'package:brain.am/controllers/screen_controller.dart';
 import 'package:brain.am/screens/PlayerScreenMain.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:brain.am/screens/LandingPage.dart';
-
 
 class SmallGlassMorphContainer extends StatefulWidget {
   const SmallGlassMorphContainer({
@@ -27,12 +27,12 @@ class _SmallGlassMorphContainerState extends State<SmallGlassMorphContainer> {
 
   @override
   Widget build(BuildContext context) {
-        double Basewidth = MediaQuery.of(context).size.width * 0.3;
-        double Baseheight = MediaQuery.of(context).size.height * 0.17;
+    double Basewidth = MediaQuery.of(context).size.width * 0.3;
+    double Baseheight = MediaQuery.of(context).size.height * 0.17;
 
     return GestureDetector(
       onTap: () {
-        Get.to(const PlayerScreenMain(),transition: Transition.fade);
+        Get.find<ScreenController>().goToPlayer();
       },
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
@@ -55,14 +55,22 @@ class _SmallGlassMorphContainerState extends State<SmallGlassMorphContainer> {
                   _isHovered
                       ? [widget.startColor, widget.endColor]
                       : [
-                        const Color.fromARGB(255, 132, 132, 132).withAlpha(20),
-                        const Color.fromARGB(255, 94, 94, 94).withAlpha(13),
+                        const Color.fromARGB(
+                          255,
+                          204,
+                          204,
+                          204,
+                        ).withAlpha(16),
+                        const Color.fromARGB(255, 94, 94, 94).withAlpha(34),
                       ],
             ),
             borderGradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Colors.white.withAlpha(26), Colors.transparent],
+              colors: [
+                const Color.fromARGB(255, 210, 210, 210).withAlpha(150),
+                const Color.fromARGB(213, 121, 121, 121),
+              ],
             ),
             child: Padding(
               padding: const EdgeInsets.all(12.0),

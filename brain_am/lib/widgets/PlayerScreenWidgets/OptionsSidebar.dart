@@ -14,7 +14,7 @@ class OptionsSidebar extends StatelessWidget {
       child: GlassmorphicContainer(
         width: MediaQuery.of(context).size.width * 0.05,
         height: MediaQuery.of(context).size.height * 0.4,
-        borderRadius: 25,
+        borderRadius: 45,
         linearGradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
