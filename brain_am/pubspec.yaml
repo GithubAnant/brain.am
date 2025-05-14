@@ -42,6 +42,7 @@ dependencies:
   font_awesome_flutter: ^10.8.0
   google_fonts: ^6.2.1
   remixicon: ^1.4.1
+  audio_video_progress_bar: ^2.0.3
 
 dev_dependencies:
   flutter_test:
@@ -67,8 +68,10 @@ flutter:
 
   assets:
   - assets/images/background.png
+  - assets/images/image.png
   - assets/images/LandingPageImages/
   - assets/images/MusicPhotos/
+  - assets/images/MusicPhotos1/
 
   fonts:
     - family: Lato

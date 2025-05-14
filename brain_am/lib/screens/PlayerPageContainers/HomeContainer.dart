@@ -9,10 +9,10 @@ class HomeContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      left: MediaQuery.of(context).size.width * 0.2,
+      left: MediaQuery.of(context).size.width * 0.18,
       top: MediaQuery.of(context).size.height * 0.08,
       child: GlassmorphicContainer(
-        width: MediaQuery.of(context).size.width * 0.6,
+        width: MediaQuery.of(context).size.width * 0.66,
         height: MediaQuery.of(context).size.height * 0.8,
         borderRadius: 15,
         linearGradient: LinearGradient(
@@ -29,12 +29,11 @@ class HomeContainer extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            const Color.fromARGB(255, 255, 255, 255),
-            const Color.fromARGB(210, 255, 255, 255),
+            const Color.fromARGB(255, 201, 201, 201),
+            const Color.fromARGB(210, 194, 194, 194),
           ],
         ),
       ),
     );
   }
 }
-

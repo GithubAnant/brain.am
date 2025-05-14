@@ -1,5 +1,8 @@
+import 'package:brain.am/screens/PlayerPageContainers/HomeContainer.dart';
+import 'package:brain.am/screens/PlayerScreenMain.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
+import 'package:get/get.dart';
 
 class FocusGlassContainer extends StatefulWidget {
   const FocusGlassContainer({super.key, required this.text});
@@ -19,7 +22,9 @@ class _FocusGlassContainerState extends State<FocusGlassContainer> {
     double baseHeight = MediaQuery.of(context).size.height * 0.56;
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Get.to(PlayerScreenMain(), transition: Transition.fade);
+      },
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         onEnter: (_) => setState(() => _isHovered = true),

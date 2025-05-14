@@ -1,3 +1,4 @@
+import 'package:brain.am/screens/PlayerScreenMain.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
@@ -31,7 +32,7 @@ class _SmallGlassMorphContainerState extends State<SmallGlassMorphContainer> {
 
     return GestureDetector(
       onTap: () {
-        Get.to(const BrainAMHome(),transition: Transition.zoom);
+        Get.to(const PlayerScreenMain(),transition: Transition.fade);
       },
       child: MouseRegion(
         cursor: SystemMouseCursors.click,

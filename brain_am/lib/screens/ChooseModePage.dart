@@ -2,6 +2,7 @@ import 'package:brain.am/widgets/FocusGlassContainer.dart';
 import 'package:brain.am/widgets/SmallGlassMorphContainer.dart';
 import 'package:brain.am/widgets/SocialLink.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
 class ChooseModePage extends StatelessWidget {
@@ -12,6 +13,12 @@ class ChooseModePage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.transparent,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: IconButton(onPressed: (){
+          Get.back();
+        }, icon: Icon(Icons.arrow_back, color: Colors.white70,)),
+      ),
       body: Stack(
         children: [
           //backdrop
@@ -32,7 +39,7 @@ class ChooseModePage extends StatelessWidget {
               child: SocialLink(urlLink: 'https://github.com/GithubAnant'),
             ),
           ),
-          
+
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,

@@ -24,7 +24,7 @@ class _StartListeningButtonState extends State<StartListeningButton> {
       child: InkWell(
         borderRadius: BorderRadius.circular(40),
         onTap: () {
-          Get.to(const ChooseModePage(), transition: Transition.zoom);
+          Get.to(const ChooseModePage(), transition: Transition.fadeIn);
         },
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 400),
