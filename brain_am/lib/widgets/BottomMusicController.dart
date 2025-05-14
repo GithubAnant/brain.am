@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:glassmorphism/glassmorphism.dart';
+import 'package:remixicon/remixicon.dart';
 
 class BottomMusicController extends StatelessWidget {
-  const BottomMusicController({
-    super.key,
-  });
+  const BottomMusicController({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +31,53 @@ class BottomMusicController extends StatelessWidget {
           colors: [
             const Color.fromARGB(255, 255, 255, 255),
             const Color.fromARGB(210, 255, 255, 255),
+          ],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Previous
+            IconButton(
+              icon: FaIcon(RemixIcons.arrow_left_wide_line, color: Colors.white.withAlpha(200), size: 30,),
+              iconSize: 30,
+              onPressed: () {
+                // Previous logic
+              },
+            ),
+
+            // Pause
+            IconButton(
+              icon: Icon(RemixIcons.pause_line, size: 35, color: Colors.white,),
+              iconSize: 40,
+              onPressed: () {
+                // Pause logic
+              },
+            ),
+
+            // Next
+            IconButton(
+              icon: FaIcon(RemixIcons.play_reverse_line, color: Colors.white.withAlpha(200), size: 30,),
+              iconSize: 30,
+              onPressed: () {
+                // Previous logic
+              },
+            ),
+
+            // Spacer
+            SizedBox(width: 30),
+
+            // Volume Icon
+            Icon(Icons.volume_up, size: 24),
+
+            // Volume Slider
+            Slider(
+              value: 0.5,
+              onChanged: (value) {
+                // Update volume logic
+              },
+              min: 0,
+              max: 1,
+            ),
           ],
         ),
       ),

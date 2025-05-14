@@ -43,6 +43,8 @@ dependencies:
   google_fonts: ^6.2.1
   remixicon: ^1.4.1
   audio_video_progress_bar: ^2.0.3
+  flutter_svg: ^2.0.7
+
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +69,7 @@ flutter:
 
 
   assets:
+  
   - assets/images/background.png
   - assets/images/image.png
   - assets/images/LandingPageImages/

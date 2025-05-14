@@ -21,7 +21,7 @@ class HomeContainer extends StatelessWidget {
           colors: [
             const Color.fromARGB(255, 255, 255, 255).withAlpha(20),
             const Color.fromARGB(255, 255, 255, 255).withAlpha(13),
-          ],  
+          ],
         ),
         border: 0.3,
         blur: 10,
@@ -33,6 +33,7 @@ class HomeContainer extends StatelessWidget {
             const Color.fromARGB(210, 194, 194, 194),
           ],
         ),
+
       ),
     );
   }
