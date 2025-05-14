@@ -69,7 +69,8 @@ flutter:
 
 
   assets:
-  
+
+  - assets/icons/  
   - assets/images/background.png
   - assets/images/image.png
   - assets/images/LandingPageImages/

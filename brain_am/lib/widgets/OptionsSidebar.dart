@@ -64,7 +64,7 @@ class IconSidebar extends StatelessWidget {
       padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.039),
       child: IconButton(
         hoverColor: const Color.fromARGB(255, 48, 48, 48),
-        icon: Icon(iconName, color: Colors.white, size: 15),
+        icon: Icon(iconName, color: Colors.white, size: 18),
         onPressed: () {},
       ),
     );

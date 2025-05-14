@@ -1,10 +1,19 @@
+import 'package:brain.am/widgets/SliderVolume.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:remixicon/remixicon.dart';
 
-class BottomMusicController extends StatelessWidget {
+class BottomMusicController extends StatefulWidget {
   const BottomMusicController({super.key});
+
+  @override
+  State<BottomMusicController> createState() => _BottomMusicControllerState();
+}
+
+class _BottomMusicControllerState extends State<BottomMusicController> {
+  double volume = 0.5;
 
   @override
   Widget build(BuildContext context) {
@@ -34,21 +43,33 @@ class BottomMusicController extends StatelessWidget {
           ],
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             // Previous
             IconButton(
-              icon: FaIcon(RemixIcons.arrow_left_wide_line, color: Colors.white.withAlpha(200), size: 30,),
-              iconSize: 30,
+              icon: SvgPicture.asset(
+                'assets/icons/previous.svg',
+                width: 27,
+                colorFilter: ColorFilter.mode(
+                  Colors.white.withAlpha(200),
+                  BlendMode.srcIn,
+                ),
+              ),
               onPressed: () {
                 // Previous logic
               },
             ),
 
-            // Pause
+            // Pause (square)
             IconButton(
-              icon: Icon(RemixIcons.pause_line, size: 35, color: Colors.white,),
-              iconSize: 40,
+              icon: SvgPicture.asset(
+                'assets/icons/pause-circle.svg',
+                width: 37,
+                colorFilter: ColorFilter.mode(
+                  const Color.fromARGB(210, 255, 255, 255),
+                  BlendMode.srcIn,
+                ),
+              ),
               onPressed: () {
                 // Pause logic
               },
@@ -56,27 +77,37 @@ class BottomMusicController extends StatelessWidget {
 
             // Next
             IconButton(
-              icon: FaIcon(RemixIcons.play_reverse_line, color: Colors.white.withAlpha(200), size: 30,),
-              iconSize: 30,
+              icon: SvgPicture.asset(
+                'assets/icons/next.svg',
+                width: 27,
+                colorFilter: ColorFilter.mode(
+                  Colors.white.withAlpha(200),
+                  BlendMode.srcIn,
+                ),
+              ),
               onPressed: () {
-                // Previous logic
+                // Next logic
               },
             ),
 
             // Spacer
-            SizedBox(width: 30),
+            SizedBox(width: MediaQuery.of(context).size.width * 0.3),
 
-            // Volume Icon
-            Icon(Icons.volume_up, size: 24),
+            // Volume Icon (speaker-full)
+            SvgPicture.asset(
+              'assets/icons/speaker-full.svg',
+              width: 24,
+              colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+            ),
 
             // Volume Slider
-            Slider(
-              value: 0.5,
+            VolumeSlider(
+              value: volume,
               onChanged: (value) {
-                // Update volume logic
+                setState(() {
+                  volume = value;
+                });
               },
-              min: 0,
-              max: 1,
             ),
           ],
         ),
