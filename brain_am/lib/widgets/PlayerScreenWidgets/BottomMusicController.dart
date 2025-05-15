@@ -56,7 +56,7 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
               screenHeight: screenHeight, songName: 'SemiColon', songType: 'Post Rock',
             ),
 
-            AllControllerWidget(
+            AllMusicControlsWidget(
               screenWidth: screenWidth,
               screenHeight: screenHeight,
             ),
@@ -142,8 +142,8 @@ class FinalMusicProgressSlider extends StatelessWidget {
 //
 //
 
-class AllControllerWidget extends StatelessWidget {
-  const AllControllerWidget({
+class AllMusicControlsWidget extends StatelessWidget {
+  const AllMusicControlsWidget({
     super.key,
     required this.screenWidth,
     required this.screenHeight,
