@@ -5,10 +5,15 @@ class SongNameAndSubtext extends StatelessWidget {
     super.key,
     required this.screenWidth,
     required this.screenHeight,
+    required this.songName,
+    required this.songType,
   });
 
   final double screenWidth;
   final double screenHeight;
+
+  final String songName;
+  final String songType;
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +31,7 @@ class SongNameAndSubtext extends StatelessWidget {
               borderRadius: BorderRadius.circular(6),
             ),
             child: const Center(
-              child: Icon(
-                Icons.music_note,
-                size: 20,
-                color: Colors.grey,
-              ),
+              child: Icon(Icons.music_note, size: 20, color: Colors.grey),
             ),
           ),
           const SizedBox(width: 12),

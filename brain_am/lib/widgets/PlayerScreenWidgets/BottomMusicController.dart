@@ -53,7 +53,7 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
           children: [
             SongNameAndSubtext(
               screenWidth: screenWidth,
-              screenHeight: screenHeight,
+              screenHeight: screenHeight, songName: 'SemiColon', songType: 'Post Rock',
             ),
 
             AllControllerWidget(
