@@ -83,7 +83,7 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
               screenHeight: screenHeight,
               screenWidth: screenWidth,
             ),
-            
+
           ],
         ),
       ),
@@ -162,9 +162,9 @@ class AllControllerWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Shuffle(svgPath: 'assets/icons/shuffle.svg'),
-          PrevNextButton(svgPath: 'assets/icons/previous.svg'),
+          PrevButton(svgPath: 'assets/icons/previous.svg'),
           PauseButton(),
-          PrevNextButton(svgPath: 'assets/icons/next.svg'),
+          NextButton(svgPath: 'assets/icons/next.svg'),
           Loop(svgPath: 'assets/icons/loop.svg'),
         ],
       ),

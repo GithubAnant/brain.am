@@ -55,8 +55,8 @@ class PauseButton extends StatelessWidget {
 //
 //
 
-class PrevNextButton extends StatelessWidget {
-  const PrevNextButton({super.key, required this.svgPath});
+class NextButton extends StatelessWidget {
+  const NextButton({super.key, required this.svgPath});
 
   final String svgPath;
 
@@ -75,6 +75,39 @@ class PrevNextButton extends StatelessWidget {
     );
   }
 }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+class PrevButton extends StatelessWidget {
+  const PrevButton({super.key, required this.svgPath});
+
+  final String svgPath;
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: SvgPicture.asset(
+        svgPath,
+        width: 25,
+        colorFilter: ColorFilter.mode(
+          Colors.white.withAlpha(200),
+          BlendMode.srcIn,
+        ),
+      ),
+      onPressed: () {},
+    );
+  }
+}
+
 //
 //
 //
