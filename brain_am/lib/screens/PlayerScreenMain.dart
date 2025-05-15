@@ -1,4 +1,5 @@
 import 'package:brain.am/screens/LandingPage.dart';
+import 'package:brain.am/screens/PlayerPageContainers/CategoryContainer.dart';
 import 'package:brain.am/screens/PlayerPageContainers/HomeContainer.dart';
 import 'package:brain.am/widgets/PlayerScreenWidgets/BottomMusicController.dart';
 import 'package:brain.am/widgets/PlayerScreenWidgets/OptionsSidebar.dart';
@@ -36,7 +37,7 @@ class _PlayerScreenMainState extends State<PlayerScreenMain> {
 
           // Glassmorphic sidebar
           OptionsSidebar(),
-          HomeContainer(),
+          CategoryContainer(),
           BottomMusicController(),
         ],
       ),
