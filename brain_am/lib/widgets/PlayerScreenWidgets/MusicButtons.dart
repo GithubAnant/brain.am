@@ -31,6 +31,7 @@ class PauseButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
+      splashColor: Colors.transparent,
       icon: SvgPicture.asset(
         'assets/icons/pause-circle.svg',
         width: 45,

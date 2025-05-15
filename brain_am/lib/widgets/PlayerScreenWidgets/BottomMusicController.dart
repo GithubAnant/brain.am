@@ -51,10 +51,9 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
 
         child: Stack(
           children: [
-            SongNameAndSubtext(
+            SongNameAndSubtext1(
               screenWidth: screenWidth,
-              screenHeight: screenHeight, songName: 'SemiColon', songType: 'Post Rock',
-            ),
+              screenHeight: screenHeight,),
 
             AllMusicControlsWidget(
               screenWidth: screenWidth,

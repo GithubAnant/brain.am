@@ -1,25 +1,47 @@
 import 'package:flutter/material.dart';
 
-class SongNameAndSubtext extends StatelessWidget {
-  const SongNameAndSubtext({
+final String songName = "Semicolon";
+final String songType = "Post Rock";
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+class SongNameAndSubtext1 extends StatefulWidget {
+  const SongNameAndSubtext1({
     super.key,
     required this.screenWidth,
     required this.screenHeight,
-    required this.songName,
-    required this.songType,
   });
 
   final double screenWidth;
   final double screenHeight;
 
-  final String songName;
-  final String songType;
+  @override
+  State<SongNameAndSubtext1> createState() => _SongNameAndSubtext1State();
+}
 
+class _SongNameAndSubtext1State extends State<SongNameAndSubtext1> {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      left: screenWidth * 0.025,
-      top: screenHeight * 0.04,
+      left: widget.screenWidth * 0.025,
+      top: widget.screenHeight * 0.04,
       child: Row(
         children: [
           // Album art
@@ -37,7 +59,7 @@ class SongNameAndSubtext extends StatelessWidget {
           const SizedBox(width: 12),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children:  [
+            children: [
               Text(
                 songName,
                 style: TextStyle(
@@ -61,3 +83,69 @@ class SongNameAndSubtext extends StatelessWidget {
     );
   }
 }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+class SongNameAndSubtext2 extends StatefulWidget {
+  const SongNameAndSubtext2({
+    super.key,
+    required this.screenWidth,
+    required this.screenHeight,
+  });
+
+  final double screenWidth;
+  final double screenHeight;
+
+  @override
+  State<SongNameAndSubtext2> createState() => _SongNameAndSubtext2State();
+}
+
+class _SongNameAndSubtext2State extends State<SongNameAndSubtext2> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          songName,
+          style: const TextStyle(
+            fontFamily: 'Montserrat',
+            color: Colors.white,
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 3), // Reduced space
+        Text(
+          songType,
+          style: const TextStyle(
+            fontFamily: 'Montserrat',
+            color: Color.fromARGB(121, 255, 255, 255),
+            fontSize: 22, // 2% increase from 20
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+
+
