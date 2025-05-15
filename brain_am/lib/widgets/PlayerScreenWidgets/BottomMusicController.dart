@@ -59,16 +59,18 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Shuffle(svgPath: 'assets/icons/shuffle.svg'),
                   PrevNextButton(svgPath: 'assets/icons/previous.svg'),
                   PauseButton(),
                   PrevNextButton(svgPath: 'assets/icons/next.svg'),
+                  Loop(svgPath: 'assets/icons/loop.svg')
                 ],
               ),
             ),
 
             Positioned(
               right: screenWidth * 0.03,
-              top: screenHeight * 0.026,
+              top: screenHeight * 0.04,
               child: Row(
                 children: [
                   const SpeakerButton(),
@@ -250,6 +252,69 @@ class PrevNextButton extends StatelessWidget {
       icon: SvgPicture.asset(
         svgPath,
         width: 25,
+        colorFilter: ColorFilter.mode(
+          Colors.white.withAlpha(200),
+          BlendMode.srcIn,
+        ),
+      ),
+      onPressed: () {},
+    );
+  }
+}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+class Shuffle extends StatelessWidget {
+  const Shuffle({super.key, required this.svgPath});
+
+  final String svgPath;
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: SvgPicture.asset(
+        svgPath,
+        width: 22,
+        colorFilter: ColorFilter.mode(
+          Colors.white.withAlpha(200),
+          BlendMode.srcIn,
+        ),
+      ),
+      onPressed: () {},
+    );
+  }
+}
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+class Loop extends StatelessWidget {
+  const Loop({super.key, required this.svgPath});
+
+  final String svgPath;
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: SvgPicture.asset(
+        svgPath,
+        width: 20,
         colorFilter: ColorFilter.mode(
           Colors.white.withAlpha(200),
           BlendMode.srcIn,
