@@ -37,9 +37,9 @@ class SongNameAndSubtext extends StatelessWidget {
           const SizedBox(width: 12),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children:  [
               Text(
-                "SemiColon",
+                songName,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 14,
@@ -47,7 +47,7 @@ class SongNameAndSubtext extends StatelessWidget {
                 ),
               ),
               Text(
-                "Post-Rock",
+                songType,
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 12,
