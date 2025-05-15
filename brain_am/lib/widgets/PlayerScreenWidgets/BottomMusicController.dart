@@ -1,5 +1,7 @@
+import 'package:brain.am/widgets/PlayerScreenWidgets/MusicButtons.dart';
 import 'package:brain.am/widgets/PlayerScreenWidgets/MusicProgressSlider.dart';
 import 'package:brain.am/widgets/PlayerScreenWidgets/SliderVolume.dart';
+import 'package:brain.am/widgets/PlayerScreenWidgets/SongNameAndSubtext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -49,23 +51,14 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
 
         child: Stack(
           children: [
-            // Song info - left side
-            SongNameAndSubtext(screenWidth: screenWidth, screenHeight: screenHeight),
+            SongNameAndSubtext(
+              screenWidth: screenWidth,
+              screenHeight: screenHeight,
+            ),
 
-            Positioned(
-              left: 0,
-              right: screenWidth * 0.008,
-              top: screenHeight * 0.006,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Shuffle(svgPath: 'assets/icons/shuffle.svg'),
-                  PrevNextButton(svgPath: 'assets/icons/previous.svg'),
-                  PauseButton(),
-                  PrevNextButton(svgPath: 'assets/icons/next.svg'),
-                  Loop(svgPath: 'assets/icons/loop.svg')
-                ],
-              ),
+            AllControllerWidget(
+              screenWidth: screenWidth,
+              screenHeight: screenHeight,
             ),
 
             Positioned(
@@ -86,17 +79,11 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
               ),
             ),
 
-            Positioned(
-              left: 0,
-              right: 0,
-              bottom: screenHeight * 0.025,
-              child: Center(
-                child: SizedBox(
-                  width: screenWidth * 0.28,
-                  child: const MusicProgressSlider(),
-                ),
-              ),
+            FinalMusicProgressSlider(
+              screenHeight: screenHeight,
+              screenWidth: screenWidth,
             ),
+            
           ],
         ),
       ),
@@ -114,9 +101,49 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
 //
 //
 //
+//
+//
 
-class SongNameAndSubtext extends StatelessWidget {
-  const SongNameAndSubtext({
+class FinalMusicProgressSlider extends StatelessWidget {
+  const FinalMusicProgressSlider({
+    super.key,
+    required this.screenHeight,
+    required this.screenWidth,
+  });
+
+  final double screenHeight;
+  final double screenWidth;
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      left: 0,
+      right: 0,
+      bottom: screenHeight * 0.025,
+      child: Center(
+        child: SizedBox(
+          width: screenWidth * 0.28,
+          child: const MusicProgressSlider(),
+        ),
+      ),
+    );
+  }
+}
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+class AllControllerWidget extends StatelessWidget {
+  const AllControllerWidget({
     super.key,
     required this.screenWidth,
     required this.screenHeight,
@@ -128,199 +155,19 @@ class SongNameAndSubtext extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      left: screenWidth * 0.025,
-      top: screenHeight * 0.04,
+      left: 0,
+      right: screenWidth * 0.008,
+      top: screenHeight * 0.006,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Album art
-          Container(
-            width: 36,
-            height: 36,
-            decoration: BoxDecoration(
-              color: Colors.grey[300],
-              borderRadius: BorderRadius.circular(6),
-            ),
-            child: const Center(
-              child: Icon(
-                Icons.music_note,
-                size: 20,
-                color: Colors.grey,
-              ),
-            ),
-          ),
-          const SizedBox(width: 12),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              Text(
-                "SemiColon",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              Text(
-                "Post-Rock",
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-            ],
-          ),
+          Shuffle(svgPath: 'assets/icons/shuffle.svg'),
+          PrevNextButton(svgPath: 'assets/icons/previous.svg'),
+          PauseButton(),
+          PrevNextButton(svgPath: 'assets/icons/next.svg'),
+          Loop(svgPath: 'assets/icons/loop.svg'),
         ],
       ),
-    );
-  }
-}
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-class SpeakerButton extends StatelessWidget {
-  const SpeakerButton({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SvgPicture.asset(
-      'assets/icons/speaker-full.svg',
-      width: 16,
-      colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
-    );
-  }
-}
-
-//
-//
-//
-//
-//
-//
-//
-//
-//s
-//
-
-class PauseButton extends StatelessWidget {
-  const PauseButton({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      icon: SvgPicture.asset(
-        'assets/icons/pause-circle.svg',
-        width: 45,
-        colorFilter: ColorFilter.mode(
-          const Color.fromARGB(210, 255, 255, 255),
-          BlendMode.srcIn,
-        ),
-      ),
-      onPressed: () {},
-    );
-  }
-}
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-class PrevNextButton extends StatelessWidget {
-  const PrevNextButton({super.key, required this.svgPath});
-
-  final String svgPath;
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      icon: SvgPicture.asset(
-        svgPath,
-        width: 25,
-        colorFilter: ColorFilter.mode(
-          Colors.white.withAlpha(200),
-          BlendMode.srcIn,
-        ),
-      ),
-      onPressed: () {},
-    );
-  }
-}
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-class Shuffle extends StatelessWidget {
-  const Shuffle({super.key, required this.svgPath});
-
-  final String svgPath;
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      icon: SvgPicture.asset(
-        svgPath,
-        width: 22,
-        colorFilter: ColorFilter.mode(
-          Colors.white.withAlpha(200),
-          BlendMode.srcIn,
-        ),
-      ),
-      onPressed: () {},
-    );
-  }
-}
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-class Loop extends StatelessWidget {
-  const Loop({super.key, required this.svgPath});
-
-  final String svgPath;
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      icon: SvgPicture.asset(
-        svgPath,
-        width: 20,
-        colorFilter: ColorFilter.mode(
-          Colors.white.withAlpha(200),
-          BlendMode.srcIn,
-        ),
-      ),
-      onPressed: () {},
     );
   }
 }
