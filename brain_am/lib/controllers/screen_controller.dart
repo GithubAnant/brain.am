@@ -9,7 +9,7 @@ enum ScreenState {
 
 class ScreenController extends GetxController {
   // Observable variable to track current screen
-  var currentScreen = ScreenState.home.obs;
+  var currentScreen = ScreenState.player.obs;
   
   // Track previous screens for back navigation
   final List<ScreenState> _navigationHistory = [ScreenState.home];
