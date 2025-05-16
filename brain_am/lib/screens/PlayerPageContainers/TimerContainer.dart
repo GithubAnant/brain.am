@@ -3,7 +3,8 @@
 import 'dart:async';
 import 'package:brain.am/screens/PlayerPageContainers/HomeContainer.dart';
 import 'package:brain.am/widgets/ModeButtonWidget.dart';
-import 'package:brain.am/widgets/ResetPauseButton.dart';
+import 'package:brain.am/widgets/PlayerContainerBackgroundImage.dart';
+import 'package:brain.am/widgets/GlassButton.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
@@ -168,8 +169,10 @@ class _TimerContainerState extends State<TimerContainer> {
       child: Stack(
         children: [
           // Background Image
-          BackgroundImage(containerWidth: containerWidth, containerHeight: containerHeight),
-
+          BackgroundImage(
+            containerWidth: containerWidth,
+            containerHeight: containerHeight,
+          ),
 
           // Glassmorphic Container
           GlassmorphicContainer(
@@ -222,31 +225,36 @@ class _TimerContainerState extends State<TimerContainer> {
                       ),
                     ),
 
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 20),
 
                   // Timer controls
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  Column(
                     children: [
-                      // Play/Pause button
-                      GlassButton(
-                        icon: _isRunning ? Icons.pause : Icons.play_arrow,
-                        onTap: () {
-                          if (_isRunning) {
-                            _pauseTimer();
-                          } else {
-                            _startTimer();
-                          }
-                        },
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          // Play/Pause button
+                          GlassButton(
+                            icon: _isRunning ? Icons.pause : Icons.play_arrow,
+                            onTap: () {
+                              if (_isRunning) {
+                                _pauseTimer();
+                              } else {
+                                _startTimer();
+                              }
+                            },
+                          ),
+
+                          const SizedBox(width: 20),
+
+                          GlassButton(icon: Icons.refresh, onTap: _resetTimer),
+
+                          // Mode selection buttons
+                          const SizedBox(height: 160),
+                        ],
                       ),
 
-                      const SizedBox(width: 20),
 
-                      GlassButton(icon: Icons.refresh, onTap: _resetTimer),
-
-                      const SizedBox(height: 160),
-
-                      // Mode selection buttons
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -277,7 +285,6 @@ class _TimerContainerState extends State<TimerContainer> {
                         ],
                       ),
 
-                      const SizedBox(height: 30),
                     ],
                   ),
                 ],
@@ -289,5 +296,3 @@ class _TimerContainerState extends State<TimerContainer> {
     );
   }
 }
-
-
