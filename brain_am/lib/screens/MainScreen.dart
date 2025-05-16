@@ -1,6 +1,7 @@
 import 'package:brain.am/controllers/screen_controller.dart';
 import 'package:brain.am/screens/PlayerPageContainers/CategoryContainer.dart';
 import 'package:brain.am/screens/PlayerPageContainers/HomeContainer.dart';
+import 'package:brain.am/screens/PlayerPageContainers/TimerContainer.dart';
 import 'package:brain.am/widgets/LandingPageWidgets/DemoImage.dart';
 import 'package:brain.am/widgets/LandingPageWidgets/HeaderText.dart';
 import 'package:brain.am/widgets/LandingPageWidgets/HeroText.dart';
@@ -105,7 +106,7 @@ class Player extends StatelessWidget {
       key: ValueKey('player'),
       children: [
         OptionsSidebar(),
-        CategoryContainer(),
+        TimerContainer(),
         BottomMusicController(),
       ],
     );
