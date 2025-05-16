@@ -36,7 +36,7 @@ class _PlayerScreenMainState extends State<PlayerScreenMain> {
           ),
 
           // Glassmorphic sidebar
-          OptionsSidebar(),
+          // OptionsSidebar(),
           CategoryContainer(),
           BottomMusicController(),
         ],

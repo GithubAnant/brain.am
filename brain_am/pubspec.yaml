@@ -44,6 +44,7 @@ dependencies:
   remixicon: ^1.4.1
   audio_video_progress_bar: ^2.0.3
   flutter_svg: ^2.0.7
+  dropdown_button2: ^2.3.9
 
 
 dev_dependencies:

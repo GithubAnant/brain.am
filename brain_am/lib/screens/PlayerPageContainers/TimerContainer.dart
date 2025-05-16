@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
 // Timer mode enum
-enum TimerMode { infinite, countdown, workRest }
+enum TimerMode { infinite, countdown, pomodoro }
 
 class TimerContainer extends StatefulWidget {
   const TimerContainer({super.key});
@@ -22,14 +22,17 @@ class TimerContainer extends StatefulWidget {
 class _TimerContainerState extends State<TimerContainer> {
   TimerMode _currentMode = TimerMode.infinite;
 
+  int? _selectedWork = 50;
+  int? _selectedRest = 10;
+
   // Timer properties
   bool _isRunning = false;
   int _currentSeconds = 0;
   Timer? _timer;
 
   // Work-Rest settings
-  int _workMinutes = 25;
-  int _restMinutes = 5;
+  int _workMinutes = 50;
+  int _restMinutes = 10;
   bool _isWorkPeriod = true;
 
   // Text editing controllers
@@ -43,7 +46,7 @@ class _TimerContainerState extends State<TimerContainer> {
   @override
   void initState() {
     super.initState();
-    _updateWorkRestTimes();
+    _updatepomodoroTimes();
   }
 
   @override
@@ -54,11 +57,11 @@ class _TimerContainerState extends State<TimerContainer> {
     super.dispose();
   }
 
-  void _updateWorkRestTimes() {
-    _workMinutes = int.tryParse(_workController.text) ?? 25;
-    _restMinutes = int.tryParse(_restController.text) ?? 5;
+  void _updatepomodoroTimes() {
+    _workMinutes = (_selectedWork) ?? 50;
+    _restMinutes = (_selectedRest) ?? 10;
 
-    if (_currentMode == TimerMode.workRest) {
+    if (_currentMode == TimerMode.pomodoro) {
       setState(() {
         _currentSeconds = _isWorkPeriod ? _workMinutes * 60 : _restMinutes * 60;
       });
@@ -82,8 +85,8 @@ class _TimerContainerState extends State<TimerContainer> {
         }
         // When countdown reaches zero
         else {
-          if (_currentMode == TimerMode.workRest) {
-            _toggleWorkRest();
+          if (_currentMode == TimerMode.pomodoro) {
+            _togglepomodoro();
           } else {
             _pauseTimer();
           }
@@ -115,7 +118,7 @@ class _TimerContainerState extends State<TimerContainer> {
     });
   }
 
-  void _toggleWorkRest() {
+  void _togglepomodoro() {
     setState(() {
       _isWorkPeriod = !_isWorkPeriod;
       _currentSeconds = _isWorkPeriod ? _workMinutes * 60 : _restMinutes * 60;
@@ -157,7 +160,7 @@ class _TimerContainerState extends State<TimerContainer> {
   }
 
   String _getModeStatusText() {
-    if (_currentMode == TimerMode.workRest) {
+    if (_currentMode == TimerMode.pomodoro) {
       return _isWorkPeriod ? "Work Period" : "Rest Period";
     }
     return "";
@@ -219,7 +222,7 @@ class _TimerContainerState extends State<TimerContainer> {
                     ),
                   ),
 
-                  if (_currentMode == TimerMode.workRest)
+                  if (_currentMode == TimerMode.pomodoro)
                     Text(
                       _getModeStatusText(),
                       style: const TextStyle(
@@ -260,32 +263,36 @@ class _TimerContainerState extends State<TimerContainer> {
                         height: MediaQuery.of(context).size.height * 0.04,
                       ),
 
-                      // Work-Rest Input Fields (only shown in workRest mode)
-                      if (_currentMode == TimerMode.workRest)
+                      if (_currentMode == TimerMode.pomodoro)
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 10.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-
-                              DurationField(
-                                Controller: _workController,
+                              //
+                              DurationDropdown(
+                                value: _selectedWork,
+                                onChanged:
+                                    (val) =>
+                                        setState(() => _selectedWork = val),
                                 labelText: 'Work',
+                                options: [20, 30, 40, 50, 60],
                               ),
-
                               const SizedBox(width: 15),
-
-                              DurationField(
-                                Controller: _restController,
+                              DurationDropdown(
+                                value: _selectedRest,
+                                onChanged:
+                                    (val) =>
+                                        setState(() => _selectedRest = val),
                                 labelText: 'Rest',
+                                options: [5, 10, 15, 20, 25],
                               ),
-
                               const SizedBox(width: 15),
 
                               GlassButton2(
                                 icon: Icons.check,
                                 onTap: () {
-                                  _updateWorkRestTimes();
+                                  _updatepomodoroTimes();
                                   FocusScope.of(context).unfocus();
                                 },
                               ),
@@ -317,8 +324,8 @@ class _TimerContainerState extends State<TimerContainer> {
                           // Work-Rest timer button
                           ModeButtonWidget(
                             label: "Pomodoro",
-                            isActive: _currentMode == TimerMode.workRest,
-                            onTap: () => _setTimerMode(TimerMode.workRest),
+                            isActive: _currentMode == TimerMode.pomodoro,
+                            onTap: () => _setTimerMode(TimerMode.pomodoro),
                           ),
                         ],
                       ),
@@ -333,9 +340,3 @@ class _TimerContainerState extends State<TimerContainer> {
     );
   }
 }
-
-
-
-
-
-

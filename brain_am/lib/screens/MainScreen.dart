@@ -97,16 +97,30 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class Player extends StatelessWidget {
+class Player extends StatefulWidget {
   const Player({super.key});
 
+  @override
+  State<Player> createState() => _PlayerState();
+}
+
+class _PlayerState extends State<Player> {
+  Widget _currentContainer = const HomeContainer();
+
+  void _updateContainer(Widget container) {
+    setState(() {
+      _currentContainer = container;
+    });
+  }
+
+  // Default to HomeContainer
   @override
   Widget build(BuildContext context) {
     return Stack(
       key: ValueKey('player'),
       children: [
-        OptionsSidebar(),
-        TimerContainer(),
+        _currentContainer,
+        OptionsSidebar(onContainerChanged: _updateContainer),
         BottomMusicController(),
       ],
     );
