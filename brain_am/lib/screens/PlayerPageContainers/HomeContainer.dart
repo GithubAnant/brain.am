@@ -129,21 +129,24 @@ class IntervalButton extends StatelessWidget {
         colors: [Colors.white.withAlpha(128), Colors.white.withAlpha(77)],
       ),
       child: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.timer_outlined, color: Colors.white, size: 18),
-            const SizedBox(width: 8),
-            const Text(
-              "Interval",
-              style: TextStyle(
-                color: Colors.white,
-                fontFamily: 'Lato',
-                fontSize: 13,
-                fontWeight: FontWeight.w500,
+        child: GestureDetector(
+          onTap: (){},
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.timer_outlined, color: Colors.white, size: 18),
+              const SizedBox(width: 8),
+              const Text(
+                "Interval",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Lato',
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

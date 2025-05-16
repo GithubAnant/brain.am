@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:remixicon/remixicon.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Future<void> _launchURL(String url) async {
@@ -47,7 +49,7 @@ class _SocialLinkState extends State<SocialLink> {
                   : Colors.white.withAlpha(77),
               decoration: TextDecoration.underline,
             ),
-            child: const Text('@GithubAnant'),
+            child: Icon(RemixIcons.github_fill, color: Colors.white,),
           ),
         ),
       ),
