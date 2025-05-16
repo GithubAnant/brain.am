@@ -25,6 +25,9 @@ class CategoryContainer extends StatelessWidget {
             containerHeight: containerHeight,
           ),
 
+          BlackTint(containerWidth: containerWidth, containerHeight: containerHeight),
+
+
           GlassmorphicContainer(
             width: containerWidth,
             height: containerHeight,
@@ -38,7 +41,7 @@ class CategoryContainer extends StatelessWidget {
               ],
             ),
             border: 0.3,
-            blur: 0.5,
+            blur: 0,
             borderGradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,

@@ -37,7 +37,7 @@ class HomeContainer extends StatelessWidget {
               ],
             ),
             border: 0.3,
-            blur: 0.5,
+            blur: 0,
             borderGradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,

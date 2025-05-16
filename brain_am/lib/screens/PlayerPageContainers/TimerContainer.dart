@@ -182,6 +182,8 @@ class _TimerContainerState extends State<TimerContainer> {
             containerHeight: containerHeight,
           ),
 
+          BlackTint(containerWidth: containerWidth, containerHeight: containerHeight),
+
           // Glassmorphic Container
           GlassmorphicContainer(
             width: containerWidth,
@@ -196,7 +198,7 @@ class _TimerContainerState extends State<TimerContainer> {
               ],
             ),
             border: 0.3,
-            blur: 0.5,
+            blur: 0,
             borderGradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
