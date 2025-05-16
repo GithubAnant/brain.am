@@ -1,4 +1,5 @@
 import 'package:brain.am/screens/PlayerScreenMain.dart';
+import 'package:brain.am/widgets/PlayerContainerBackgroundImage.dart';
 import 'package:brain.am/widgets/PlayerScreenWidgets/SongNameAndSubtext.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
@@ -88,53 +89,6 @@ class HomeContainer extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-class BackgroundImage extends StatelessWidget {
-  const BackgroundImage({
-    super.key,
-    required this.containerWidth,
-    required this.containerHeight,
-  });
-
-  final double containerWidth;
-  final double containerHeight;
-
-  @override
-  Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(15),
-      child: SizedBox(
-        width: containerWidth,
-        height: containerHeight,
-        child: Image.asset(
-         'assets/images/MusicPhotos1/jaws-beach-in-the-bahamas-5k-8g.jpg', // Replace with your actual album art asset
-          fit: BoxFit.cover,
-          errorBuilder: (context, error, stackTrace) {
-            return Container(
-              color: Colors.grey[800],
-              child: const Center(
-                child: Icon(Icons.music_note, color: Colors.white54, size: 80),
-              ),
-            );
-          },
-        ),
       ),
     );
   }

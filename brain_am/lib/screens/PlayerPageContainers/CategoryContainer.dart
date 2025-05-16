@@ -1,7 +1,9 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers, avoid_print
 
+import 'package:brain.am/screens/PlayerPageContainers/HomeContainer.dart';
 import 'package:brain.am/widgets/GridItem.dart';
 import 'package:brain.am/widgets/GridTable.dart';
+import 'package:brain.am/widgets/PlayerContainerBackgroundImage.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:remixicon/remixicon.dart';
@@ -87,37 +89,3 @@ class CategoryContainer extends StatelessWidget {
 //
 //
 //
-
-class BackgroundImage extends StatelessWidget {
-  const BackgroundImage({
-    super.key,
-    required this.containerWidth,
-    required this.containerHeight,
-  });
-
-  final double containerWidth;
-  final double containerHeight;
-
-  @override
-  Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(15),
-      child: SizedBox(
-        width: containerWidth,
-        height: containerHeight,
-        child: Image.asset(
-          'assets/images/MusicPhotos1/jaws-beach-in-the-bahamas-5k-8g.jpg', // Same background image
-          fit: BoxFit.cover,
-          errorBuilder: (context, error, stackTrace) {
-            return Container(
-              color: Colors.grey[800],
-              child: const Center(
-                child: Icon(Icons.music_note, color: Colors.white54, size: 80),
-              ),
-            );
-          },
-        ),
-      ),
-    );
-  }
-}
