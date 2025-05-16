@@ -70,6 +70,8 @@ flutter:
 
 
   assets:
+  - assets/audio/start_working.mp3
+  - assets/audio/start_resting.mp3
 
   - assets/icons/  
   - assets/images/background.png

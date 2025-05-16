@@ -104,7 +104,7 @@ class _OptionsSidebarState extends State<OptionsSidebar> {
                   onPressed: () => _selectScreen(SelectedScreen.timer),
                 ),
                 IconSidebar(
-                  iconName: RemixIcons.hourglass_2_fill,
+                  iconName: RemixIcons.filter_2_line,
                   isSelected: _selectedScreen == SelectedScreen.uptime,
                   onPressed: () => _selectScreen(SelectedScreen.uptime),
                 ),
