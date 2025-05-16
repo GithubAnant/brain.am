@@ -254,7 +254,6 @@ class _TimerContainerState extends State<TimerContainer> {
                         ],
                       ),
 
-
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -284,7 +283,6 @@ class _TimerContainerState extends State<TimerContainer> {
                           ),
                         ],
                       ),
-
                     ],
                   ),
                 ],
