@@ -2,6 +2,7 @@
 
 import 'dart:async';
 import 'package:brain.am/screens/PlayerPageContainers/HomeContainer.dart';
+import 'package:brain.am/widgets/DurationField.dart';
 import 'package:brain.am/widgets/ModeButtonWidget.dart';
 import 'package:brain.am/widgets/PlayerContainerBackgroundImage.dart';
 import 'package:brain.am/widgets/GlassButton.dart';
@@ -9,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
 // Timer mode enum
-enum TimerMode { infinite, countdown, pomodoro }
+enum TimerMode { infinite, countdown, workRest }
 
 class TimerContainer extends StatefulWidget {
   const TimerContainer({super.key});
@@ -23,20 +24,45 @@ class _TimerContainerState extends State<TimerContainer> {
 
   // Timer properties
   bool _isRunning = false;
-  int _currentSeconds = 00; // Default 25 minutes for pomodoro
+  int _currentSeconds = 0;
   Timer? _timer;
 
-  // Pomodoro settings
-  final int _pomodoroTime = 1500; // 25 minutes
-  final int _shortBreakTime = 300; // 5 minutes
-  final int _longBreakTime = 900; // 15 minutes
-  int _pomodoroCount = 0;
-  bool _isBreak = false;
+  // Work-Rest settings
+  int _workMinutes = 25;
+  int _restMinutes = 5;
+  bool _isWorkPeriod = true;
+
+  // Text editing controllers
+  final TextEditingController _workController = TextEditingController(
+    text: "25",
+  );
+  final TextEditingController _restController = TextEditingController(
+    text: "5",
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    _updateWorkRestTimes();
+  }
 
   @override
   void dispose() {
     _timer?.cancel();
+    _workController.dispose();
+    _restController.dispose();
     super.dispose();
+  }
+
+  void _updateWorkRestTimes() {
+    _workMinutes = int.tryParse(_workController.text) ?? 25;
+    _restMinutes = int.tryParse(_restController.text) ?? 5;
+
+    if (_currentMode == TimerMode.workRest) {
+      setState(() {
+        _currentSeconds = _isWorkPeriod ? _workMinutes * 60 : _restMinutes * 60;
+      });
+    }
   }
 
   void _startTimer() {
@@ -50,14 +76,14 @@ class _TimerContainerState extends State<TimerContainer> {
         if (_currentMode == TimerMode.infinite) {
           _currentSeconds++;
         }
-        // For countdown and pomodoro, decrement
+        // For countdown and work-rest, decrement
         else if (_currentSeconds > 0) {
           _currentSeconds--;
         }
         // When countdown reaches zero
         else {
-          if (_currentMode == TimerMode.pomodoro) {
-            _handlePomodoroStateChange();
+          if (_currentMode == TimerMode.workRest) {
+            _toggleWorkRest();
           } else {
             _pauseTimer();
           }
@@ -83,37 +109,17 @@ class _TimerContainerState extends State<TimerContainer> {
       } else if (_currentMode == TimerMode.countdown) {
         _currentSeconds = 1500; // Default 25 minutes for countdown
       } else {
-        _currentSeconds = _pomodoroTime;
-        _isBreak = false;
-        _pomodoroCount = 0;
+        _isWorkPeriod = true;
+        _currentSeconds = _workMinutes * 60;
       }
     });
   }
 
-  void _handlePomodoroStateChange() {
-    if (_isBreak) {
-      // After break, start work
-      setState(() {
-        _currentSeconds = _pomodoroTime;
-        _isBreak = false;
-      });
-    } else {
-      // After work session, decide break type
-      _pomodoroCount++;
-      if (_pomodoroCount % 4 == 0) {
-        // Every 4th pomodoro gets a long break
-        setState(() {
-          _currentSeconds = _longBreakTime;
-          _isBreak = true;
-        });
-      } else {
-        // Other pomodoros get short breaks
-        setState(() {
-          _currentSeconds = _shortBreakTime;
-          _isBreak = true;
-        });
-      }
-    }
+  void _toggleWorkRest() {
+    setState(() {
+      _isWorkPeriod = !_isWorkPeriod;
+      _currentSeconds = _isWorkPeriod ? _workMinutes * 60 : _restMinutes * 60;
+    });
   }
 
   void _setTimerMode(TimerMode mode) {
@@ -129,9 +135,8 @@ class _TimerContainerState extends State<TimerContainer> {
         } else if (mode == TimerMode.countdown) {
           _currentSeconds = 1500; // 25 minutes
         } else {
-          _currentSeconds = _pomodoroTime;
-          _isBreak = false;
-          _pomodoroCount = 0;
+          _isWorkPeriod = true;
+          _currentSeconds = _workMinutes * 60;
         }
       });
     }
@@ -152,8 +157,8 @@ class _TimerContainerState extends State<TimerContainer> {
   }
 
   String _getModeStatusText() {
-    if (_currentMode == TimerMode.pomodoro) {
-      return _isBreak ? "Break Period" : "Focus Period";
+    if (_currentMode == TimerMode.workRest) {
+      return _isWorkPeriod ? "Work Period" : "Rest Period";
     }
     return "";
   }
@@ -214,7 +219,7 @@ class _TimerContainerState extends State<TimerContainer> {
                     ),
                   ),
 
-                  if (_currentMode == TimerMode.pomodoro)
+                  if (_currentMode == TimerMode.workRest)
                     Text(
                       _getModeStatusText(),
                       style: const TextStyle(
@@ -225,7 +230,7 @@ class _TimerContainerState extends State<TimerContainer> {
                       ),
                     ),
 
-                  const SizedBox(height: 20),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
 
                   // Timer controls
                   Column(
@@ -244,14 +249,52 @@ class _TimerContainerState extends State<TimerContainer> {
                               }
                             },
                           ),
-
-                          const SizedBox(width: 20),
-
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.02,
+                          ),
                           GlassButton(icon: Icons.refresh, onTap: _resetTimer),
-
-                          // Mode selection buttons
-                          const SizedBox(height: 160),
                         ],
+                      ),
+
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.04,
+                      ),
+
+                      // Work-Rest Input Fields (only shown in workRest mode)
+                      if (_currentMode == TimerMode.workRest)
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+
+                              DurationField(
+                                Controller: _workController,
+                                labelText: 'Work',
+                              ),
+
+                              const SizedBox(width: 15),
+
+                              DurationField(
+                                Controller: _restController,
+                                labelText: 'Rest',
+                              ),
+
+                              const SizedBox(width: 15),
+
+                              GlassButton2(
+                                icon: Icons.check,
+                                onTap: () {
+                                  _updateWorkRestTimes();
+                                  FocusScope.of(context).unfocus();
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.04,
                       ),
 
                       Row(
@@ -263,23 +306,19 @@ class _TimerContainerState extends State<TimerContainer> {
                             isActive: _currentMode == TimerMode.infinite,
                             onTap: () => _setTimerMode(TimerMode.infinite),
                           ),
-
                           const SizedBox(width: 15),
-
                           // Countdown timer button
                           ModeButtonWidget(
                             label: "Timer",
                             isActive: _currentMode == TimerMode.countdown,
                             onTap: () => _setTimerMode(TimerMode.countdown),
                           ),
-
                           const SizedBox(width: 15),
-
-                          // Pomodoro timer button
+                          // Work-Rest timer button
                           ModeButtonWidget(
                             label: "Pomodoro",
-                            isActive: _currentMode == TimerMode.pomodoro,
-                            onTap: () => _setTimerMode(TimerMode.pomodoro),
+                            isActive: _currentMode == TimerMode.workRest,
+                            onTap: () => _setTimerMode(TimerMode.workRest),
                           ),
                         ],
                       ),
@@ -294,3 +333,9 @@ class _TimerContainerState extends State<TimerContainer> {
     );
   }
 }
+
+
+
+
+
+
