@@ -25,25 +25,37 @@ class SpeakerButton extends StatelessWidget {
 //s
 //
 
-class PauseButton extends StatelessWidget {
+class PauseButton extends StatefulWidget {
   const PauseButton({super.key});
+
+  @override
+  State<PauseButton> createState() => _PauseButtonState();
+}
+
+class _PauseButtonState extends State<PauseButton> {
+  bool isPaused = true;
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
       splashColor: Colors.transparent,
       icon: SvgPicture.asset(
-        'assets/icons/pause-circle.svg',
+        'assets/icons/${isPaused ? 'pause-circle' : 'play'}.svg',
         width: 45,
-        colorFilter: ColorFilter.mode(
-          const Color.fromARGB(210, 255, 255, 255),
+        colorFilter: const ColorFilter.mode(
+          Color.fromARGB(210, 255, 255, 255),
           BlendMode.srcIn,
         ),
       ),
-      onPressed: () {},
+      onPressed: () {
+        setState(() {
+          isPaused = !isPaused;
+        });
+      },
     );
   }
 }
+
 
 //
 //
