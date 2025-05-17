@@ -45,7 +45,8 @@ dependencies:
   audio_video_progress_bar: ^2.0.3
   flutter_svg: ^2.0.7
   dropdown_button2: ^2.3.9
-
+  audioplayers: ^6.4.0
+  just_audio: ^0.10.3
 
 dev_dependencies:
   flutter_test:
@@ -70,9 +71,7 @@ flutter:
 
 
   assets:
-  - assets/audio/start_working.mp3
-  - assets/audio/start_resting.mp3
-
+  - assets/audio/
   - assets/icons/  
   - assets/images/background.png
   - assets/images/image.png

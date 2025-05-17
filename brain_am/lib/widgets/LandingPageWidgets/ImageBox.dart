@@ -1,21 +1,63 @@
 import 'package:flutter/material.dart';
+import 'package:just_audio/just_audio.dart';
 
-class ImageBox extends StatefulWidget {
-  const ImageBox({
+class AudioImageBox extends StatefulWidget {
+  const AudioImageBox({
     super.key,
     required this.imagePath,
     required this.description,
+    required this.audioPath,
   });
 
   final String imagePath;
   final String description;
+  final String audioPath;
 
   @override
-  State<ImageBox> createState() => _ImageBoxState();
+  State<AudioImageBox> createState() => _AudioImageBoxState();
 }
 
-class _ImageBoxState extends State<ImageBox> {
+class _AudioImageBoxState extends State<AudioImageBox> {
   bool _isHovered = false;
+  late AudioPlayer _audioPlayer;
+  bool _isInitialized = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _initAudioPlayer();
+  }
+
+  Future<void> _initAudioPlayer() async {
+    _audioPlayer = AudioPlayer();
+    try {
+      await _audioPlayer.setAsset(widget.audioPath);
+      setState(() {
+        _isInitialized = true;
+      });
+    } catch (e) {
+      debugPrint('Error loading audio file: $e');
+    }
+  }
+
+  @override
+  void dispose() {
+    _audioPlayer.dispose();
+    super.dispose();
+  }
+
+  void _playAudio() {
+    if (_isInitialized) {
+      _audioPlayer.play();
+    }
+  }
+
+  void _stopAudio() {
+    if (_isInitialized) {
+      _audioPlayer.pause();
+      _audioPlayer.seek(Duration.zero);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +69,14 @@ class _ImageBoxState extends State<ImageBox> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         MouseRegion(
-          onEnter: (_) => setState(() => _isHovered = true),
-          onExit: (_) => setState(() => _isHovered = false),
+          onEnter: (_) {
+            setState(() => _isHovered = true);
+            _playAudio();
+          },
+          onExit: (_) {
+            setState(() => _isHovered = false);
+            _stopAudio();
+          },
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 200),
             curve: Curves.easeInOut,
@@ -48,7 +96,42 @@ class _ImageBoxState extends State<ImageBox> {
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(13),
-              child: Image.asset(widget.imagePath, fit: BoxFit.cover),
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Image.asset(
+                    widget.imagePath, 
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) {
+                      return Container(
+                        color: Colors.grey,
+                        child: const Center(
+                          child: Text('Image not found',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                  if (_isHovered)
+                    Positioned(
+                      bottom: 10,
+                      right: 10,
+                      child: Container(
+                        padding: const EdgeInsets.all(4),
+                        decoration: BoxDecoration(
+                          color: Colors.black.withOpacity(0.5),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Icon(
+                          Icons.volume_up,
+                          color: Colors.white,
+                          size: 20,
+                        ),
+                      ),
+                    ),
+                ],
+              ),
             ),
           ),
         ),

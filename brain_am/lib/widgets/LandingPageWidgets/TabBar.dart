@@ -10,34 +10,85 @@ class TabBarDisplayWidget extends StatelessWidget {
 
   final TabController _tabController;
 
-List<ImageBox> workImageBoxes = [
-  ImageBox(imagePath: 'assets/images/LandingPageImages/work1.png', description: 'Deep Work'),
-  ImageBox(imagePath: 'assets/images/LandingPageImages/work2.png', description: 'Lofi Beats'),
-  ImageBox(imagePath: 'assets/images/LandingPageImages/work3.png', description: 'Coding'),
+List<AudioImageBox> workImageBoxes = [
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/work1.png',
+    description: 'Deep Work',
+    audioPath: 'assets/audio/deepwork.mp3',
+  ),
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/work2.png',
+    description: 'Lofi Beats',
+    audioPath: 'assets/audio/lofi.mp3',
+  ),
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/work3.png',
+    description: 'Coding',
+    audioPath: 'assets/audio/upbeat.mp3',
+  ),
 ];
 
-List<ImageBox> chillImageBoxes = [
-  ImageBox(imagePath: 'assets/images/LandingPageImages/chill1.png', description: 'Instrumental'),
-  ImageBox(imagePath: 'assets/images/LandingPageImages/chill2.png', description: 'Upbeat'),
-  ImageBox(imagePath: 'assets/images/LandingPageImages/chill3.png', description: 'Vintage'),
+List<AudioImageBox> chillImageBoxes = [
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/chill1.png',
+    description: 'Instrumental',
+    audioPath: 'assets/audio/instrumental.mp3',
+  ),
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/chill2.png',
+    description: 'Upbeat',
+    audioPath: 'assets/audio/coding.mp3',
+  ),
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/chill3.png',
+    description: 'Vintage',
+    audioPath: 'assets/audio/vintage.mp3',
+  ),
 ];
 
-List<ImageBox> sleepImageBoxes = [
-  ImageBox(imagePath: 'assets/images/LandingPageImages/sleep1.png', description: 'Rain Sounds'),
-  ImageBox(imagePath: 'assets/images/LandingPageImages/sleep2.png', description: 'Ambient'),
+List<AudioImageBox> sleepImageBoxes = [
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/sleep1.png',
+    description: 'Rain Sounds',
+    audioPath: 'assets/audio/rain.mp3',
+  ),
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/sleep2.png',
+    description: 'Ambient',
+    audioPath: 'assets/audio/ambient.mp3',
+  ),
 ];
 
-List<ImageBox> studyImageBoxes = [
-  ImageBox(imagePath: 'assets/images/LandingPageImages/study1.png', description: 'Rainforest'),
-  ImageBox(imagePath: 'assets/images/LandingPageImages/study2.png', description: 'Electronic'),
-  ImageBox(imagePath: 'assets/images/LandingPageImages/study3.png', description: 'Underwater'),
+List<AudioImageBox> studyImageBoxes = [
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/study1.png',
+    description: 'Rainforest',
+    audioPath: 'assets/audio/rainforest.mp3',
+  ),
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/study2.png',
+    description: 'Electronic',
+    audioPath: 'assets/audio/electric.mp3',
+  ),
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/study3.png',
+    description: 'Underwater',
+    audioPath: 'assets/audio/underwater.mp3',
+  ),
 ];
 
-List<ImageBox> focusImageBoxes = [
-  ImageBox(imagePath: 'assets/images/LandingPageImages/focus1.png', description: 'Concentrate'),
-  ImageBox(imagePath: 'assets/images/LandingPageImages/focus2.png', description: 'Post Rock'),
+List<AudioImageBox> focusImageBoxes = [
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/focus1.png',
+    description: 'Concentrate',
+    audioPath: 'assets/audio/concentrate.mp3',
+  ),
+  AudioImageBox(
+    imagePath: 'assets/images/LandingPageImages/focus2.png',
+    description: 'Post Rock',
+    audioPath: 'assets/audio/postrock.mp3',
+  ),
 ];
-
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +117,7 @@ class RowImageBox extends StatelessWidget {
     required this.ImageBoxes,
   });
 
-  final List<ImageBox> ImageBoxes;
+  final List<AudioImageBox> ImageBoxes;
 
   @override
   Widget build(BuildContext context) {
