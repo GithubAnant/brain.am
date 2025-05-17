@@ -1,5 +1,3 @@
-
-
 // Neural Effect Button Widget
 import 'package:brain.am/screens/PlayerPageContainers/SpecificsContainer.dart';
 import 'package:flutter/material.dart';
