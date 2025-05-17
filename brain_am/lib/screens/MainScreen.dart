@@ -41,9 +41,10 @@ class MainScreen extends StatelessWidget {
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
-                    'Made by :',
+                    'Made by : Anant',
                     style: TextStyle(
                       color: const Color.fromARGB(159, 255, 255, 255),
                       fontSize: 16,
@@ -54,7 +55,7 @@ class MainScreen extends StatelessWidget {
                   SocialLink(
                     icon: Icon(
                       RemixIcons.github_fill,
-                      color: Colors.white,
+                      color: Colors.white,  
                       size: 30,
                     ),
                     urlLink: 'https://github.com/GithubAnant',

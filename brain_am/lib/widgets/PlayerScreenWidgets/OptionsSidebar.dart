@@ -117,6 +117,36 @@ class _OptionsSidebarState extends State<OptionsSidebar> {
   }
 }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 class IconSidebar extends StatelessWidget {
   const IconSidebar({
     super.key,
