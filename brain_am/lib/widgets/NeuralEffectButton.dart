@@ -44,24 +44,27 @@ class NeuralEffectButton extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Icon and label row
-            Row(
-              children: [
-                Icon(
-                  RemixIcons.menu_line,
-                  color: isSelected ? Colors.white : Colors.grey,
-                  size: 18,
-                ),
-                const SizedBox(width: 8),
-                Text(
-                  label,
-                  style: TextStyle(
-                    fontFamily: 'Montserrat',
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Icon(
+                    RemixIcons.menu_line,
                     color: isSelected ? Colors.white : Colors.grey,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
+                    size: 18,
                   ),
-                ),
-              ],
+                  const SizedBox(width: 8),
+                  Text(
+                    label,
+                    style: TextStyle(
+                      fontFamily: 'Montserrat',
+                      color: isSelected ? Colors.white : Colors.grey,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
             ),
 
             const SizedBox(height: 10),

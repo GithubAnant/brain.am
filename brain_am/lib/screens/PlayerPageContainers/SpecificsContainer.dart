@@ -1,5 +1,6 @@
 import 'package:brain.am/screens/PlayerScreenMain.dart';
-import 'package:brain.am/widgets/NerualEffectButton.dart';
+import 'package:brain.am/widgets/CategoryChip.dart';
+import 'package:brain.am/widgets/NeuralEffectButton.dart';
 import 'package:brain.am/widgets/PlayerContainerBackgroundImage.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
@@ -68,11 +69,12 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
     });
   }
 
-  // void _resetFilters() {
-  //   setState(() {
-  //     _selectedCategories.clear();
-  //   });
-  // }
+  // ignore: unused_element
+  void _resetFilters() {
+    setState(() {
+      _selectedCategories.clear();
+    });
+  }
 
   void _updateNeuralLevel(NeuralEffectLevel level) {
     setState(() {
@@ -124,144 +126,101 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
                 const Color.fromARGB(210, 194, 194, 194),
               ],
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // CATEGORIES section
-                  Text(
-                    "CATEGORIES",
-                    style: GoogleFonts.montserrat(
-                      color: Colors.grey,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // CATEGORIES section
+                    Text(
+                      "CATEGORIES",
+                      style: GoogleFonts.montserrat(
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
                     ),
-                  ),
-
-                  const SizedBox(height: 20),
-
-                  // Category chips in a wrapped layout
-                  Wrap(
-                    spacing: 8,
-                    runSpacing: 10,
-                    children:
-                        categories.map((category) {
-                          return CategoryChip(
-                            category: category,
-                            isSelected: _selectedCategories.contains(category),
-                            onTap: () => _toggleCategory(category),
-                          );
-                        }).toList(),
-                  ),
-
-                  const SizedBox(height: 40),
-
-                  // NEURAL EFFECT LEVEL section
-                  Text(
-                    "NEURAL EFFECT",
-                    style: GoogleFonts.montserrat(
-                      color: Colors.grey,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
+              
+                    const SizedBox(height: 20),
+              
+                    // Category chips in a wrapped layout
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 10,
+                      children:
+                          categories.map((category) {
+                            return CategoryChip(
+                              category: category,
+                              isSelected: _selectedCategories.contains(category),
+                              onTap: () => _toggleCategory(category),
+                            );
+                          }).toList(),
                     ),
-                  ),
-
-                  const SizedBox(height: 20),
-
-                  // Neural effect selection buttons
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      NeuralEffectButton(
-                        level: NeuralEffectLevel.low,
-                        label: "low effect",
-                        description:
-                            "Use this effect level if you are generally sensitive to sounds",
-                        isSelected: _neuralEffectLevel == NeuralEffectLevel.low,
-                        onTap: () => _updateNeuralLevel(NeuralEffectLevel.low),
+              
+                    const SizedBox(height: 40),
+              
+                    // NEURAL EFFECT LEVEL section
+                    Text(
+                      "NEURAL EFFECT",
+                      style: GoogleFonts.montserrat(
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
                       ),
-                      NeuralEffectButton(
-                        level: NeuralEffectLevel.medium,
-                        label: "medium effect",
-                        description:
-                            "Our standard level of neural phase locking",
-                        isSelected:
-                            _neuralEffectLevel == NeuralEffectLevel.medium,
-                        onTap:
-                            () => _updateNeuralLevel(NeuralEffectLevel.medium),
-                      ),
-                      NeuralEffectButton(
-                        level: NeuralEffectLevel.high,
-                        label: "high effect",
-                        description:
-                            "Try the strongest level for extra stimulation",
-                        isSelected:
-                            _neuralEffectLevel == NeuralEffectLevel.high,
-                        onTap: () => _updateNeuralLevel(NeuralEffectLevel.high),
-                      ),
-                    ],
-                  ),
-
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-
-                  // Action buttons
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      TextButton(
-                        onPressed: () {
-                          
-                        },
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.transparent,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25),
-                            side: const BorderSide(color: Colors.grey),
-                          ),
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 30,
-                            vertical: 15,
-                          ),
+                    ),
+              
+                    const SizedBox(height: 20),
+              
+                    // Neural effect selection buttons
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        NeuralEffectButton(
+                          level: NeuralEffectLevel.low,
+                          label: "low effect",
+                          description:
+                              "Use this effect level if you are generally sensitive to sounds",
+                          isSelected: _neuralEffectLevel == NeuralEffectLevel.low,
+                          onTap: () => _updateNeuralLevel(NeuralEffectLevel.low),
                         ),
-                        child: Text(
-                          "cancel",
-                          style: GoogleFonts.montserrat(
-                            color: Colors.grey,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                          ),
+                        NeuralEffectButton(
+                          level: NeuralEffectLevel.medium,
+                          label: "medium effect",
+                          description:
+                              "Our standard level of neural phase locking",
+                          isSelected:
+                              _neuralEffectLevel == NeuralEffectLevel.medium,
+                          onTap:
+                              () => _updateNeuralLevel(NeuralEffectLevel.medium),
                         ),
-                      ),
+                        NeuralEffectButton(
+                          level: NeuralEffectLevel.high,
+                          label: "high effect",
+                          description:
+                              "Try the strongest level for extra stimulation",
+                          isSelected:
+                              _neuralEffectLevel == NeuralEffectLevel.high,
+                          onTap: () => _updateNeuralLevel(NeuralEffectLevel.high),
+                        ),
+                      ],
+                    ),
+              
+                    SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+              
+                    // Action buttons
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        CancelButton(),
+              
+                        const SizedBox(width: 10),
 
-                      const SizedBox(width: 10),
-
-                      TextButton(
-                        onPressed: () {
-                          // Handle apply changes action
-                        },
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.deepPurple,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25),
-                          ),
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 30,
-                            vertical: 15,
-                          ),
-                        ),
-                        child: Text(
-                          "apply changes",
-                          style: GoogleFonts.montserrat(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                        ApplyChangesButton(),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -271,48 +230,85 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
   }
 }
 
-// Reusable Category Chip Widget
-class CategoryChip extends StatelessWidget {
-  final String category;
-  final bool isSelected;
-  final VoidCallback onTap;
 
-  const CategoryChip({
+
+
+
+
+
+
+
+
+
+
+class ApplyChangesButton extends StatelessWidget {
+  const ApplyChangesButton({
     super.key,
-    required this.category,
-    required this.isSelected,
-    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
-        decoration: BoxDecoration(
-          color:
-              isSelected
-                  ? const Color.fromARGB(255, 55, 46, 114)
-                  : const Color.fromARGB(148, 55, 46, 114),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: isSelected ? Colors.deepPurple.shade300 : Colors.transparent,
-            width: 1,
-          ),
+    return TextButton(
+      onPressed: () {
+        // Handle apply changes action
+      },
+      style: TextButton.styleFrom(
+        backgroundColor: Colors.deepPurple,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(25),
         ),
-        child: Text(
-          category,
-          style: GoogleFonts.montserrat(
-            color: isSelected ? Colors.white : Colors.grey,
-            fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-            fontSize: 13,
-          ),
+        padding:  EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width*0.021,
+          vertical: MediaQuery.of(context).size.width*0.011,
+        ),
+      ),
+      child: Text(
+        "apply changes",
+        style: GoogleFonts.montserrat(
+          color: Colors.white,
+          fontWeight: FontWeight.w500,
+          fontSize: MediaQuery.of(context).size.width*0.011,
         ),
       ),
     );
   }
 }
+
+class CancelButton extends StatelessWidget {
+  const CancelButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        
+      },
+      style: TextButton.styleFrom(
+        backgroundColor: Colors.transparent,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(25),
+          side: const BorderSide(color: Colors.grey),
+        ),
+        padding: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width*0.021,
+          vertical: MediaQuery.of(context).size.width*0.011,
+        ),
+      ),
+      child: Text(
+        "cancel",
+        style: GoogleFonts.montserrat(
+          color: Colors.grey,
+          fontWeight: FontWeight.w500,
+          fontSize: MediaQuery.of(context).size.width*0.011,
+        ),
+      ),
+    );
+  }
+}
+
+
 
 // This class provides static access to the SpecificsContainer controllers
 class SpecificsController {
