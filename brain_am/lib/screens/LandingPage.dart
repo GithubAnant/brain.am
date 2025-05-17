@@ -35,7 +35,7 @@ class BrainAMHome extends StatelessWidget {
             left: 0,
             right: 0,
             child: Center(
-              child: SocialLink(urlLink: 'https://github.com/GithubAnant')
+              // child: SocialLink(urlLink: 'https://github.com/GithubAnant')
             ),
           ),
 

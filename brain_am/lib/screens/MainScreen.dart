@@ -1,19 +1,16 @@
 import 'package:brain.am/controllers/screen_controller.dart';
-import 'package:brain.am/screens/PlayerPageContainers/CategoryContainer.dart';
 import 'package:brain.am/screens/PlayerPageContainers/HomeContainer.dart';
-import 'package:brain.am/screens/PlayerPageContainers/TimerContainer.dart';
 import 'package:brain.am/widgets/LandingPageWidgets/DemoImage.dart';
-import 'package:brain.am/widgets/LandingPageWidgets/HeaderText.dart';
-import 'package:brain.am/widgets/LandingPageWidgets/HeroText.dart';
+
 import 'package:brain.am/widgets/LandingPageWidgets/MainContainer.dart';
 import 'package:brain.am/widgets/SocialLink.dart';
-import 'package:brain.am/widgets/LandingPageWidgets/StartListeningButton.dart';
 import 'package:brain.am/widgets/ChooseModeScreenWidgets/FocusGlassContainer.dart';
 import 'package:brain.am/widgets/ChooseModeScreenWidgets/SmallGlassMorphContainer.dart';
 import 'package:brain.am/widgets/PlayerScreenWidgets/BottomMusicController.dart';
 import 'package:brain.am/widgets/PlayerScreenWidgets/OptionsSidebar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:remixicon/remixicon.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({super.key});
@@ -42,7 +39,38 @@ class MainScreen extends StatelessWidget {
             left: 0,
             right: 0,
             child: Center(
-              child: SocialLink(urlLink: 'https://github.com/GithubAnant'),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'Made by :',
+                    style: TextStyle(
+                      color: const Color.fromARGB(159, 255, 255, 255),
+                      fontSize: 16,
+                      fontFamily: 'Montserrat',
+                    ),
+                  ),
+                  SizedBox(width: 6),
+                  SocialLink(
+                    icon: Icon(
+                      RemixIcons.github_fill,
+                      color: Colors.white,
+                      size: 30,
+                    ),
+                    urlLink: 'https://github.com/GithubAnant',
+                  ),
+                  SocialLink(
+                    icon: Icon(
+                      RemixIcons.linkedin_box_fill,
+                      color: Colors.white,
+                      size: 30,
+                    ),
+                    urlLink:
+                        'https://www.linkedin.com/in/anant-singhal-linkdn/',
+                  ),
+                  SizedBox(width: 30),
+                ],
+              ),
             ),
           ),
 
@@ -82,6 +110,19 @@ class MainScreen extends StatelessWidget {
   }
 }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -96,6 +137,19 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 class Player extends StatefulWidget {
   const Player({super.key});
@@ -126,6 +180,19 @@ class _PlayerState extends State<Player> {
     );
   }
 }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 class ChooseMode extends StatelessWidget {
   const ChooseMode({super.key});

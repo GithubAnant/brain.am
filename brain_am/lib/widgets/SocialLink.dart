@@ -11,8 +11,9 @@ Future<void> _launchURL(String url) async {
 }
 
 class SocialLink extends StatefulWidget {
-  const SocialLink({super.key, required this.urlLink});
+  const SocialLink({super.key, required this.urlLink, required this.icon});
   final String urlLink;
+  final Icon icon;
 
   @override
   State<SocialLink> createState() => _SocialLinkState();
@@ -36,7 +37,7 @@ class _SocialLinkState extends State<SocialLink> {
         onEnter: (_) => setState(() => _isHovered = true),
         onExit: (_) => setState(() => _isHovered = false),
         child: AnimatedScale(
-          scale: _isHovered ? 1.02 : 1.0,
+          scale: _isHovered ? 1.06 : 1.0,
           duration: const Duration(milliseconds: 200),
           curve: Curves.easeOut,
           child: AnimatedDefaultTextStyle(
@@ -49,7 +50,7 @@ class _SocialLinkState extends State<SocialLink> {
                   : Colors.white.withAlpha(77),
               decoration: TextDecoration.underline,
             ),
-            child: Icon(RemixIcons.github_fill, color: Colors.white,),
+            child: widget.icon,
           ),
         ),
       ),
