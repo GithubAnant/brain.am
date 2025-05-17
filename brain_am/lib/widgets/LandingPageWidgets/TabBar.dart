@@ -18,7 +18,7 @@ List<ImageBox> workImageBoxes = [
 
 List<ImageBox> chillImageBoxes = [
   ImageBox(imagePath: 'assets/images/LandingPageImages/chill1.png', description: 'Instrumental'),
-  ImageBox(imagePath: 'assets/images/LandingPageImages/chill2.png', description: 'Lofi'),
+  ImageBox(imagePath: 'assets/images/LandingPageImages/chill2.png', description: 'Upbeat'),
   ImageBox(imagePath: 'assets/images/LandingPageImages/chill3.png', description: 'Vintage'),
 ];
 
