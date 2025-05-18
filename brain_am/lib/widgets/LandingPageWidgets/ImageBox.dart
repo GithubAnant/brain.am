@@ -25,16 +25,20 @@ class _AudioImageBoxState extends State<AudioImageBox> {
   @override
   void initState() {
     super.initState();
+    _audioPlayer = AudioPlayer();
     _initAudioPlayer();
   }
 
   Future<void> _initAudioPlayer() async {
-    _audioPlayer = AudioPlayer();
     try {
+      // Properly await the audio loading and mark as initialized only when complete
       await _audioPlayer.setAsset(widget.audioPath);
-      setState(() {
-        _isInitialized = true;
-      });
+      // Only set _isInitialized to true if the widget is still mounted
+      if (mounted) {
+        setState(() {
+          _isInitialized = true;
+        });
+      }
     } catch (e) {
       debugPrint('Error loading audio file: $e');
     }
@@ -48,6 +52,7 @@ class _AudioImageBoxState extends State<AudioImageBox> {
 
   void _playAudio() {
     if (_isInitialized) {
+      _audioPlayer.seek(Duration.zero);
       _audioPlayer.play();
     }
   }
@@ -114,39 +119,68 @@ class _AudioImageBoxState extends State<AudioImageBox> {
                     },
                   ),
                   if (_isHovered)
-                    Positioned(
-                      bottom: 10,
-                      right: 10,
-                      child: Container(
-                        padding: const EdgeInsets.all(4),
-                        decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.5),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: const Icon(
-                          Icons.volume_up,
-                          color: Colors.white,
-                          size: 20,
-                        ),
-                      ),
-                    ),
+                    PlayingNowIcon(),
                 ],
               ),
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 25, top: 15),
-          child: Text(
-            widget.description,
-            style: TextStyle(
-              color: const Color.fromARGB(255, 255, 233, 208),
-              fontSize: MediaQuery.of(context).size.width * 0.012,
-              fontFamily: 'Montserrat',
-            ),
-          ),
-        ),
+        BottomDescription(widget: widget),
       ],
+    );
+  }
+}
+
+
+
+
+
+class BottomDescription extends StatelessWidget {
+  const BottomDescription({
+    super.key,
+    required this.widget,
+  });
+
+  final AudioImageBox widget;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 25, top: 15),
+      child: Text(
+        widget.description,
+        style: TextStyle(
+          color: const Color.fromARGB(255, 255, 233, 208),
+          fontSize: MediaQuery.of(context).size.width * 0.012,
+          fontFamily: 'Montserrat',
+        ),
+      ),
+    );
+  }
+}
+
+class PlayingNowIcon extends StatelessWidget {
+  const PlayingNowIcon({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      bottom: 10,
+      right: 10,
+      child: Container(
+        padding: const EdgeInsets.all(4),
+        decoration: BoxDecoration(
+          color: Colors.black.withOpacity(0.5),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: const Icon(
+          Icons.volume_up,
+          color: Colors.white,
+          size: 20,
+        ),
+      ),
     );
   }
 }
