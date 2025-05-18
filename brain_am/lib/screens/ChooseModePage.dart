@@ -22,7 +22,6 @@ class ChooseModePage extends StatelessWidget {
       body: Stack(
         children: [
           //backdrop
-          Positioned.fill(child: Container(color: Colors.black.withAlpha(50))),
           Positioned.fill(
             child: Image.asset(
               'assets/images/background.png',
