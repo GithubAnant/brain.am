@@ -36,7 +36,7 @@ List<AudioImageBox> chillImageBoxes = [
   ),
   AudioImageBox(
     imagePath: 'assets/images/LandingPageImages/chill2.png',
-    description: 'Upbeat',
+    description: 'Melancholy',
     audioPath: 'assets/audio/coding.mp3',
   ),
   AudioImageBox(

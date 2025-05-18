@@ -22,6 +22,7 @@ class ChooseModePage extends StatelessWidget {
       body: Stack(
         children: [
           //backdrop
+          Positioned.fill(child: Container(color: Colors.black.withAlpha(50))),
           Positioned.fill(
             child: Image.asset(
               'assets/images/background.png',
@@ -29,16 +30,6 @@ class ChooseModePage extends StatelessWidget {
             ),
           ),
 
-          Positioned.fill(child: Container(color: Colors.black.withAlpha(50))),
-
-          Positioned(
-            bottom: 20,
-            left: 0,
-            right: 0,
-            child: Center(
-              // child: SocialLink(urlLink: 'https://github.com/GithubAnant'),
-            ),
-          ),
 
           Column(
             mainAxisAlignment: MainAxisAlignment.center,

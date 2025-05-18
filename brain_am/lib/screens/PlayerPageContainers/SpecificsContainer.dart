@@ -93,15 +93,16 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
       child: Stack(
         children: [
           // Background Image
+          BlackTint(
+            containerWidth: containerWidth,
+            containerHeight: containerHeight,
+          ),
+
           BackgroundImage(
             containerWidth: containerWidth,
             containerHeight: containerHeight,
           ),
 
-          BlackTint(
-            containerWidth: containerWidth,
-            containerHeight: containerHeight,
-          ),
 
           // Glassmorphic Container
           GlassmorphicContainer(

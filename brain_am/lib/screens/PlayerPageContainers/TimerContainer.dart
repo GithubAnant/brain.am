@@ -176,13 +176,13 @@ class _TimerContainerState extends State<TimerContainer> {
       top: MediaQuery.of(context).size.height * 0.08,
       child: Stack(
         children: [
+          BlackTint(containerWidth: containerWidth, containerHeight: containerHeight),
           // Background Image
           BackgroundImage(
             containerWidth: containerWidth,
             containerHeight: containerHeight,
           ),
 
-          BlackTint(containerWidth: containerWidth, containerHeight: containerHeight),
 
           // Glassmorphic Container
           GlassmorphicContainer(
