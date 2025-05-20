@@ -8,7 +8,7 @@ enum ScreenState {
 }
 
 class ScreenController extends GetxController {
-  var currentScreen = ScreenState.home.obs;
+  var currentScreen = ScreenState.player.obs;
   
   final List<ScreenState> _navigationHistory = [ScreenState.home];
 

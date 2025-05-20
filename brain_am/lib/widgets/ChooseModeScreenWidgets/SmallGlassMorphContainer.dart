@@ -47,7 +47,7 @@ class _SmallGlassMorphContainerState extends State<SmallGlassMorphContainer> {
             margin: const EdgeInsets.only(bottom: 20),
             borderRadius: 25,
             blur: 0,
-            border: 0.6,
+            border: 0.3,
             linearGradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -69,7 +69,7 @@ class _SmallGlassMorphContainerState extends State<SmallGlassMorphContainer> {
               end: Alignment.bottomCenter,
               colors: [
                 const Color.fromARGB(255, 210, 210, 210).withAlpha(150),
-                const Color.fromARGB(213, 121, 121, 121),
+                const Color.fromARGB(136, 121, 121, 121),
               ],
             ),
             child: Padding(
@@ -77,7 +77,12 @@ class _SmallGlassMorphContainerState extends State<SmallGlassMorphContainer> {
               child: Center(
                 child: Text(
                   widget.text,
-                  style: const TextStyle(color: Colors.white, fontSize: 20),
+                  style: const TextStyle(
+                  fontSize: 22,
+                  fontFamily: 'Lato',
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
                 ),
               ),
             ),

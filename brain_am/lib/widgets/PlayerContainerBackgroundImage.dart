@@ -18,7 +18,7 @@ class BackgroundImage extends StatelessWidget {
         width: containerWidth,
         height: containerHeight,
         child: Image.asset(
-          'assets/images/MusicPhotos1/04001_thepierofhanaleibay_2880x1800.jpg',
+  'assets/images/MusicPhotos1/LyKTuqo.jpg',
           fit: BoxFit.cover,
           errorBuilder: (context, error, stackTrace) {
             return Container(

@@ -25,7 +25,7 @@ class NeuralEffectButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: MediaQuery.of(context).size.width * 0.2,
+        width: MediaQuery.of(context).size.width * 0.199,
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           color:

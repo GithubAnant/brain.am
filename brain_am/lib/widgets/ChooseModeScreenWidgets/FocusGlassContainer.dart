@@ -41,7 +41,7 @@ class _FocusGlassContainerState extends State<FocusGlassContainer> {
             height: baseHeight,
             borderRadius: 25,
             blur: 0,
-            border: 0.6,
+            border: 0.3,
             // ← Updated gradients here
             linearGradient: LinearGradient(
               begin: Alignment.topLeft,
@@ -64,12 +64,20 @@ class _FocusGlassContainerState extends State<FocusGlassContainer> {
             borderGradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Colors.white.withAlpha(150), const Color.fromARGB(213, 121, 121, 121)],
+              colors: [
+                const Color.fromARGB(255, 210, 210, 210).withAlpha(150),
+                const Color.fromARGB(136, 121, 121, 121),
+              ],
             ),
             child: Center(
               child: Text(
                 widget.text,
-                style: const TextStyle(color: Colors.white, fontSize: 20),
+                style: const TextStyle(
+                  fontSize: 32,
+                  fontFamily: 'Lato',
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),

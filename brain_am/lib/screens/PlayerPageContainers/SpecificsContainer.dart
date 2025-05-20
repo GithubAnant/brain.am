@@ -177,7 +177,7 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
                           level: NeuralEffectLevel.low,
                           label: "low effect",
                           description:
-                              "Use this effect level if you are generally sensitive to sounds",
+                              "This is just for the vibes",
                           isSelected: _neuralEffectLevel == NeuralEffectLevel.low,
                           onTap: () => _updateNeuralLevel(NeuralEffectLevel.low),
                         ),
@@ -185,7 +185,7 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
                           level: NeuralEffectLevel.medium,
                           label: "medium effect",
                           description:
-                              "Our standard level of neural phase locking",
+                              "The standard level of neural phase locking",
                           isSelected:
                               _neuralEffectLevel == NeuralEffectLevel.medium,
                           onTap:

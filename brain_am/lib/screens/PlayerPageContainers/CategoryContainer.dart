@@ -25,9 +25,6 @@ class CategoryContainer extends StatelessWidget {
             containerHeight: containerHeight,
           ),
 
-          BlackTint(containerWidth: containerWidth, containerHeight: containerHeight),
-
-
           GlassmorphicContainer(
             width: containerWidth,
             height: containerHeight,
