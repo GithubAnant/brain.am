@@ -12,7 +12,7 @@ class VolumeSlider extends StatefulWidget {
 
 class _VolumeSliderState extends State<VolumeSlider> {
   bool _isHovered = false;
-
+  
   @override
   Widget build(BuildContext context) {
     return MouseRegion(

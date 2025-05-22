@@ -2,8 +2,8 @@
     {
         "id": "track002",
         "title": "Drifted",
-        "fileId": "1weXvA0G6Ikd-FG50uIQEBWBE3wEsUZAL",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/1.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "Ocean",
             "Ambient"
@@ -17,8 +17,8 @@
     {
         "id": "track003",
         "title": "Plastic Heaven",
-        "fileId": "1ZvrZgR6lYekR7hiSzcunYAIuYsBdLFPZ",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/2.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "vintage"
         ],
@@ -32,8 +32,8 @@
     {
         "id": "track004",
         "title": "Songs For Rain",
-        "fileId": "1XWViX-xZzu6T61vrGPcQ-nnUAnXjPTBe",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/3.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "rain",
             "thunderstorm"
@@ -48,8 +48,8 @@
     {
         "id": "track005",
         "title": "Opaleye",
-        "fileId": "1UP2fU20fC-NL0sjKjgEkIwPc-Yxzj68E",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/4.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "rainforest",
             "ambient"
@@ -63,8 +63,8 @@
     {
         "id": "track006",
         "title": "They Danced Like Smoke",
-        "fileId": "1Swf-z4VF-SMHJoSLi-keVuJoN5ez7mC4",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/5.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "rainforest",
             "rain",
@@ -80,8 +80,8 @@
     {
         "id": "track007",
         "title": "Kisses In Reverse",
-        "fileId": "13BUz8jptXNxGDw_C9i30_Uh_c7soULEE",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/6.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "rain",
             "ambient",
@@ -97,8 +97,8 @@
     {
         "id": "track008",
         "title": "Soft Collapse",
-        "fileId": "1866AW7sRW0RgY3HSL3ST7KP4vxLUrD9p",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/7.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "rain",
             "ambient"
@@ -113,8 +113,8 @@
     {
         "id": "track009",
         "title": "Semicolon",
-        "fileId": "1ruRPGOiZNrsCKmTQCQcLZD5RDC6ZRDqL",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/8.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "post rock",
             "coding",
@@ -130,8 +130,8 @@
     {
         "id": "track010",
         "title": "Before The Glow",
-        "fileId": "1p_R9m8cXRQ8mQ8KFGvjqEFPtTfdd6B56",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/9.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "post rock"
         ],
@@ -143,8 +143,8 @@
     {
         "id": "track011",
         "title": "False Memory",
-        "fileId": "1qlW6nMPv66cNPsTnDpNqcdzHWHDdn5XX",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/10.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "post rock",
             "electronic",
@@ -159,8 +159,8 @@
     {
         "id": "track012",
         "title": "Behind Cold Eyes",
-        "fileId": "1bhzjqH1UL0-ZGrj4GKiwQjdmdfvUW7Du",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/11.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "post rock",
             "ambient"
@@ -174,8 +174,8 @@
     {
         "id": "track013",
         "title": "Woke Up Blue",
-        "fileId": "1Ue_bHIHBxod1xtz5LPVFPOxPQroDzYUa",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/12.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "lofi",
             "ambient"
@@ -190,8 +190,8 @@
     {
         "id": "track014",
         "title": "About To Die",
-        "fileId": "1vMwlXrNJyHdubr5VoaAJZqokkw1qBMZN",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/13.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "lofi",
             "ambient",
@@ -207,8 +207,8 @@
     {
         "id": "track015",
         "title": "Skintone",
-        "fileId": "15XylJSTqnNvSJQxG-_j-wh1Jrm23bFKJ",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/14.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "coding",
             "ambient"
@@ -222,8 +222,8 @@
     {
         "id": "track016",
         "title": "Ghosting",
-        "fileId": "1k6Qo1iEYzNeCX9vd84z3ULYRIn5bHFKJ",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Low/15.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "ambient",
             "coding"
@@ -235,270 +235,274 @@
         ]
     },
     {
-        "id": "track017",
-        "title": "Mirror Lake",
-        "fileId": "1JJIhlhy8R6dRbRH0EjJI3pLyfLMpaV3L",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "ocean",
-            "ambient"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "study",
-            "relax"
-        ]
-    },
-    {
-        "id": "track018",
-        "title": "Cool Romance",
-        "fileId": "1i7Ok8BTsHKC0NTev1d99hy-ceW21oSNi",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "rain",
-            "vintage",
-            "coding"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "focus",
-            "study",
-            "relax",
-            "sleep"
-        ]
-    },
-    {
-        "id": "track019",
-        "title": "Dream Museum",
-        "fileId": "1FETc8JoNiE7_HYeccp40qdDwhr6yaZ3T",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "rain",
-            "vintage",
-            "ambient",
-            "coding"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "focus",
-            "study",
-            "relax"
-        ]
-    },
-    {
-        "id": "track020",
-        "title": "Just Kids With Umbrellas",
-        "fileId": "1WGtYE-Pv5yPU4xT0xvgZmqqXkGh5MO2M",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "rain",
-            "thunderstorm",
-            "ambient",
-            "coding"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "sleep",
-            "focus",
-            "relax",
-            "study"
-        ]
-    },
-    {
-        "id": "track021",
-        "title": "Silhouette",
-        "fileId": "13fqThrVhkB54yNVBubVNjhZO2jAnhvtg",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "rainforest",
-            "rain",
-            "ambient"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "sleep",
-            "study"
-        ]
-    },
-    {
-        "id": "track022",
-        "title": "Backspace",
-        "fileId": "10g_-Rrjvzjop6XA6GJS665IiWC9VuS7B",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "rain",
-            "rainforest",
-            "thunderstorm",
-            "ambient"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "sleep",
-            "study"
-        ]
-    },
-    {
-        "id": "track023",
-        "title": "Slowburn",
-        "fileId": "1zQN17j70XuYWHq4Vp2B-916phiR1p4sw",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "coding",
-            "post rock"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "focus",
-            "study"
-        ]
-    },
-    {
-        "id": "track024",
-        "title": "Night Sky",
-        "fileId": "1glv2YOu8RCg1D4FEOWPa6tl0bUEwHBWG",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "post rock",
-            "ambient",
-            "electronic",
-            "coding"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "focus"
-        ]
-    },
-    {
-        "id": "track025",
-        "title": "Paper Stars",
-        "fileId": "1HmUXShDi6l0xE8U0avSQ9ZI3uu5VqlYl",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "post rock",
-            "ambient",
-            "coding"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "focus",
-            "study"
-        ]
-    },
-    {
-        "id": "track026",
-        "title": "Sunlight Theory",
-        "fileId": "117lIU4OBytlvWQZ15WrZ-wW5i9Y7pkJe",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "electronic",
-            "ambient"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "study",
-            "relax"
-        ]
-    },
-    {
-        "id": "track027",
-        "title": "Velvet Crime",
-        "fileId": "1bA-SSGucz0EQ0EoztkdrWCuVf8al-uIg",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "post rock",
-            "coding"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "focus",
-            "study"
-        ]
-    },
-    {
-        "id": "track028",
-        "title": "Under Fake Skies",
-        "fileId": "1OClTMDL40Ja-6tMJJZZbHNr-fXYSQnGv",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "lofi",
-            "ambient"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "study",
-            "relax"
-        ]
-    },
-    {
-        "id": "track029",
-        "title": "Nothing Feels Right",
-        "fileId": "1OClTMDL40Ja-6tMJJZZbHNr-fXYSQnGv",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "electronic",
-            "post rock",
-            "coding"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "focus",
-            "study"
-        ]
-    },
-    {
-        "id": "track030",
-        "title": "Now We Drift",
-        "fileId": "1Mq9y9820QBInIGkwh6_8W8trhpqDGD-j",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "lofi",
-            "electronic",
-            "post rock"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "focus",
-            "study",
-            "relax"
-        ]
-    },
-    {
-        "id": "track031",
-        "title": "Love Means Nothing",
-        "fileId": "1IIuN5CnRG5E0LgXJK5SU5qmLH-fTsh6V",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "electronic"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "focus",
-            "study"
-        ]
-    },
-    {
-        "id": "track032",
-        "title": "Secondhand Light",
-        "fileId": "1iXTZw-KOZb3YLoPXrb2IpbimVeeyuPIm",
-        "imagePath": "images/deep_focus.jpg",
-        "tags": [
-            "lofi",
-            "ambient",
-            "coding"
-        ],
-        "neuralLevel": "medium",
-        "categories": [
-            "focus",
-            "sleep",
-            "relax",
-            "study"
+        "tracks": [
+            {
+                "id": "track017",
+                "title": "Mirror Lake",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/1.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "ocean",
+                    "ambient"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "study",
+                    "relax"
+                ]
+            },
+            {
+                "id": "track018",
+                "title": "Cool Romance",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/2.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "rain",
+                    "vintage",
+                    "coding"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "focus",
+                    "study",
+                    "relax",
+                    "sleep"
+                ]
+            },
+            {
+                "id": "track019",
+                "title": "Dream Museum",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/3.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "rain",
+                    "vintage",
+                    "ambient",
+                    "coding"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "focus",
+                    "study",
+                    "relax"
+                ]
+            },
+            {
+                "id": "track020",
+                "title": "Just Kids With Umbrellas",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/4.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "rain",
+                    "thunderstorm",
+                    "ambient",
+                    "coding"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "sleep",
+                    "focus",
+                    "relax",
+                    "study"
+                ]
+            },
+            {
+                "id": "track021",
+                "title": "Silhouette",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/5.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "rainforest",
+                    "rain",
+                    "ambient"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "sleep",
+                    "study"
+                ]
+            },
+            {
+                "id": "track022",
+                "title": "Backspace",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/6.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "rain",
+                    "rainforest",
+                    "thunderstorm",
+                    "ambient"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "sleep",
+                    "study"
+                ]
+            },
+            {
+                "id": "track023",
+                "title": "Slowburn",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/7.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "coding",
+                    "post rock"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "focus",
+                    "study"
+                ]
+            },
+            {
+                "id": "track024",
+                "title": "Night Sky",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/8.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "post rock",
+                    "ambient",
+                    "electronic",
+                    "coding"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "focus"
+                ]
+            },
+            {
+                "id": "track025",
+                "title": "Paper Stars",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/9.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "post rock",
+                    "ambient",
+                    "coding"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "focus",
+                    "study"
+                ]
+            },
+            {
+                "id": "track026",
+                "title": "Sunlight Theory",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/10.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "electronic",
+                    "ambient"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "study",
+                    "relax"
+                ]
+            },
+            {
+                "id": "track027",
+                "title": "Velvet Crime",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/11.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "post rock",
+                    "coding"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "focus",
+                    "study"
+                ]
+            },
+            {
+                "id": "track028",
+                "title": "Under Fake Skies",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/12.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "lofi",
+                    "ambient"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "study",
+                    "relax"
+                ]
+            },
+            {
+                "id": "track029",
+                "title": "Nothing Feels Right",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/13.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "electronic",
+                    "post rock",
+                    "coding"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "focus",
+                    "study"
+                ]
+            },
+            {
+                "id": "track030",
+                "title": "Now We Drift",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/14.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "lofi",
+                    "electronic",
+                    "post rock"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "focus",
+                    "study",
+                    "relax"
+                ]
+            },
+            {
+                "id": "track031",
+                "title": "Love Means Nothing",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/15.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "electronic"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "focus",
+                    "study"
+                ]
+            },
+            {
+                "id": "track032",
+                "title": "Secondhand Light",
+                "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/16.mp3",
+                "imagePath": "assets/images/MusicPhotos1/image1.png",
+                "tags": [
+                    "lofi",
+                    "ambient",
+                    "coding"
+                ],
+                "neuralLevel": "medium",
+                "categories": [
+                    "focus",
+                    "sleep",
+                    "relax",
+                    "study"
+                ]
+            }
         ]
     },
     {
         "id": "track033",
         "title": "A Playlist",
-        "fileId": "1PQOkxLsc5ZEAR1IQzU7PbTXLqhh2mMe-",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/17.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "ambient",
             "rain"
@@ -514,8 +518,8 @@
     {
         "id": "track034",
         "title": "Midnight Summer",
-        "fileId": "1DgWBsWdqVuqdtnu8lvnOoWXGtMeyjIa1",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/Medium/18.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "ambient"
         ],
@@ -525,11 +529,12 @@
             "focus"
         ]
     },
+
     {
         "id": "track035",
         "title": "Talk About Yesterday",
-        "fileId": "17CaNuUDJNQ7qyHaKsqcN4tOh2jBbVmFt",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/1.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "ocean",
             "ambient"
@@ -543,8 +548,8 @@
     {
         "id": "track036",
         "title": "Neon Grace",
-        "fileId": "1BuolffAZRz5XRv4JxsUYx5Y0eiUN8ubt",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/2.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "vintage",
             "ambient",
@@ -561,8 +566,8 @@
     {
         "id": "track037",
         "title": "I Slept Through Winter",
-        "fileId": "1JWJMHT9zEw7n9yzj91TsCKkKF-V-rse_",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/3.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "vintage",
             "rain"
@@ -576,8 +581,8 @@
     {
         "id": "track038",
         "title": "Now We Drift",
-        "fileId": "19klyWUQy8bahRYfo-FmkHyrSEEW1p1_U",
-        "imagePath": "images/deep_focus.jpg",
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/4.mp3",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "rain",
             "ambient",
@@ -595,8 +600,7 @@
     {
         "id": "track039",
         "title": "Exit Signal",
-        "fileId": "1GceaNejdidcJEtJpKidrcM2B2wQKw4Qg",
-        "imagePath": "images/deep_focus.jpg",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "rain",
             "thunderstorm",
@@ -609,13 +613,13 @@
             "sleep",
             "relax",
             "study"
-        ]
+        ],
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/5.mp3"
     },
     {
         "id": "track040",
         "title": "We Never Said Goodbye",
-        "fileId": "1bXBlO7pWcz0-Ea2ACSjGN_Y8wgRM1ECL",
-        "imagePath": "images/deep_focus.jpg",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "rain",
             "ambient"
@@ -625,13 +629,13 @@
             "sleep",
             "relax",
             "study"
-        ]
+        ],
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/6.mp3"
     },
     {
         "id": "track041",
         "title": "Days Of Rain",
-        "fileId": "1ownHQJBSKBCwdY8f9AZMa8vkM8sTERx4",
-        "imagePath": "images/deep_focus.jpg",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "thunderstorm",
             "rain"
@@ -640,13 +644,13 @@
         "categories": [
             "relax",
             "sleep"
-        ]
+        ],
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/7.mp3"
     },
     {
         "id": "track042",
         "title": "Love Means Nothing",
-        "fileId": "1UMPb5GLAtQpmgcpbaijY6d6xAoh5qfKJ",
-        "imagePath": "images/deep_focus.jpg",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "post rock",
             "coding"
@@ -655,13 +659,13 @@
         "categories": [
             "focus",
             "study"
-        ]
+        ],
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/8.mp3"
     },
     {
         "id": "track043",
         "title": "Lunar Static",
-        "fileId": "1RARKA6W6ovQqohxPWY4aCAM2nZy_e8q5",
-        "imagePath": "images/deep_focus.jpg",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "ambient",
             "post rock",
@@ -671,13 +675,13 @@
         "categories": [
             "relax",
             "study"
-        ]
+        ],
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/9.mp3"
     },
     {
         "id": "track044",
         "title": "Made You Forget",
-        "fileId": "1IHN7OJLh0BY8HLxiQj3Sgxe5Q9n3-hfn",
-        "imagePath": "images/deep_focus.jpg",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "coding",
             "post rock"
@@ -686,13 +690,13 @@
         "categories": [
             "focus",
             "study"
-        ]
+        ],
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/10.mp3"
     },
     {
         "id": "track045",
         "title": "Brazilian Summer",
-        "fileId": "1v3LdNinW2C4ZrcNmanOgtg13UCCAjKZq",
-        "imagePath": "images/deep_focus.jpg",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "lofi",
             "ambient",
@@ -703,26 +707,26 @@
             "relax",
             "study",
             "focus"
-        ]
+        ],
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/11.mp3"
     },
     {
         "id": "track046",
         "title": "Freeze",
-        "fileId": "1jccbrwLjchAsjbatBgV0F5c319l2bAmO",
-        "imagePath": "images/deep_focus.jpg",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "lofi"
         ],
         "neuralLevel": "high",
         "categories": [
             "study"
-        ]
+        ],
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/12.mp3"
     },
     {
         "id": "track047",
         "title": "Songs For Rain",
-        "fileId": "10kgOZ77Dtz7XzJouOjRX17tNL8gMPgwY",
-        "imagePath": "images/deep_focus.jpg",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "rain",
             "coding"
@@ -733,13 +737,13 @@
             "relax",
             "focus",
             "study"
-        ]
+        ],
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/13.mp3"
     },
     {
         "id": "track048",
         "title": "She Had No Face",
-        "fileId": "1t8Ub4ecmJLZpQi1aQE-heAcvFSa3DCg6",
-        "imagePath": "images/deep_focus.jpg",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "electronic",
             "coding"
@@ -748,26 +752,26 @@
         "categories": [
             "focus",
             "study"
-        ]
+        ],
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/14.mp3"
     },
     {
         "id": "track049",
         "title": "Dark Lights",
-        "fileId": "1X_BUtFuwEWEaIX5Cogt0g8EAci6BGl1y",
-        "imagePath": "images/deep_focus.jpg",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "electronic"
         ],
         "neuralLevel": "high",
         "categories": [
             "study"
-        ]   
+        ],
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/15.mp4"
     },
     {
         "id": "track050",
         "title": "Goldline",
-        "fileId": "1gpg4VhpEXFnbgMDTiFw9eZdCkOl2JlVM",
-        "imagePath": "images/deep_focus.jpg",
+        "imagePath": "assets/images/MusicPhotos1/image1.png",
         "tags": [
             "ambient",
             "rain"
@@ -776,6 +780,7 @@
         "categories": [
             "sleep",
             "relax"
-        ]
+        ],
+        "filePath": "Users/anantsinghal/Desktop/Music-brain.am/High/16.mp3"
     }
 ]
