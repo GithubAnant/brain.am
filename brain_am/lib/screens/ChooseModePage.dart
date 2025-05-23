@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
+// dead code. not used anywhere
+
 class ChooseModePage extends StatelessWidget {
   const ChooseModePage({super.key});
 

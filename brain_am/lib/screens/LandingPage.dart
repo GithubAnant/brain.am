@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// dead code. not used anywhere
+
 class BrainAMHome extends StatelessWidget {
   const BrainAMHome({super.key});
 

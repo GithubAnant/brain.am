@@ -10,6 +10,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'dart:math';
 
+// dead code. not used anywhere
+
 class PlayerScreenMain extends StatefulWidget {
   const PlayerScreenMain({super.key});
 
