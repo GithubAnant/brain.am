@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:brain.am/constants/globals.dart' as globals;
 
 class BackgroundImage extends StatelessWidget {
   const BackgroundImage({

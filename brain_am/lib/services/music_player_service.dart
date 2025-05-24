@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
+import 'package:brain.am/constants/globals.dart' as global;
 
 class MusicPlayerService extends ChangeNotifier {
   static final MusicPlayerService _instance = MusicPlayerService._internal();
@@ -9,7 +10,7 @@ class MusicPlayerService extends ChangeNotifier {
   MusicPlayerService._internal();
 
   final AudioPlayer _audioPlayer = AudioPlayer();
-  
+
   // Available songs in assets/music/
   final List<String> _songPaths = [
     'assets/music/postrock_full.mp3',
@@ -17,6 +18,29 @@ class MusicPlayerService extends ChangeNotifier {
     'assets/music/rain_full.mp3',
     'assets/music/vintage_full.mp3',
   ];
+
+  final Map<String, Map<String, String>> songMeta = {
+    'postrock_full.mp3': {
+      'image': 'assets/images/1.jpg',
+      'title': 'Last Spring',
+      'type': 'Post Rock',
+    },
+    'rainforest_full.mp3': {
+      'image': 'assets/images/2.jpg',
+      'title': 'Forest Amuse',
+      'type': 'Rainforest',
+    },
+    'rain_full.mp3': {
+      'image': 'assets/images/2.jpg',
+      'title': 'Second Storm',
+      'type': 'Rainy Thunderstorm',
+    },
+    'vintage_full.mp3': {
+      'image': 'assets/images/2.jpg',
+      'title': 'Smoke Days',
+      'type': 'Vintage',
+    },
+  };
 
   // Song names for display (without path and extension)
   final List<String> _songNames = [
@@ -58,20 +82,19 @@ class MusicPlayerService extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Initialize the music service and start playing a random song
   Future<void> initialize() async {
     if (_isInitialized) return;
 
     try {
-      // Set up audio player listeners
+      // Set up audio player listeners  
       _setupAudioListeners();
-      
+
       // Select a random song to start with
       _selectRandomSong();
-      
+
       // Play the selected song
       await playCurrentSong();
-      
+
       _isInitialized = true;
       notifyListeners();
     } catch (e) {
@@ -111,12 +134,25 @@ class MusicPlayerService extends ChangeNotifier {
     _currentSongIndex = random.nextInt(_songPaths.length);
   }
 
-  /// Play the current song
   Future<void> playCurrentSong() async {
     try {
-      await _audioPlayer.play(AssetSource(_songPaths[_currentSongIndex].replaceFirst('assets/', '')));
+      final songAsset = _songPaths[_currentSongIndex];
+      final filename = songAsset.split('/').last;
+
+      // Play song
+      await _audioPlayer.play(
+        AssetSource(songAsset.replaceFirst('assets/', '')),
+      );
       _isPlaying = true;
       notifyListeners();
+
+      // Update global ValueNotifiers
+      final meta = songMeta[filename];
+      if (meta != null) {
+        global.imagePath.value = meta['image']!;
+        global.songTitle.value = meta['title']!;
+        global.songType.value = meta['type']!;
+      }
     } catch (e) {
       debugPrint('Error playing song: $e');
     }
@@ -176,7 +212,8 @@ class MusicPlayerService extends ChangeNotifier {
     if (_isShuffle) {
       _selectRandomSong();
     } else {
-      _currentSongIndex = (_currentSongIndex - 1 + _songPaths.length) % _songPaths.length;
+      _currentSongIndex =
+          (_currentSongIndex - 1 + _songPaths.length) % _songPaths.length;
     }
     await playCurrentSong();
     notifyListeners();
@@ -214,18 +251,6 @@ class MusicPlayerService extends ChangeNotifier {
     final index = _songNames.indexOf(songName);
     if (index != -1) {
       await playSongByIndex(index);
-    }
-  }
-
-  /// Stop playback and reset
-  Future<void> stop() async {
-    try {
-      await _audioPlayer.stop();
-      _isPlaying = false;
-      _currentPosition = Duration.zero;
-      notifyListeners();
-    } catch (e) {
-      debugPrint('Error stopping audio: $e');
     }
   }
 
