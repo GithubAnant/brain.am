@@ -1,3 +1,4 @@
+import 'package:brain.am/services/music_player_service.dart';
 import 'package:brain.am/widgets/PlayerScreenWidgets/MusicButtons.dart';
 import 'package:brain.am/widgets/PlayerScreenWidgets/MusicProgressSlider.dart';
 import 'package:brain.am/widgets/PlayerScreenWidgets/SliderVolume.dart';
@@ -17,6 +18,14 @@ class BottomMusicController extends StatefulWidget {
 
 class _BottomMusicControllerState extends State<BottomMusicController> {
   double volume = 0.5;
+    final MusicPlayerService _musicService = MusicPlayerService();
+
+  @override
+  void initState() {
+    super.initState();
+    // Initialize and start playing a random song
+    _musicService.initialize();
+  }
 
   @override
   Widget build(BuildContext context) {

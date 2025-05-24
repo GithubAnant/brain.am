@@ -1,6 +1,7 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:brain.am/services/music_player_service.dart';
 
 class MusicProgressSlider extends StatefulWidget {
   const MusicProgressSlider({super.key});
@@ -10,31 +11,49 @@ class MusicProgressSlider extends StatefulWidget {
 }
 
 class _MusicProgressSliderState extends State<MusicProgressSlider> {
-  Duration duration = const Duration(seconds: 120); // 2 minutes
+  Duration duration = Duration.zero;
   Duration position = Duration.zero;
-  Timer? _timer;
+  StreamSubscription? _durationSubscription;
+  StreamSubscription? _positionSubscription;
   bool _isDragging = false;
   bool _isHovering = false;
+  final MusicPlayerService _musicService = MusicPlayerService();
 
   @override
   void initState() {
     super.initState();
-    _startFakeAudioProgress();
+    _setupAudioListeners();
   }
 
-  void _startFakeAudioProgress() {
-    _timer = Timer.periodic(const Duration(milliseconds: 500), (_) {
-      if (!_isDragging && position < duration) {
+  void _setupAudioListeners() {
+    _durationSubscription = _musicService.audioPlayer.onDurationChanged.listen((Duration d) {
+      setState(() {
+        duration = d;
+      });
+    });
+
+    _positionSubscription = _musicService.audioPlayer.onPositionChanged.listen((Duration p) {
+      if (!_isDragging) {
         setState(() {
-          position += const Duration(milliseconds: 500);
+          position = p;
         });
+      }
+    });
+
+    // Handle song completion
+    _musicService.audioPlayer.onPlayerComplete.listen((_) {
+      if (_musicService.isLoop) {
+        _musicService.playCurrentSong();
+      } else {
+        _musicService.nextSong();
       }
     });
   }
 
   @override
   void dispose() {
-    _timer?.cancel();
+    _durationSubscription?.cancel();
+    _positionSubscription?.cancel();
     super.dispose();
   }
 
@@ -66,7 +85,7 @@ class _MusicProgressSliderState extends State<MusicProgressSlider> {
             ),
           ),
           child: Slider(
-            value: value.clamp(0.0, 1.0), // Ensure value is within 0.0 and 1.0
+            value: value.clamp(0.0, 1.0),
             min: 0,
             max: 1,
             onChanged: (newValue) {
@@ -80,8 +99,8 @@ class _MusicProgressSliderState extends State<MusicProgressSlider> {
             onChangeEnd: (newValue) {
               setState(() {
                 _isDragging = false;
-
               });
+              _musicService.audioPlayer.seek(position);
             },
           ),
         ),
