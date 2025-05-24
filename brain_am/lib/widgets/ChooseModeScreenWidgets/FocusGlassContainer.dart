@@ -14,14 +14,6 @@ class FocusGlassContainer extends StatefulWidget {
   State<FocusGlassContainer> createState() => _FocusGlassContainerState();
 }
 
-
-
-
-
-
-
-
-
 class _FocusGlassContainerState extends State<FocusGlassContainer> {
   bool _isHovered = false;
 

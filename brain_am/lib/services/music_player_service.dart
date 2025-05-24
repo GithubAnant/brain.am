@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:brain.am/widgets/PlayerScreenWidgets/MusicButtons.dart';
 import 'package:flutter/foundation.dart';
 import 'package:brain.am/constants/globals.dart' as global;
 
@@ -135,8 +136,12 @@ class MusicPlayerService extends ChangeNotifier {
     _currentSongIndex = random.nextInt(_songPaths.length);
   }
 
-  Future<void> playCurrentSong() async {
+   Future<void> playCurrentSong([context]) async {
     try {
+      if (context != null) {
+        LoadingSnackbar.show(context, 'Loading track...');
+      }
+
       final songAsset = _songPaths[_currentSongIndex];
       final filename = songAsset.split('/').last;
 
@@ -154,8 +159,15 @@ class MusicPlayerService extends ChangeNotifier {
         global.songTitle.value = meta['title']!;
         global.songType.value = meta['type']!;
       }
+
+      if (context != null) {
+        LoadingSnackbar.hide(context);
+      }
     } catch (e) {
       debugPrint('Error playing song: $e');
+      if (context != null) {
+        LoadingSnackbar.hide(context);
+      }
     }
   }
 
