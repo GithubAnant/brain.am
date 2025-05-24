@@ -1,5 +1,5 @@
+import 'package:brain.am/LiveTime.dart';
 import 'package:brain.am/screens/PlayerScreenMain.dart';
-import 'package:brain.am/widgets/LiveTime.dart';
 import 'package:brain.am/widgets/PlayerContainerBackgroundImage.dart';
 import 'package:brain.am/widgets/PlayerScreenWidgets/SongNameAndSubtext.dart';
 import 'package:flutter/material.dart';
