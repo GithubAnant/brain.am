@@ -22,7 +22,7 @@ class MusicPlayerService extends ChangeNotifier {
 
   final Map<String, Map<String, String>> songMeta = {
     'postrock_full.mp3': {
-      'image': 'assets/images/MusicPhotos1/sea-sunset-clouds-sky-5k-zh.jpg',
+      'image': 'assets/images/MusicPhotos1/postrock.jpg',
       'title': 'Last Spring',
       'type': 'Post Rock',
     },
