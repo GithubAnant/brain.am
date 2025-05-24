@@ -162,7 +162,7 @@ class _ShuffleState extends State<Shuffle> {
           widget.svgPath,
           width: _isHovering ? 22 * 1.02 : 22,
           colorFilter: ColorFilter.mode(
-            Colors.white.withAlpha(_isHovering ? 220 : 120),
+            Colors.white.withAlpha(_isHovering || _musicService.isShuffle ? 250 : 120),
             BlendMode.srcIn,
           ),
         ),
@@ -199,7 +199,7 @@ class _LoopState extends State<Loop> {
           widget.svgPath,
           width: _isHovering ? 20 * 1.02 : 20,
           colorFilter: ColorFilter.mode(
-            Colors.white.withAlpha(_isHovering ? 220 : 120),
+            Colors.white.withAlpha(_isHovering || _musicService.isLoop ? 250 : 120),
             BlendMode.srcIn,
           ),
         ),

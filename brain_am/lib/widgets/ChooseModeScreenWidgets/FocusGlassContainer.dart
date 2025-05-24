@@ -14,6 +14,14 @@ class FocusGlassContainer extends StatefulWidget {
   State<FocusGlassContainer> createState() => _FocusGlassContainerState();
 }
 
+
+
+
+
+
+
+
+
 class _FocusGlassContainerState extends State<FocusGlassContainer> {
   bool _isHovered = false;
 
@@ -23,9 +31,7 @@ class _FocusGlassContainerState extends State<FocusGlassContainer> {
     double baseHeight = MediaQuery.of(context).size.height * 0.56;
 
     return GestureDetector(
-
-      onTap: () {
-        // Instead of Get.to(PlayerScreenMain())
+      onTap: () { 
         Get.find<ScreenController>().goToPlayer();
       },
       child: MouseRegion(
@@ -42,7 +48,6 @@ class _FocusGlassContainerState extends State<FocusGlassContainer> {
             borderRadius: 25,
             blur: 0,
             border: 0.3,
-            // ← Updated gradients here
             linearGradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
