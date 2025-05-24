@@ -18,7 +18,7 @@ class BottomMusicController extends StatefulWidget {
 
 class _BottomMusicControllerState extends State<BottomMusicController> {
   double volume = 0.5;
-    final MusicPlayerService _musicService = MusicPlayerService();
+  final MusicPlayerService _musicService = MusicPlayerService();
 
   @override
   void initState() {
@@ -62,7 +62,8 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
           children: [
             SongNameAndSubtext1(
               screenWidth: screenWidth,
-              screenHeight: screenHeight,),
+              screenHeight: screenHeight,
+            ),
 
             AllMusicControlsWidget(
               screenWidth: screenWidth,
@@ -81,17 +82,16 @@ class _BottomMusicControllerState extends State<BottomMusicController> {
                       setState(() {
                         volume = value;
                       });
+                      MusicPlayerService().setVolume(value);
                     },
                   ),
                 ],
               ),
             ),
-
             FinalMusicProgressSlider(
               screenHeight: screenHeight,
               screenWidth: screenWidth,
             ),
-
           ],
         ),
       ),

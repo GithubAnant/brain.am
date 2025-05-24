@@ -13,24 +13,45 @@ class BackgroundImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(15),
-      child: SizedBox(
-        width: containerWidth,
-        height: containerHeight,
-        child: Image.asset(
-  'assets/images/MusicPhotos1/LyKTuqo.jpg',
-          fit: BoxFit.cover,
-          errorBuilder: (context, error, stackTrace) {
-            return Container(
-              color: Colors.grey[800],
-              child: const Center(
-                child: Icon(Icons.music_note, color: Colors.white54, size: 80),
-              ),
-            );
-          },
-        ),
-      ),
+    return ValueListenableBuilder<String>(
+      valueListenable: globals.imagePath,
+      builder: (context, path, _) {
+        return ClipRRect(
+          borderRadius: BorderRadius.circular(15),
+          child: SizedBox(
+            width: containerWidth,
+            height: containerHeight,
+            child:
+                path.isEmpty
+                    ? Container(
+                      color: Colors.grey[800],
+                      child: const Center(
+                        child: Icon(
+                          Icons.music_note,
+                          color: Colors.white54,
+                          size: 80,
+                        ),
+                      ),
+                    )
+                    : Image.asset(
+                      path,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Container(
+                          color: Colors.grey[800],
+                          child: const Center(
+                            child: Icon(
+                              Icons.music_note,
+                              color: Colors.white54,
+                              size: 80,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+          ),
+        );
+      },
     );
   }
 }

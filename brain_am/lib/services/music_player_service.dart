@@ -18,25 +18,26 @@ class MusicPlayerService extends ChangeNotifier {
     'assets/music/rain_full.mp3',
     'assets/music/vintage_full.mp3',
   ];
+  
 
   final Map<String, Map<String, String>> songMeta = {
     'postrock_full.mp3': {
-      'image': 'assets/images/1.jpg',
+      'image': 'assets/images/MusicPhotos1/sea-sunset-clouds-sky-5k-zh.jpg',
       'title': 'Last Spring',
       'type': 'Post Rock',
     },
     'rainforest_full.mp3': {
-      'image': 'assets/images/2.jpg',
+      'image': 'assets/images/MusicPhotos1/rainforest.jpg',
       'title': 'Forest Amuse',
       'type': 'Rainforest',
     },
     'rain_full.mp3': {
-      'image': 'assets/images/2.jpg',
+      'image': 'assets/images/MusicPhotos1/jaws-beach-in-the-bahamas-5k-8g.jpg',
       'title': 'Second Storm',
       'type': 'Rainy Thunderstorm',
     },
     'vintage_full.mp3': {
-      'image': 'assets/images/2.jpg',
+      'image': 'assets/images/MusicPhotos1/LyKTuqo.jpg',
       'title': 'Smoke Days',
       'type': 'Vintage',
     },
