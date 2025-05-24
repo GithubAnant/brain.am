@@ -1,4 +1,5 @@
 import 'package:brain.am/screens/PlayerScreenMain.dart';
+import 'package:brain.am/widgets/LiveTime.dart';
 import 'package:brain.am/widgets/PlayerContainerBackgroundImage.dart';
 import 'package:brain.am/widgets/PlayerScreenWidgets/SongNameAndSubtext.dart';
 import 'package:flutter/material.dart';
@@ -53,17 +54,7 @@ class HomeContainer extends StatelessWidget {
                 children: [
                   const SizedBox(height: 20),
 
-                  const Text(
-                    "10:21",
-                    style: TextStyle(
-                      fontSize: 72,
-                      fontFamily: 'Lato',
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-
-                  IntervalButton(),
+                  LiveTimeText(),
 
                   const Spacer(),
                   Container(
