@@ -93,12 +93,15 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
       child: Stack(
         children: [
           // Background Image
-
           BackgroundImage(
             containerWidth: containerWidth,
             containerHeight: containerHeight,
           ),
 
+          BlackTint(
+            containerWidth: containerWidth,
+            containerHeight: containerHeight,
+          ),
 
           // Glassmorphic Container
           GlassmorphicContainer(
@@ -138,9 +141,9 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
                         fontSize: 16,
                       ),
                     ),
-              
+
                     const SizedBox(height: 20),
-              
+
                     // Category chips in a wrapped layout
                     Wrap(
                       spacing: 8,
@@ -149,14 +152,16 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
                           categories.map((category) {
                             return CategoryChip(
                               category: category,
-                              isSelected: _selectedCategories.contains(category),
+                              isSelected: _selectedCategories.contains(
+                                category,
+                              ),
                               onTap: () => _toggleCategory(category),
                             );
                           }).toList(),
                     ),
-              
+
                     const SizedBox(height: 40),
-              
+
                     // NEURAL EFFECT LEVEL section
                     Text(
                       "NEURAL EFFECT",
@@ -166,9 +171,9 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
                         fontSize: 16,
                       ),
                     ),
-              
+
                     const SizedBox(height: 20),
-              
+
                     // Neural effect selection buttons
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -176,10 +181,11 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
                         NeuralEffectButton(
                           level: NeuralEffectLevel.low,
                           label: "low effect",
-                          description:
-                              "This is just for the vibes",
-                          isSelected: _neuralEffectLevel == NeuralEffectLevel.low,
-                          onTap: () => _updateNeuralLevel(NeuralEffectLevel.low),
+                          description: "This is just for the vibes",
+                          isSelected:
+                              _neuralEffectLevel == NeuralEffectLevel.low,
+                          onTap:
+                              () => _updateNeuralLevel(NeuralEffectLevel.low),
                         ),
                         NeuralEffectButton(
                           level: NeuralEffectLevel.medium,
@@ -189,7 +195,8 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
                           isSelected:
                               _neuralEffectLevel == NeuralEffectLevel.medium,
                           onTap:
-                              () => _updateNeuralLevel(NeuralEffectLevel.medium),
+                              () =>
+                                  _updateNeuralLevel(NeuralEffectLevel.medium),
                         ),
                         NeuralEffectButton(
                           level: NeuralEffectLevel.high,
@@ -198,19 +205,20 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
                               "Try the strongest level for extra stimulation",
                           isSelected:
                               _neuralEffectLevel == NeuralEffectLevel.high,
-                          onTap: () => _updateNeuralLevel(NeuralEffectLevel.high),
+                          onTap:
+                              () => _updateNeuralLevel(NeuralEffectLevel.high),
                         ),
                       ],
                     ),
-              
+
                     SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-              
+
                     // Action buttons
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         CancelButton(),
-              
+
                         const SizedBox(width: 10),
 
                         ApplyChangesButton(),
@@ -227,21 +235,8 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 class ApplyChangesButton extends StatelessWidget {
-  const ApplyChangesButton({
-    super.key,
-  });
+  const ApplyChangesButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -251,12 +246,10 @@ class ApplyChangesButton extends StatelessWidget {
       },
       style: TextButton.styleFrom(
         backgroundColor: Colors.deepPurple,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(25),
-        ),
-        padding:  EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.width*0.021,
-          vertical: MediaQuery.of(context).size.width*0.011,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+        padding: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * 0.021,
+          vertical: MediaQuery.of(context).size.width * 0.011,
         ),
       ),
       child: Text(
@@ -264,7 +257,7 @@ class ApplyChangesButton extends StatelessWidget {
         style: GoogleFonts.montserrat(
           color: Colors.white,
           fontWeight: FontWeight.w500,
-          fontSize: MediaQuery.of(context).size.width*0.011,
+          fontSize: MediaQuery.of(context).size.width * 0.011,
         ),
       ),
     );
@@ -272,16 +265,12 @@ class ApplyChangesButton extends StatelessWidget {
 }
 
 class CancelButton extends StatelessWidget {
-  const CancelButton({
-    super.key,
-  });
+  const CancelButton({super.key});
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {
-        
-      },
+      onPressed: () {},
       style: TextButton.styleFrom(
         backgroundColor: Colors.transparent,
         shape: RoundedRectangleBorder(
@@ -289,8 +278,8 @@ class CancelButton extends StatelessWidget {
           side: const BorderSide(color: Colors.grey),
         ),
         padding: EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.width*0.021,
-          vertical: MediaQuery.of(context).size.width*0.011,
+          horizontal: MediaQuery.of(context).size.width * 0.021,
+          vertical: MediaQuery.of(context).size.width * 0.011,
         ),
       ),
       child: Text(
@@ -298,14 +287,12 @@ class CancelButton extends StatelessWidget {
         style: GoogleFonts.montserrat(
           color: Colors.grey,
           fontWeight: FontWeight.w500,
-          fontSize: MediaQuery.of(context).size.width*0.011,
+          fontSize: MediaQuery.of(context).size.width * 0.011,
         ),
       ),
     );
   }
 }
-
-
 
 // This class provides static access to the SpecificsContainer controllers
 class SpecificsController {

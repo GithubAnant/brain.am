@@ -121,7 +121,7 @@ class IntervalButton extends StatelessWidget {
       ),
       child: Center(
         child: GestureDetector(
-          onTap: (){},
+          onTap: () {},
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
