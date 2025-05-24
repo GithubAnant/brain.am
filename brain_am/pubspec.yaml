@@ -38,9 +38,15 @@ dependencies:
   remixicon: ^1.4.1
   audio_video_progress_bar: ^2.0.3
   flutter_svg: ^2.0.7
+  intl: ^0.20.2
   dropdown_button2: ^2.3.9
+  file_picker: ^10.1.9
   audioplayers: ^6.4.0
   just_audio: ^0.10.3
+  hive_flutter: ^1.1.0
+  path: ^1.9.1
+  path_provider: ^2.1.5
+  hive: ^2.2.3
 
 dev_dependencies:
   flutter_test:
