@@ -32,12 +32,12 @@ class MusicPlayerService extends ChangeNotifier {
       'type': 'Rainforest',
     },
     'rain_full.mp3': {
-      'image': 'assets/images/MusicPhotos1/jaws-beach-in-the-bahamas-5k-8g.jpg',
+      'image': 'assets/images/MusicPhotos1/thunderstorm.jpg',
       'title': 'Second Storm',
       'type': 'Rainy Thunderstorm',
     },
     'vintage_full.mp3': {
-      'image': 'assets/images/MusicPhotos1/LyKTuqo.jpg',
+      'image': 'assets/images/MusicPhotos1/vintage.jpg',
       'title': 'Smoke Days',
       'type': 'Vintage',
     },
