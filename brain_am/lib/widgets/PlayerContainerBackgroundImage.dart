@@ -26,10 +26,23 @@ class BackgroundImage extends StatelessWidget {
                     ? Container(
                       color: Colors.grey[800],
                       child: const Center(
-                        child: Icon(
-                          Icons.music_note,
-                          color: Colors.white54,
-                          size: 80,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.music_note,
+                              color: Colors.white54,
+                              size: 80,
+                            ),
+                            Text(
+                              'Click Here Once To Activate',
+                              style: TextStyle(
+                                fontSize: 50,
+                                color: Colors.white54,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     )
@@ -40,10 +53,14 @@ class BackgroundImage extends StatelessWidget {
                         return Container(
                           color: Colors.grey[800],
                           child: const Center(
-                            child: Icon(
-                              Icons.music_note,
-                              color: Colors.white54,
-                              size: 80,
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.music_note,
+                                  color: Colors.white54,
+                                  size: 80,
+                                ),
+                              ],
                             ),
                           ),
                         );
