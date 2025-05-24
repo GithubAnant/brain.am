@@ -35,7 +35,7 @@ class BackgroundImage extends StatelessWidget {
                               size: 80,
                             ),
                             Text(
-                              'Click Here Once To Activate',
+                              'Loading...',
                               style: TextStyle(
                                 fontSize: 50,
                                 color: Colors.white54,
