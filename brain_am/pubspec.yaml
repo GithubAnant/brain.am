@@ -69,6 +69,7 @@ flutter:
 
   assets:
   - assets/audio/
+  - assets/music/
   - assets/icons/  
   - assets/images/background.png
   - assets/images/image.png
