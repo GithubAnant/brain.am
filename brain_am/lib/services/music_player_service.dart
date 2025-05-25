@@ -42,6 +42,41 @@ class MusicPlayerService extends ChangeNotifier {
       'title': 'Smoke Days',
       'type': 'Vintage',
     },
+    'ambient.mp3': {
+      'image': 'assets/images/MusicPhotos1/ambient.jpg',
+      'title': 'The Dawn',
+      'type': 'Ambient',
+    },
+    'electronic.mp3': {
+      'image': 'assets/images/MusicPhotos1/electronic.jpg',
+      'title': 'Velvet Vires',
+      'type': 'Electronic',
+    },
+    'lofi.mp3': {
+      'image': 'assets/images/MusicPhotos1/lofi.jpg',
+      'title': 'Everyone Knew',
+      'type': 'Lofi',
+    },
+    'melancholy.mp3': {
+      'image': 'assets/images/MusicPhotos1/melancholy.jpg',
+      'title': 'Next December',
+      'type': 'Melancholy',
+    },
+    'oceanic.mp3': {
+      'image': 'assets/images/MusicPhotos1/oceanic.jpg',
+      'title': 'White Corals',
+      'type': 'Ocean',
+    },
+    'study.mp3': {
+      'image': 'assets/images/MusicPhotos1/study.JPG',
+      'title': 'Backspace Crater',
+      'type': 'Instrumental',
+    },
+    'tent_rain.mp3': {
+      'image': 'assets/images/MusicPhotos1/tent_rain.jpg',
+      'title': 'Midnight Monsoons',
+      'type': 'Rainy Camp',
+    },
   };
 
   // Song names for display (without path and extension)
