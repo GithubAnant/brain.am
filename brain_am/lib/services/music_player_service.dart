@@ -12,12 +12,18 @@ class MusicPlayerService extends ChangeNotifier {
 
   final AudioPlayer _audioPlayer = AudioPlayer();
 
-  // Available songs in assets/music/
   final List<String> _songPaths = [
     'assets/music/postrock_full.mp3',
     'assets/music/rainforest_full.mp3',
     'assets/music/rain_full.mp3',
     'assets/music/vintage_full.mp3',
+    'assets/music/ambient.mp3',
+    'assets/music/electronic.mp3',
+    'assets/music/lofi.mp3',
+    'assets/music/melancholy.mp3',
+    'assets/music/oceanic.mp3',
+    'assets/music/study.mp3',
+    'assets/music/tent_rain.mp3',
   ];
   
 
@@ -35,7 +41,7 @@ class MusicPlayerService extends ChangeNotifier {
     'rain_full.mp3': {
       'image': 'assets/images/MusicPhotos1/thunderstorm.jpg',
       'title': 'Second Storm',
-      'type': 'Rainy Thunderstorm',
+      'type': 'Rain',
     },
     'vintage_full.mp3': {
       'image': 'assets/images/MusicPhotos1/vintage.jpg',
@@ -50,7 +56,7 @@ class MusicPlayerService extends ChangeNotifier {
     'electronic.mp3': {
       'image': 'assets/images/MusicPhotos1/electronic.jpg',
       'title': 'Velvet Vires',
-      'type': 'Electronic',
+      'type': 'Upbeat',
     },
     'lofi.mp3': {
       'image': 'assets/images/MusicPhotos1/lofi.jpg',
@@ -75,7 +81,7 @@ class MusicPlayerService extends ChangeNotifier {
     'tent_rain.mp3': {
       'image': 'assets/images/MusicPhotos1/tent_rain.jpg',
       'title': 'Midnight Monsoons',
-      'type': 'Rainy Camp',
+      'type': 'Thunderstorm',
     },
   };
 
@@ -85,6 +91,13 @@ class MusicPlayerService extends ChangeNotifier {
     'Rainforest',
     'Rain',
     'Vintage',
+    'Ambient',
+    'Upbeat',
+    'Lofi',
+    'Melancholy',
+    'Ocean',
+    'Instrumental',
+    'Thunderstorm',
   ];
 
   int _currentSongIndex = 0;
