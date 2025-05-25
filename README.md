@@ -1,4 +1,4 @@
-# brain.am
+# <h2 align="center">🧠 brain.am</h1>
 
 ![brain.am home](home.png)  
 ![brain.am player](player.png)
@@ -13,10 +13,10 @@ brain.am is a **Flutter app inspired by Brain.fm** — delivering *curated* soun
 
 ## 🎧 Features
 
-- 🎯 Handpicked soundscapes for **Focus**, **Relaxation**, and **Sleep**  
-- 🎛️ Multi-layer audio mixing — sliders + mute toggles  
+- 🎯 Handpicked soundscapes for **Focus**, **Relaxation**, **Sleep** and more  
 - ⏱️ Session timer with pause/resume  
-- ⚡ Lightweight & snappy with Flutter + GetX  
+- ⚡ Lightweight & snappy with Flutter + GetX
+- 💻 Deployed as a Mac App and Web App
 
 ---
 
