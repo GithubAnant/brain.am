@@ -90,7 +90,7 @@ class BlackTint extends StatelessWidget {
       child: Container(
         width: containerWidth,
         height: containerHeight,
-        color: Colors.black.withAlpha(154), // smoother control
+        color: Colors.black.withAlpha(154), 
       ),
     );
   }
