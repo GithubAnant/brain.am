@@ -2,9 +2,11 @@
 ![brain.am home](home.png)  
 ![brain.am player](player.png)
 ---
-## 🚀 What is brain.am?
-brain.am is a **Flutter app inspired by Brain.fm** — delivering *curated* soundscapes (not procedural music) that help your brain focus, relax, or sleep better. It's minimal, powerful, and uses **GetX** for smooth state management.
+## 🚀 What is brain.am?## 
+
+brain.am is a Flutter app inspired by Brain.fm — delivering curated soundscapes (not procedural music) that help your brain focus, relax, or sleep better.
 ---
+
 ## 🎧 Features
 - Handpicked soundscapes for **Focus**, **Relaxation**, **Sleep** and more  
 - Session timer with pause/resume  
