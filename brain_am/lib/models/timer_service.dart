@@ -1,8 +1,11 @@
 // timer_service.dart
 import 'dart:async';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
 
 enum TimerMode { infinite, countdown, pomodoro }
+
+final AudioPlayer _audioPlayer = AudioPlayer();
 
 class TimerService extends ChangeNotifier {
   static final TimerService _instance = TimerService._internal();
@@ -98,12 +101,20 @@ class TimerService extends ChangeNotifier {
     notifyListeners();
   }
 
-  void _togglePomodoro() {
-    _isWorkPeriod = !_isWorkPeriod;
-    _currentSeconds = _isWorkPeriod ? _workMinutes * 60 : _restMinutes * 60;
-    notifyListeners();
+void _togglePomodoro() async {
+  // Play appropriate audio based on current state (before toggling)
+  if (_isWorkPeriod) {
+    // Work period just ended, about to start rest
+    await _audioPlayer.play(AssetSource('audio/start_resting.mp3'));
+  } else {
+    // Rest period just ended, about to start work
+    await _audioPlayer.play(AssetSource('audio/start_working.mp3'));
   }
-
+  
+  _isWorkPeriod = !_isWorkPeriod;
+  _currentSeconds = _isWorkPeriod ? _workMinutes * 60 : _restMinutes * 60;
+  notifyListeners();
+}
   void setTimerMode(TimerMode mode) {
     if (_currentMode != mode) {
       _timer?.cancel();
