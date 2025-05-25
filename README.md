@@ -13,17 +13,17 @@ brain.am is a **Flutter app inspired by Brain.fm** — delivering *curated* soun
 ---
 ## 🧠 How brain.am Works
 
-**State Management Architecture**
-The app leverages GetX's reactive programming paradigm to manage application state efficiently. GetX controllers handle the business logic while maintaining clean separation between UI and data layers. This ensures smooth performance and eliminates boilerplate code typically associated with other state management solutions.
+**State Management with GetX**
+GetX controllers handle app state and business logic with clean separation between UI and data layers. This eliminates boilerplate code while ensuring smooth performance.
 
-**Audio Playback System**
-Audio functionality is built around Flutter's `just_audio` package, which provides reliable cross-platform audio streaming. The app maintains a centralized audio controller that manages playback state, volume controls, and seamless transitions between tracks. Audio files are either streamed from remote URLs or loaded from local assets depending on the deployment configuration.
+**Audio Playback Engine**
+Built on Flutter's just_audio package for reliable cross-platform streaming. A centralized controller manages playback, volume, and track transitions.
 
-**Session Management**
-The timer system operates independently of the audio playback, allowing users to run timed sessions while maintaining full control over their soundscape. Session data including duration, selected goals, and preferred soundscapes are persisted locally using Flutter's shared preferences, ensuring user settings survive app restarts.
+**Independent Session Timers**
+Timer system runs separately from audio playback, allowing flexible session control. User preferences and session data persist locally using shared preferences.
 
-**UI Responsiveness**
-The interface utilizes GetX's reactive observers to automatically update UI components when underlying data changes. This creates a fluid user experience where timer updates, playback controls, and session state changes are reflected instantly across all relevant UI elements without manual refresh calls.
+**Reactive UI Updates**
+GetX observers automatically refresh UI components when data changes. Timer updates and playback controls reflect instantly without manual refresh calls.
 
 **Cross-Platform Deployment**
 The codebase maintains platform-specific optimizations for both web and desktop deployments. Web builds utilize Flutter's HTML renderer for optimal browser compatibility, while the Mac app leverages native system integrations for better performance and user experience.
