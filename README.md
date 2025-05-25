@@ -1,16 +1,64 @@
-## 🎵 Work In Progress
+# <h1 align="center">🧠 brain.am</h1>
 
-Building an app that helps you focus by playing neural music, with a bunch of other gimmicks!
-
-Currently under development — follow along as I build something beautiful.
+![brain.am home](home.png)  
+![brain.am player](player.png)
 
 ---
 
-### 🔐 Easter Egg
+## What is brain.am?
 
- If you’re reading this, it means the project is still underway.  
-  
-> DM me a screenshot of this on [Linkedin](https://www.linkedin.com/in/anant-singhal-linkdn/) or [Twitter](https://x.com/singhal_an82006)  
-> and I’ll **put you as an easter egg in the app**  
-  
-Let’s make you immortal in code. 🎧
+- brain.am is a Flutter app inspired by Brain.fm — delivering curated soundscapes (not procedural music) that help your brain focus, relax, or sleep better.
+
+---
+
+## 🎧 Features
+- Handpicked soundscapes for **Focus**, **Relaxation**, **Sleep** and more  
+- Session timer with pause/resume  
+- Lightweight & snappy with Flutter + GetX
+- Deployed as a Mac App and Web App
+---
+## 🧠 How brain.am Works
+
+**State Management with GetX**
+- GetX controllers handle app state and business logic with clean separation between UI and data layers. This eliminates boilerplate code while ensuring smooth performance.
+
+**Audio Playback Engine**
+- Built on Flutter's just_audio package for reliable cross-platform streaming. A centralized controller manages playback, volume, and track transitions.
+
+**Independent Session Timers**
+- Timer system runs separately from audio playback, allowing flexible session control. User preferences and session data persist locally using shared preferences.
+
+**Reactive UI Updates**
+- GetX observers automatically refresh UI components when data changes. Timer updates and playback controls reflect instantly without manual refresh calls.
+
+**Cross-Platform Deployment**
+- The codebase maintains platform-specific optimizations for both web and desktop deployments. Web builds utilize Flutter's HTML renderer for optimal browser compatibility, while the Mac app leverages native system integrations for better performance and user experience.
+
+---
+## 🕹️ Session Setup
+<details>
+<summary>Choose your Goal</summary>
+- [x] Focus  
+- [ ] Relax 
+- [ ] Sleep  
+- [x] Study 
+- [ ] Deep Work 
+</details>
+<details>
+<summary>Select Soundscape</summary>
+- [ ] Ocean Waves  
+- [x] Rainforest   
+- [ ] White Noise  
+- [x] Soft Piano
+- [x] Post Rock
+- [ ] Thunderstorm
+- [x] Melancholy
+- [ ] Ambience
+</details>
+<details>
+<summary>Pomodoro Settings</summary>
+| Setting      | Value (minutes) |
+|--------------|-----------------|
+| Work Time    | `50`          |
+| Rest Time    | `10`          |
+</details>
