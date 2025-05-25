@@ -1,10 +1,14 @@
 # <h1 align="center">🧠 brain.am</h1>
+
 ![brain.am home](home.png)  
 ![brain.am player](player.png)
----
-## 🚀 What is brain.am?## 
 
-brain.am is a Flutter app inspired by Brain.fm — delivering curated soundscapes (not procedural music) that help your brain focus, relax, or sleep better.
+---
+
+## What is brain.am?
+
+- brain.am is a Flutter app inspired by Brain.fm — delivering curated soundscapes (not procedural music) that help your brain focus, relax, or sleep better.
+
 ---
 
 ## 🎧 Features
@@ -16,19 +20,19 @@ brain.am is a Flutter app inspired by Brain.fm — delivering curated soundscape
 ## 🧠 How brain.am Works
 
 **State Management with GetX**
-GetX controllers handle app state and business logic with clean separation between UI and data layers. This eliminates boilerplate code while ensuring smooth performance.
+- GetX controllers handle app state and business logic with clean separation between UI and data layers. This eliminates boilerplate code while ensuring smooth performance.
 
 **Audio Playback Engine**
-Built on Flutter's just_audio package for reliable cross-platform streaming. A centralized controller manages playback, volume, and track transitions.
+- Built on Flutter's just_audio package for reliable cross-platform streaming. A centralized controller manages playback, volume, and track transitions.
 
 **Independent Session Timers**
-Timer system runs separately from audio playback, allowing flexible session control. User preferences and session data persist locally using shared preferences.
+- Timer system runs separately from audio playback, allowing flexible session control. User preferences and session data persist locally using shared preferences.
 
 **Reactive UI Updates**
-GetX observers automatically refresh UI components when data changes. Timer updates and playback controls reflect instantly without manual refresh calls.
+- GetX observers automatically refresh UI components when data changes. Timer updates and playback controls reflect instantly without manual refresh calls.
 
 **Cross-Platform Deployment**
-The codebase maintains platform-specific optimizations for both web and desktop deployments. Web builds utilize Flutter's HTML renderer for optimal browser compatibility, while the Mac app leverages native system integrations for better performance and user experience.
+- The codebase maintains platform-specific optimizations for both web and desktop deployments. Web builds utilize Flutter's HTML renderer for optimal browser compatibility, while the Mac app leverages native system integrations for better performance and user experience.
 
 ---
 ## 🕹️ Session Setup
