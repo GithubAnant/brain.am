@@ -1,4 +1,4 @@
-# <h2 align="center">🧠 brain.am</h1>
+# <h1 align="center">🧠 brain.am</h1>
 
 ![brain.am home](home.png)  
 ![brain.am player](player.png)
