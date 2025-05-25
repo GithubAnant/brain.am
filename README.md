@@ -41,7 +41,6 @@ brain.am is a **Flutter app inspired by Brain.fm** — delivering *curated* soun
 - [x] Study 
 - [ ] Deep Work 
 
-*(Click the checkbox to pick your vibe)*
 
 </details>
 
