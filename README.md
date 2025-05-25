@@ -27,15 +27,6 @@ brain.am is a **Flutter app inspired by Brain.fm** — delivering *curated* soun
 - Audio playback managed via a stable Flutter package like `just_audio`  
 - Saves your session preferences locally for a seamless experience  
 
----
-
-## 🎛️ Interactive Sound Layers
-
-| Layer          | Volume        | Mute     |
-| -------------- | ------------- | -------- |
-| 🌧️ Rain       | `[====----]` 80% | [ ]      |
-| 🌬️ White Noise | `[==------]` 30% | [x]      |
-| 🎶 Ambient Tones| `[======--]` 90% | [ ]      |
 
 ---
 
@@ -44,10 +35,10 @@ brain.am is a **Flutter app inspired by Brain.fm** — delivering *curated* soun
 <details>
 <summary>Choose your Goal</summary>
 
-- [ ] Focus  
+- [x] Focus  
 - [ ] Relax 
 - [ ] Sleep  
-- [ ] Study 
+- [x] Study 
 - [ ] Deep Work 
 
 *(Click the checkbox to pick your vibe)*
@@ -57,20 +48,23 @@ brain.am is a **Flutter app inspired by Brain.fm** — delivering *curated* soun
 <details>
 <summary>Select Soundscape</summary>
 
-- Ocean Waves  
-- Rainforest   
-- White Noise  
-- Soft Piano
-- Post Rock
-- Thunderstorm
-- Ambience
-- ...and many more
+- [ ] Ocean Waves  
+- [x] Rainforest   
+- [ ] White Noise  
+- [x] Soft Piano
+- [x] Post Rock
+- [ ] Thunderstorm
+- [x] Melancholy
+- [ ] Ambience
 </details>
 
 <details>
-<summary>Session Timer</summary>
+<summary>Pomodoro Settings</summary>
 
-- Set duration: 15, 30, 45, 60 minutes  
-- Pause / Resume controls  
+| Setting      | Value (minutes) |
+|--------------|-----------------|
+| Work Time    | `50`          |
+| Rest Time    | `10`          |
+
 
 </details>
