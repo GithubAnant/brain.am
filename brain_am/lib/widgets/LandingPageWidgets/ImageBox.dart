@@ -70,63 +70,65 @@ class _AudioImageBoxState extends State<AudioImageBox> {
     double baseWidth = MediaQuery.of(context).size.width * 0.15;
     double scale = _isHovered ? 1.03 : 1.0;
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        MouseRegion(
-          onEnter: (_) {
-            setState(() => _isHovered = true);
-            _playAudio();
-          },
-          onExit: (_) {
-            setState(() => _isHovered = false);
-            _stopAudio();
-          },
-          child: AnimatedContainer(
-            duration: const Duration(milliseconds: 200),
-            curve: Curves.easeInOut,
-            height: baseHeight * scale,
-            width: baseWidth * scale,
-            margin: const EdgeInsets.only(left: 20, right: 10, top: 30),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(13),
-              boxShadow: [
-                BoxShadow(
-                  color: const Color.fromARGB(181, 23, 22, 22).withAlpha(77),
-                  spreadRadius: 2,
-                  blurRadius: 10,
-                  offset: const Offset(0, 4),
-                ),
-              ],
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(13),
-              child: Stack(
-                fit: StackFit.expand,
-                children: [
-                  Image.asset(
-                    widget.imagePath, 
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) {
-                      return Container(
-                        color: Colors.grey,
-                        child: const Center(
-                          child: Text('Image not found',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ),
-                      );
-                    },
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          MouseRegion(
+            onEnter: (_) {
+              setState(() => _isHovered = true);
+              _playAudio();
+            },
+            onExit: (_) {
+              setState(() => _isHovered = false);
+              _stopAudio();
+            },
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 200),
+              curve: Curves.easeInOut,
+              height: baseHeight * scale,
+              width: baseWidth * scale,
+              margin: EdgeInsets.only(left: 20, right: 10, top: MediaQuery.of(context).size.height*0.025),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(13),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color.fromARGB(181, 23, 22, 22).withAlpha(77),
+                    spreadRadius: 2,
+                    blurRadius: 10,
+                    offset: const Offset(0, 4),
                   ),
-                  if (_isHovered)
-                    PlayingNowIcon(),
                 ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(13),
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    Image.asset(
+                      widget.imagePath, 
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Container(
+                          color: Colors.grey,
+                          child: const Center(
+                            child: Text('Image not found',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    if (_isHovered)
+                      PlayingNowIcon(),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-        BottomDescription(widget: widget),
-      ],
+          BottomDescription(widget: widget),
+        ],
+      ),
     );
   }
 }
