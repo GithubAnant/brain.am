@@ -213,18 +213,12 @@ class ChooseMode extends StatelessWidget {
               children: [
                 SmallGlassMorphContainer(
                   text: 'Chill',
-                  startColor: const Color(0xFFFF5E62).withAlpha(179),
-                  endColor: const Color(0xFFFF9966).withAlpha(153),
                 ),
                 SmallGlassMorphContainer(
                   text: 'Sleep',
-                  startColor: const Color(0xFF56CCF2).withAlpha(179),
-                  endColor: const Color(0xFF2F80ED).withAlpha(153),
                 ),
                 SmallGlassMorphContainer(
                   text: 'Study',
-                  startColor: const Color(0xFF00C9A7).withAlpha(179),
-                  endColor: const Color(0xFF92FE9D).withAlpha(153),
                 ),
               ],
             ),

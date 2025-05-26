@@ -23,7 +23,7 @@ class _FocusGlassContainerState extends State<FocusGlassContainer> {
     double baseHeight = MediaQuery.of(context).size.height * 0.56;
 
     return GestureDetector(
-      onTap: () { 
+      onTap: () {
         Get.find<ScreenController>().goToPlayer();
       },
       child: MouseRegion(
@@ -31,49 +31,46 @@ class _FocusGlassContainerState extends State<FocusGlassContainer> {
         onEnter: (_) => setState(() => _isHovered = true),
         onExit: (_) => setState(() => _isHovered = false),
         child: AnimatedScale(
-          duration: const Duration(milliseconds: 300),
-          scale: _isHovered ? 1.02 : 1.0,
+          duration: const Duration(milliseconds: 200),
+          scale: _isHovered ? 1.01 : 1.0,
           child: GlassmorphicContainer(
             margin: const EdgeInsets.only(right: 20, bottom: 20),
             width: baseWidth,
             height: baseHeight,
             borderRadius: 25,
             blur: 0,
-            border: 0.3,
+            border: 0.5,
+            // ← Updated gradients here
             linearGradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors:
                   _isHovered
                       ? [
-                        // strong mint → teal → cyan
-                        const Color(0xFF1DE9B6).withAlpha(122), // fresh mint
-                        const Color(0xFF00BFA5).withAlpha(115), // deep teal
-                        const Color(0xFF00E5FF).withAlpha(85), // electric cyan
+                        const Color(0xFF1A1A1D).withAlpha(22),
+                        const Color(0xFF2C2F33).withAlpha(40),
                       ]
                       : [
-                        const Color.fromARGB(255, 204, 204, 204).withAlpha(20),
-                        const Color.fromARGB(255, 94, 94, 94).withAlpha(54),
+                        const Color.fromARGB(255, 204, 204, 204).withAlpha(16),
+                        const Color.fromARGB(255, 94, 94, 94).withAlpha(34),
                       ],
-              stops: _isHovered ? [0.0, 0.5, 1.0] : null,
             ),
 
             borderGradient: LinearGradient(
               begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+              end: Alignment.bottomRight,
               colors: [
-                const Color.fromARGB(255, 210, 210, 210).withAlpha(150),
-                const Color.fromARGB(136, 121, 121, 121),
+                const Color.fromARGB(255, 65, 75, 65).withAlpha(120),
+                const Color.fromARGB(112, 53, 53, 53),
               ],
             ),
             child: Center(
               child: Text(
                 widget.text,
                 style: const TextStyle(
-                  fontSize: 32,
-                  fontFamily: 'Lato',
-                  fontWeight: FontWeight.w500,
-                  color: Colors.white,
+                  color: Color.fromARGB(255, 181, 170, 170),
+                  fontSize: 22,
+                  fontFamily: 'Montserrat',
                 ),
               ),
             ),

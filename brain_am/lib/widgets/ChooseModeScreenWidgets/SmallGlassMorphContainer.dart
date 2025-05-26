@@ -9,13 +9,9 @@ class SmallGlassMorphContainer extends StatefulWidget {
   const SmallGlassMorphContainer({
     super.key,
     required this.text,
-    required this.startColor,
-    required this.endColor,
   });
 
   final String text;
-  final Color startColor;
-  final Color endColor;
 
   @override
   State<SmallGlassMorphContainer> createState() =>
@@ -40,36 +36,34 @@ class _SmallGlassMorphContainerState extends State<SmallGlassMorphContainer> {
         onExit: (_) => setState(() => _isHovered = false),
         child: AnimatedScale(
           duration: Duration(milliseconds: 200),
-          scale: _isHovered ? 1.02 : 1.0,
+          scale: _isHovered ? 1.01 : 1.0,
           child: GlassmorphicContainer(
             width: Basewidth,
             height: Baseheight,
             margin: const EdgeInsets.only(bottom: 20),
             borderRadius: 25,
             blur: 0,
-            border: 0.3,
+            border: 0.5,
             linearGradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors:
                   _isHovered
-                      ? [widget.startColor, widget.endColor]
+                      ? [
+                        const Color(0xFF1A1A1D).withAlpha(22),
+                        const Color(0xFF2C2F33).withAlpha(40),
+                      ]
                       : [
-                        const Color.fromARGB(
-                          255,
-                          204,
-                          204,
-                          204,
-                        ).withAlpha(16),
+                        const Color.fromARGB(255, 204, 204, 204).withAlpha(16),
                         const Color.fromARGB(255, 94, 94, 94).withAlpha(34),
                       ],
             ),
             borderGradient: LinearGradient(
               begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+              end: Alignment.bottomRight,
               colors: [
-                const Color.fromARGB(255, 210, 210, 210).withAlpha(150),
-                const Color.fromARGB(136, 121, 121, 121),
+                const Color.fromARGB(255, 65, 75, 65).withAlpha(120),
+                const Color.fromARGB(112, 53, 53, 53),
               ],
             ),
             child: Padding(
@@ -78,11 +72,10 @@ class _SmallGlassMorphContainerState extends State<SmallGlassMorphContainer> {
                 child: Text(
                   widget.text,
                   style: const TextStyle(
-                  fontSize: 22,
-                  fontFamily: 'Lato',
-                  fontWeight: FontWeight.w500,
-                  color: Colors.white,
-                ),
+                    color: Color.fromARGB(255, 181, 170, 170),
+                    fontSize: 22,
+                    fontFamily: 'Montserrat',
+                  ),
                 ),
               ),
             ),

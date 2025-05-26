@@ -45,23 +45,11 @@ class ChooseModePage extends StatelessWidget {
                     children: [
                       SmallGlassMorphContainer(
                         text: 'Chill',
-                        startColor: Color(0xFFFF6B6B).withAlpha(77),
-                        endColor: Color(0xFFFFE66D).withAlpha(51),
                       ),
                       SmallGlassMorphContainer(
-                        text: 'Sleep',
-                        startColor: Color.fromARGB(
-                          255,
-                          64,
-                          28,
-                          142,
-                        ).withAlpha(77),
-                        endColor: Color(0xFF9B51E0).withAlpha(51),
-                      ),
+                        text: 'Sleep',),
                       SmallGlassMorphContainer(
-                        text: 'Study',
-                        startColor: Color(0xFFB8E986).withAlpha(77),
-                        endColor: Color(0xFF62D2A2).withAlpha(51),
+                        text: 'Study'
                       ),
                     ],
                   ),
