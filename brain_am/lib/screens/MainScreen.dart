@@ -55,7 +55,7 @@ class MainScreen extends StatelessWidget {
                   SocialLink(
                     icon: Icon(
                       RemixIcons.github_fill,
-                      color: Colors.white,  
+                      color: Colors.white,
                       size: 30,
                     ),
                     urlLink: 'https://github.com/GithubAnant',
@@ -174,6 +174,16 @@ class _PlayerState extends State<Player> {
     return Stack(
       key: ValueKey('player'),
       children: [
+        Positioned(
+          left: 10,
+          top: 10,
+          child: IconButton(
+            onPressed: () {
+              Get.find<ScreenController>().goToHome();
+            },
+            icon: Icon(Icons.arrow_back),
+          ),
+        ),
         _currentContainer,
         OptionsSidebar(onContainerChanged: _updateContainer),
         BottomMusicController(),
@@ -187,13 +197,13 @@ class _PlayerState extends State<Player> {
 //
 //
 //
+//  
 //
 //
 //
 //
-//
-//
-//
+//    
+// 
 
 class ChooseMode extends StatelessWidget {
   const ChooseMode({super.key});
@@ -211,15 +221,9 @@ class ChooseMode extends StatelessWidget {
             FocusGlassContainer(text: 'Focus'),
             Column(
               children: [
-                SmallGlassMorphContainer(
-                  text: 'Chill',
-                ),
-                SmallGlassMorphContainer(
-                  text: 'Sleep',
-                ),
-                SmallGlassMorphContainer(
-                  text: 'Study',
-                ),
+                SmallGlassMorphContainer(text: 'Chill'),
+                SmallGlassMorphContainer(text: 'Sleep'),
+                SmallGlassMorphContainer(text: 'Study'),
               ],
             ),
           ],
