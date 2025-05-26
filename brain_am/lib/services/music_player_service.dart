@@ -321,3 +321,4 @@ class MusicPlayerService extends ChangeNotifier {
     super.dispose();
   }
 }
+

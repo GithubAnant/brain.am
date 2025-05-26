@@ -14,14 +14,14 @@ class GridTable extends StatelessWidget {
           children: [
             TableRow(
               children: [
-                GridItem(icon: RemixIcons.focus_2_line, label: "Focus", onTap: (){}),
-                GridItem(icon: RemixIcons.zzz_line, label: "Sleep", onTap: (){})
+                GridItem(icon: RemixIcons.focus_2_line, label: "Focus"),
+                GridItem(icon: RemixIcons.zzz_line, label: "Sleep"),
               ],
             ),
             TableRow(
               children: [
-                GridItem(icon: RemixIcons.book_open_line, label: "Study", onTap: (){}),
-                GridItem(icon: RemixIcons.sofa_line, label: "Relax", onTap: (){}),
+                GridItem(icon: RemixIcons.book_open_line, label: "Study"),
+                GridItem(icon: RemixIcons.sofa_line, label: "Relax"),
               ],
             ),
           ],
@@ -30,4 +30,3 @@ class GridTable extends StatelessWidget {
     );
   }
 }
-

@@ -14,10 +14,7 @@ enum SelectedScreen { home, category, timer, uptime }
 class OptionsSidebar extends StatefulWidget {
   final Function(Widget) onContainerChanged;
 
-  const OptionsSidebar({
-    super.key,
-    required this.onContainerChanged,
-  });
+  const OptionsSidebar({super.key, required this.onContainerChanged});
 
   @override
   State<OptionsSidebar> createState() => _OptionsSidebarState();
@@ -45,13 +42,17 @@ class _OptionsSidebarState extends State<OptionsSidebar> {
           widget.onContainerChanged(const HomeContainer());
           break;
         case SelectedScreen.category:
-          widget.onContainerChanged(const CategoryContainer());
+          widget.onContainerChanged(CategoryContainer());
           break;
         case SelectedScreen.timer:
           widget.onContainerChanged(const TimerContainer());
           break;
         case SelectedScreen.uptime:
-          widget.onContainerChanged(const SpecificsContainer());
+          widget.onContainerChanged(
+            SpecificsContainer(
+              navigateToHome: () => _selectScreen(SelectedScreen.home),
+            ),
+          );
           break;
       }
     }
@@ -187,5 +188,3 @@ class IconSidebar extends StatelessWidget {
     );
   }
 }
-
-

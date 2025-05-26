@@ -1,7 +1,11 @@
+import 'package:brain.am/screens/PlayerPageContainers/CategoryContainer.dart';
+import 'package:brain.am/screens/PlayerPageContainers/HomeContainer.dart';
+import 'package:brain.am/screens/PlayerPageContainers/TimerContainer.dart';
 import 'package:brain.am/screens/PlayerScreenMain.dart';
 import 'package:brain.am/widgets/CategoryChip.dart';
 import 'package:brain.am/widgets/NeuralEffectButton.dart';
 import 'package:brain.am/widgets/PlayerContainerBackgroundImage.dart';
+import 'package:brain.am/widgets/PlayerScreenWidgets/OptionsSidebar.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,7 +15,8 @@ import 'package:remixicon/remixicon.dart';
 enum NeuralEffectLevel { high, medium, low }
 
 class SpecificsContainer extends StatefulWidget {
-  const SpecificsContainer({super.key});
+  final VoidCallback? navigateToHome;
+  const SpecificsContainer({super.key, this.navigateToHome});
 
   @override
   State<SpecificsContainer> createState() => _SpecificsContainerState();
@@ -217,11 +222,19 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        CancelButton(),
+                        CancelButton(
+                          onPressed: () {
+                            widget.navigateToHome?.call();
+                          },
+                        ),
 
                         const SizedBox(width: 10),
 
-                        ApplyChangesButton(),
+                        ApplyChangesButton(
+                          onPressed: () {
+                            widget.navigateToHome?.call();
+                          },
+                        ),
                       ],
                     ),
                   ],
@@ -236,14 +249,14 @@ class _SpecificsContainerState extends State<SpecificsContainer> {
 }
 
 class ApplyChangesButton extends StatelessWidget {
-  const ApplyChangesButton({super.key});
+  final VoidCallback? onPressed;
+
+  const ApplyChangesButton({super.key, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {
-        // Handle apply changes action
-      },
+      onPressed: onPressed,
       style: TextButton.styleFrom(
         backgroundColor: Colors.deepPurple,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
@@ -265,12 +278,14 @@ class ApplyChangesButton extends StatelessWidget {
 }
 
 class CancelButton extends StatelessWidget {
-  const CancelButton({super.key});
+  final VoidCallback? onPressed;
+
+  const CancelButton({super.key, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: TextButton.styleFrom(
         backgroundColor: Colors.transparent,
         shape: RoundedRectangleBorder(
