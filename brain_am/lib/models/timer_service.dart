@@ -53,32 +53,35 @@ class TimerService extends ChangeNotifier {
     }
   }
 
-  void startTimer() {
-    if (_isRunning) return;
-    
-    _isRunning = true;
-    notifyListeners();
+// Alternative fix: Modify the timer logic in startTimer()
+void startTimer() {
+  if (_isRunning) return;
+  
+  _isRunning = true;
+  notifyListeners();
 
-    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      // For infinite timer, increment
-      if (_currentMode == TimerMode.infinite) {
-        _currentSeconds++;
+  _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+    // For infinite timer, increment
+    if (_currentMode == TimerMode.infinite) {
+      _currentSeconds++;
+    }
+    // For countdown and pomodoro, decrement
+    else if (_currentSeconds > 0) {
+      _currentSeconds--;
+      
+      // Check if we just hit zero for pomodoro
+      if (_currentSeconds == 0 && _currentMode == TimerMode.pomodoro) {
+        _togglePomodoro();
+        return; // Exit early to prevent immediate decrement
       }
-      // For countdown and pomodoro, decrement
-      else if (_currentSeconds > 0) {
-        _currentSeconds--;
-      }
-      // When countdown reaches zero
-      else {
-        if (_currentMode == TimerMode.pomodoro) {
-          _togglePomodoro();
-        } else {
-          pauseTimer();
-        }
-      }
-      notifyListeners();
-    });
-  }
+    }
+    // When countdown reaches zero (non-pomodoro)
+    else {
+      pauseTimer();
+    }
+    notifyListeners();
+  });
+}
 
   void pauseTimer() {
     _isRunning = false;
@@ -101,20 +104,21 @@ class TimerService extends ChangeNotifier {
     notifyListeners();
   }
 
-void _togglePomodoro() async {
-  // Play appropriate audio based on current state (before toggling)
-  if (_isWorkPeriod) {
-    // Work period just ended, about to start rest
-    await _audioPlayer.play(AssetSource('audio/start_resting.mp3'));
-  } else {
-    // Rest period just ended, about to start work
-    await _audioPlayer.play(AssetSource('audio/start_working.mp3'));
+  void _togglePomodoro() async {
+    // Play appropriate audio based on current state (before toggling)
+    if (_isWorkPeriod) {
+      // Work period just ended, about to start rest
+      await _audioPlayer.play(AssetSource('audio/start_resting.mp3'));
+    } else {
+      // Rest period just ended, about to start work
+      await _audioPlayer.play(AssetSource('audio/start_working.mp3'));
+    }
+
+    _isWorkPeriod = !_isWorkPeriod;
+    _currentSeconds = _isWorkPeriod ? _workMinutes * 60 : _restMinutes * 60;
+    notifyListeners();
   }
-  
-  _isWorkPeriod = !_isWorkPeriod;
-  _currentSeconds = _isWorkPeriod ? _workMinutes * 60 : _restMinutes * 60;
-  notifyListeners();
-}
+
   void setTimerMode(TimerMode mode) {
     if (_currentMode != mode) {
       _timer?.cancel();
