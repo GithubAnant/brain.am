@@ -42,9 +42,9 @@ class SongNameAndSubtext1 extends StatelessWidget {
                     (context, title, _) => Text(
                       title,
                       style: GoogleFonts.urbanist(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w400,
+                        color: const Color.fromARGB(220, 232, 232, 232),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w300,
                       ),
                     ),
               ),
