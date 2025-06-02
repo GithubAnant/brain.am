@@ -309,6 +309,7 @@ class CancelButton extends StatelessWidget {
   }
 }
 
+
 // This class provides static access to the SpecificsContainer controllers
 class SpecificsController {
   // Get currently selected categories
