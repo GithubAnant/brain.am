@@ -36,29 +36,26 @@
 
 ---
 ## 🕹️ Session Setup
-<details>
-<summary>Choose your Goal</summary>
-- [x] Focus  
-- [ ] Relax 
-- [ ] Sleep  
-- [x] Study 
-- [ ] Deep Work 
-</details>
-<details>
-<summary>Select Soundscape</summary>
-- [ ] Ocean Waves  
-- [x] Rainforest   
-- [ ] White Noise  
-- [x] Soft Piano
-- [x] Post Rock
-- [ ] Thunderstorm
-- [x] Melancholy
-- [ ] Ambience
-</details>
-<details>
-<summary>Pomodoro Settings</summary>
-| Setting      | Value (minutes) |
-|--------------|-----------------|
-| Work Time    | `50`          |
-| Rest Time    | `10`          |
-</details>
+
+### 🎯 Goals
+- ✅ Focus  
+- ❌ Relax  
+- ❌ Sleep  
+- ✅ Study  
+- ❌ Deep Work  
+
+### 🌿 Soundscape
+- ❌ Ocean Waves  
+- ✅ Rainforest  
+- ❌ White Noise  
+- ✅ Soft Piano  
+- ✅ Post Rock  
+- ❌ Thunderstorm  
+- ✅ Melancholy  
+- ❌ Ambience  
+
+### ⏱️ Pomodoro Settings
+| Interval     | Duration (minutes) |
+|--------------|--------------------|
+| 🧠 Work Time | 50                 |
+| ☕ Rest Time | 10                 |
